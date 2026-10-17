@@ -1,0 +1,3047 @@
+% programmes-cpge-pc.tex — programme de physique de la classe de PC
+% Texte officiel de 2021 (voie Physique et chimie), publié par le ministère de
+% l’Enseignement supérieur. Fichier de données du paquet programmes-cpge.
+% Format : voir la documentation, « Ajouter un programme ».
+
+\cpgefiliere{PC}{
+  discipline = {Physique},
+  classe = {PC},
+  voie = {Physique et chimie},
+  annee = {2021},
+}
+
+\cpgerubrique{PC/1}{
+  parent = {PC},
+  numero = {1},
+  niveau = {1},
+  titre = {Optique},
+  chapeau = {
+    \cpgeitem{Le programme de la classe de PC s’inscrit dans la continuité de la partie « Formation des images » du thème « Ondes et signaux » du programme de PCSI. Dans une première partie, on introduit les éléments spécifiques à l’émission, la propagation et la détection des ondes lumineuses. Les parties suivantes traitent essentiellement des interférences lumineuses : partant des trous d’Young éclairés par une source ponctuelle strictement monochromatique, on étudie ensuite l’évolution de la visibilité sous l’effet d’un élargissement spatial et spectral de la source. Le brouillage des franges précédentes sous l’effet d’un élargissement spatial de la source conduit à montrer l’un des avantages de l’interféromètre de Michelson éclairé par une source étendue (franges d’égale inclinaison et franges d’égale épaisseur) en constatant expérimentalement l’existence d’un lieu de localisation des franges. L’objectif de cette partie n’est pas le calcul de la répartition de l’intensité lumineuse modélisant les figures observées : on exploite le plus souvent les variations de l’ordre d’interférences (avec la position du point d’observation, la position du point source et la longueur d’onde) pour interpréter les observations sans expliciter l’intensité de la lumière.}},
+}
+
+\cpgerubrique{PC/1/1}{
+  parent = {PC/1},
+  numero = {1.1},
+  niveau = {2},
+  titre = {Modèle scalaire des ondes lumineuses},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie introduit les outils nécessaires à l’étude des phénomènes ondulatoires dans le domaine de l’optique. La réponse des récepteurs est supposée proportionnelle à la moyenne du carré du champ électrique de l’onde. Le programme utilise uniquement le mot « intensité » pour décrire la grandeur détectée mais on peut employer indifféremment les termes « intensité » et « éclairement » sans chercher à les distinguer à ce niveau de formation. Le théorème de Malus (orthogonalité des rayons lumineux et des surfaces d’ondes dans l’approximation de l’optique géométrique) est admis. Dans le cadre de l’optique, on qualifie une onde de plane ou sphérique par référence à la forme des surfaces d’ondes.}},
+}
+
+\cpgeligne{PC/1/1/1}{
+  parent = {PC/1/1},
+  numero = {1.1.1},
+  contenu = {
+    \cpgeitem{\cpgenotion{Modèle de propagation dans l’approximation de l’optique géométrique.}}
+    \cpgeitem{Vibration lumineuse.}},
+  capacites = {
+    \cpgeitem{Associer la grandeur scalaire de l’optique à une composante d’un champ électrique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/1/2}{
+  parent = {PC/1/1},
+  numero = {1.1.2},
+  contenu = {
+    \cpgeitem{Chemin optique. Déphasage dû à la propagation.}},
+  capacites = {
+    \cpgeitem{Exprimer le retard de phase en un point en fonction de la durée de propagation ou du chemin optique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/1/3}{
+  parent = {PC/1/1},
+  numero = {1.1.3},
+  contenu = {
+    \cpgeitem{Surfaces d’ondes. Théorème de Malus.}
+    \cpgeitem{Onde plane, onde sphérique ; effet d’une lentille mince dans l’approximation de Gauss.}},
+  capacites = {
+    \cpgeitem{Utiliser l’égalité des chemins optiques sur les rayons d’un point objet à son image.}
+    \cpgeitem{Associer une description de la formation des images en termes de rayons lumineux et en termes de surfaces d’onde.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/1/4}{
+  parent = {PC/1/1},
+  numero = {1.1.4},
+  contenu = {
+    \cpgeitem{\cpgenotion{Modèle d’émission.}}
+    \cpgeitem{Largeur spectrale. Cohérence temporelle.}},
+  capacites = {
+    \cpgeitem{Classer différentes sources lumineuses (lampe spectrale basse pression, laser, source de lumière blanche…) en fonction du temps de cohérence de leurs diverses radiations.}
+    \cpgeitem{Citer quelques ordres de grandeur des longueurs de cohérence temporelle associées à différentes sources.}
+    \cpgeitem{Relier, en ordre de grandeur, le temps de cohérence et la largeur spectrale de la radiation considérée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/1/5}{
+  parent = {PC/1/1},
+  numero = {1.1.5},
+  contenu = {
+    \cpgeitem{\cpgenotion{Réception d’une onde lumineuse.}}
+    \cpgeitem{Récepteurs. Intensité lumineuse.}},
+  capacites = {
+    \cpgeitem{Comparer le temps de réponse d’un récepteur usuel (œil, photodiode, capteur CCD) aux temps caractéristiques des vibrations lumineuses.}
+    \cpgeitem{Relier l’intensité lumineuse à la moyenne temporelle du carré de la grandeur scalaire de l’optique.}},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre un capteur optique.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/1/2}{
+  parent = {PC/1},
+  numero = {1.2},
+  niveau = {2},
+  titre = {Superposition d’ondes lumineuses},
+  chapeau = {
+    \cpgeitem{Dans la partie \cpgecettepartie, le professeur est invité à s’appuyer sur des situations concrètes, des illustrations expérimentales et des simulations afin de donner du sens aux différentes notions présentées.}},
+}
+
+\cpgeligne{PC/1/2/1}{
+  parent = {PC/1/2},
+  numero = {1.2.1},
+  contenu = {
+    \cpgeitem{Superposition de deux ondes quasi-monochromatiques non synchrones ou incohérentes entre elles.}},
+  capacites = {
+    \cpgeitem{Justifier et utiliser l’additivité des intensités.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/2/2}{
+  parent = {PC/1/2},
+  numero = {1.2.2},
+  contenu = {
+    \cpgeitem{Superposition de deux ondes quasi-monochromatiques cohérentes entre elles : formule de Fresnel.}},
+  capacites = {
+    \cpgeitem{Établir la formule de Fresnel.}
+    \cpgeitem{Identifier une situation de cohérence entre deux ondes et utiliser la formule de Fresnel.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/2/3}{
+  parent = {PC/1/2},
+  numero = {1.2.3},
+  contenu = {
+    \cpgeitem{Contraste.}},
+  capacites = {
+    \cpgeitem{Associer un bon contraste à des ondes d’intensités voisines.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/2/4}{
+  parent = {PC/1/2},
+  numero = {1.2.4},
+  contenu = {
+    \cpgeitem{Superposition de N ondes quasi-monochromatiques cohérentes entre elles, de même amplitude et dont les phases sont en progression arithmétique dans le cas N >> 1.}},
+  capacites = {
+    \cpgeitem{Expliquer qualitativement l’influence de N sur l’intensité et la finesse des franges brillantes observées.}
+    \cpgeitem{Établir, par le calcul, la condition d’interférences constructives et la demi-largeur $2\pi/N$ des franges brillantes.}
+    \cpgeitem{Établir et utiliser la formule indiquant la direction des maxima d’intensité derrière un réseau de fentes rectilignes parallèles.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/1/3}{
+  parent = {PC/1},
+  numero = {1.3},
+  niveau = {2},
+  titre = {Exemple de dispositif interférentiel par division du front d’onde : trous d’Young},
+  chapeau = {
+    \cpgeitem{Dans la partie \cpgecettepartie, les trous d’Young permettent de confronter théorie et expérience. En revanche, les fentes d’Young sont abordées de manière exclusivement expérimentale. Aucun autre interféromètre à division du front d’onde n’est exigible.}
+    \cpgeitem{Dans le prolongement de la partie précédente, la partie « Exemple de dispositif interférentiel par division d’amplitude : interféromètre de Michelson » vise à mettre en lumière l’intérêt des dispositifs interférentiels par division d’amplitude, en s’appuyant sur l’exemple de l’interféromètre de Michelson. L’accent est ainsi mis sur l’importance expérimentale de ces dispositifs, notamment dans le domaine de la métrologie. Lors de la modélisation de l’interféromètre de Michelson, la séparatrice est supposée d’épaisseur négligeable.}},
+}
+
+\cpgeligne{PC/1/3/1}{
+  parent = {PC/1/3},
+  numero = {1.3.1},
+  contenu = {
+    \cpgeitem{\cpgenotion{Dispositif-modèle des trous d’Young ponctuels dans un milieu non dispersif (source ponctuelle à grande distance finie ; observation à grande distance finie).}}
+    \cpgeitem{Champ d’interférences. Ordre d’interférences.}},
+  capacites = {
+    \cpgeitem{Définir, déterminer et utiliser l’ordre d’interférences.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/3/2}{
+  parent = {PC/1/3},
+  numero = {1.3.2},
+  contenu = {
+    \cpgeitem{Franges d’interférences.}},
+  capacites = {
+    \cpgeitem{Justifier la forme des franges observées sur un écran éloigné parallèle au plan contenant les trous d’Young.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/3/3}{
+  parent = {PC/1/3},
+  numero = {1.3.3},
+  contenu = {
+    \cpgeitem{\cpgenotion{Du dispositif-modèle au dispositif réel.}}
+    \cpgeitem{Fentes d’Young.}
+    \cpgeitem{Montage de Fraunhofer.}},
+  capacites = {
+    \cpgeitem{Identifier l’effet de la diffraction sur la figure observée.}
+    \cpgeitem{Expliquer l’intérêt pratique du dispositif des fentes d’Young comparativement aux trous d’Young.}
+    \cpgeitem{Exprimer l’ordre d’interférences sur l’écran dans le cas d’un dispositif des fentes d’Young utilisé en configuration de Fraunhofer.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/3/4}{
+  parent = {PC/1/3},
+  numero = {1.3.4},
+  contenu = {
+    \cpgeitem{Perte de contraste par élargissement spatial de la source.}},
+  capacites = {
+    \cpgeitem{Utiliser un critère semi-quantitatif de brouillage des franges portant sur l’ordre d’interférences pour interpréter des observations expérimentales.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/3/5}{
+  parent = {PC/1/3},
+  numero = {1.3.5},
+  contenu = {
+    \cpgeitem{Perte de contraste par élargissement spectral de la source.}},
+  capacites = {
+    \cpgeitem{Utiliser un critère semi-quantitatif de brouillage des franges portant sur l’ordre d’interférences pour interpréter des observations expérimentales.}
+    \cpgeitem{Relier la longueur de cohérence temporelle, la largeur spectrale et la longueur d’onde en ordres de grandeur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/3/6}{
+  parent = {PC/1/3},
+  numero = {1.3.6},
+  contenu = {
+    \cpgeitem{Observations en lumière blanche (blanc d’ordre supérieur, spectre cannelé).}},
+  capacites = {
+    \cpgeitem{Déterminer les longueurs d‘ondes des cannelures.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/1/4}{
+  parent = {PC/1},
+  numero = {1.4},
+  niveau = {2},
+  titre = {Exemple de dispositif interférentiel par division d’amplitude : interféromètre de Michelson},
+  chapeau = {},
+}
+
+\cpgeligne{PC/1/4/1}{
+  parent = {PC/1/4},
+  numero = {1.4.1},
+  contenu = {
+    \cpgeitem{\cpgenotion{Interféromètre de Michelson équivalent à une lame d’air éclairée par une source spatialement étendue.}}
+    \cpgeitem{Localisation des franges. Franges d’égale inclinaison.}},
+  capacites = {
+    \cpgeitem{Justifier les conditions d’observation des franges d’égale inclinaison, le lieu de localisation des franges étant admis.}
+    \cpgeitem{Établir et utiliser l’expression de l’ordre d’interférences en fonction de l’épaisseur de la lame, l’angle d’incidence et la longueur d’onde.}},
+  experimentales = {
+    \cpgeitem{Décrire et mettre en œuvre les conditions d’éclairage et d’observation adaptées à l’utilisation d’un interféromètre de Michelson en lame d’air.}
+    \cpgeitem{Mesurer l’écart en longueur d’onde d’un doublet et la longueur de cohérence d’une radiation.}
+    \cpgeitem{Interpréter des observations faites en lumière blanche avec l’interféromètre de Michelson en configuration lame d’air.}},
+  numeriques = {},
+}
+
+\cpgeligne{PC/1/4/2}{
+  parent = {PC/1/4},
+  numero = {1.4.2},
+  contenu = {
+    \cpgeitem{\cpgenotion{Interféromètre de Michelson équivalent à un coin d’air éclairé par une source spatialement étendue.}}
+    \cpgeitem{Localisation des franges. Franges d’égale épaisseur.}},
+  capacites = {
+    \cpgeitem{Justifier les conditions d’observation des franges d’égale épaisseur, le lieu de localisation des franges étant admis.}
+    \cpgeitem{Utiliser l’expression donnée de la différence de marche en fonction de l’épaisseur pour exprimer l’ordre d’interférences.}},
+  experimentales = {
+    \cpgeitem{Décrire et mettre en œuvre les conditions d’éclairage et d’observation adaptées à l’utilisation d’un interféromètre de Michelson en coin d’air.}
+    \cpgeitem{Caractériser la géométrie d’un objet ou l’indice d’un milieu à l’aide d’un interféromètre de Michelson.}
+    \cpgeitem{Interpréter des observations faites en lumière blanche avec l’interféromètre de Michelson en configuration coin d’air.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/2}{
+  parent = {PC},
+  numero = {2},
+  niveau = {1},
+  titre = {Électronique},
+  chapeau = {
+    \cpgeitem{La partie « Production, acquisition et traitement d’un signal électrique » est abordée exclusivement de manière expérimentale et prolonge sur ce thème le programme de première année de la classe de PCSI. De par leur large champ d’applications, les capacités identifiées dans cette partie peuvent être reliées de façon fructueuse à d’autres capacités expérimentales du programme.}},
+}
+
+\cpgeligne{PC/2/1}{
+  parent = {PC/2},
+  numero = {2.1},
+  contenu = {
+    \cpgeitem{\cpgenotion{Production, acquisition et traitement d’un signal électrique.}}
+    \cpgeitem{Oscillateur quasi-sinusoïdal réalisé en bouclant un filtre passe-bande du deuxième ordre avec un amplificateur.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre un oscillateur quasi-sinusoïdal et analyser les spectres des signaux générés.}},
+  numeriques = {},
+}
+
+\cpgeligne{PC/2/2}{
+  parent = {PC/2},
+  numero = {2.2},
+  contenu = {
+    \cpgeitem{Échantillonnage.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Expliquer l’influence de la fréquence d’échantillonnage.}},
+  numeriques = {},
+}
+
+\cpgeligne{PC/2/3}{
+  parent = {PC/2},
+  numero = {2.3},
+  contenu = {
+    \cpgeitem{Condition de Nyquist-Shannon.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Utiliser la condition de Nyquist-Shannon.}
+    \cpgeitem{Mettre en évidence le phénomène de repliement de spectre au moyen d’un oscilloscope numérique ou d’une acquisition numérique.}},
+  numeriques = {},
+}
+
+\cpgeligne{PC/2/4}{
+  parent = {PC/2},
+  numero = {2.4},
+  contenu = {
+    \cpgeitem{Détection synchrone.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre un protocole de détection synchrone.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/3}{
+  parent = {PC},
+  numero = {3},
+  niveau = {1},
+  titre = {Thermodynamique},
+  chapeau = {
+    \cpgeitem{Le programme de thermodynamique de la classe de PC s’inscrit dans le prolongement de celui de la classe de PCSI : les principes de la thermodynamique peuvent être désormais écrits sous forme infinitésimale pour un système évoluant entre deux instants infiniment proches, d’une part dans le cadre de l’étude des machines thermiques avec écoulement en régime stationnaire et d’autre part dans le cadre de l’étude de la diffusion thermique. Les expressions des variations infinitésimales des fonctions d’état en fonction des variables d’état doivent être fournies pour les systèmes envisagés. Ce thème contribue également à asseoir la maîtrise des opérateurs d’analyse vectorielle (gradient, divergence, laplacien) mais le formalisme doit rester au deuxième plan. Les mises en équations locales sont réalisées dans le cas de problèmes ne dépendant que d’une seule coordonnée d’espace en coordonnées cartésiennes, cylindriques et sphériques. On admet ensuite les formes générales des équations en utilisant les opérateurs d’analyse vectorielle, ce qui permet d’aborder des situations plus variées en fournissant les expressions de la divergence et du laplacien. Au travers des illustrations et des exemples traités, le professeur est invité à sensibiliser les étudiants à certains enjeux sociétaux liés par exemple aux questions d’économies d’énergie et de réchauffement climatique ; ceci est aussi l’occasion d’insister sur la notion de modèle en physique et plus généralement en sciences.}},
+}
+
+\cpgerubrique{PC/3/1}{
+  parent = {PC/3},
+  numero = {3.1},
+  niveau = {2},
+  titre = {Systèmes ouverts en régime stationnaire},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie complète la partie « Machines thermique » du programme de première année de la classe de PCSI en proposant notamment un bilan d’entropie. La maîtrise des démonstrations par les étudiants et l’application des résultats à des situations concrètes constituent des objectifs de formation.}},
+}
+
+\cpgeligne{PC/3/1/1}{
+  parent = {PC/3/1},
+  numero = {3.1.1},
+  contenu = {
+    \cpgeitem{Premier et deuxième principes de la thermodynamique pour un système ouvert en régime stationnaire, dans le seul cas d’un écoulement unidimensionnel au niveau de la section d’entrée et de la section de sortie.}},
+  capacites = {
+    \cpgeitem{Établir les relations $\Delta h + \Delta e = w_u + q$ et $\Delta s = s_e + s_c$ et les utiliser pour étudier des machines thermiques réelles à l’aide de diagrammes thermodynamiques (T,s) et (P,h).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/3/2}{
+  parent = {PC/3},
+  numero = {3.2},
+  niveau = {2},
+  titre = {Diffusion de particules},
+  chapeau = {
+    \cpgeitem{Dans la partie \cpgecettepartie, l’accent est mis sur le notion de bilan dans le cas où le phénomène de convection est négligé. Cette partie se termine par un modèle microscopique.}},
+}
+
+\cpgeligne{PC/3/2/1}{
+  parent = {PC/3/2},
+  numero = {3.2.1},
+  contenu = {
+    \cpgeitem{Vecteur densité de flux de particules jN.}},
+  capacites = {
+    \cpgeitem{Exprimer le flux de particules traversant une surface orientée en utilisant le vecteur jN.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/3/2/2}{
+  parent = {PC/3/2},
+  numero = {3.2.2},
+  contenu = {
+    \cpgeitem{Bilans de particules.}},
+  capacites = {
+    \cpgeitem{Utiliser la notion de flux pour traduire un bilan global de particules.}
+    \cpgeitem{Établir l’équation locale traduisant un bilan de particules dans le cas d’un problème ne dépendant qu’une d’une seule coordonnée d’espace en coordonnées cartésiennes, cylindriques et sphériques, éventuellement en présence de sources internes.}
+    \cpgeitem{Utiliser l’opérateur divergence et son expression fournie pour exprimer le bilan local de particules dans le cas d’une géométrie quelconque.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/3/2/3}{
+  parent = {PC/3/2},
+  numero = {3.2.3},
+  contenu = {
+    \cpgeitem{Loi de Fick.}},
+  capacites = {
+    \cpgeitem{Utiliser la loi de Fick.}
+    \cpgeitem{Citer l’ordre de grandeur d’un coefficient de diffusion dans un gaz dans les conditions usuelles.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/3/2/4}{
+  parent = {PC/3/2},
+  numero = {3.2.4},
+  contenu = {
+    \cpgeitem{Régimes stationnaires.}},
+  capacites = {
+    \cpgeitem{Utiliser, en régime stationnaire, la conservation du flux sous forme locale ou globale en l’absence de sources internes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/3/2/5}{
+  parent = {PC/3/2},
+  numero = {3.2.5},
+  contenu = {
+    \cpgeitem{Équation de diffusion en l’absence de sources internes.}},
+  capacites = {
+    \cpgeitem{Établir l’équation de la diffusion en l’absence de sources internes.}
+    \cpgeitem{Utiliser l’opérateur laplacien et son expression fournie pour écrire l’équation de diffusion dans le cas d’une géométrie quelconque.}
+    \cpgeitem{Analyser une équation de diffusion en ordres de grandeur pour relier des échelles caractéristiques spatiale et temporelle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/3/2/6}{
+  parent = {PC/3/2},
+  numero = {3.2.6},
+  contenu = {
+    \cpgeitem{Approche microscopique du phénomène de diffusion.}},
+  capacites = {
+    \cpgeitem{Mettre en place un modèle probabiliste discret à une dimension de la diffusion (marche au hasard) et évaluer le coefficient de diffusion associé en fonction du libre parcours moyen et de la vitesse quadratique moyenne.}},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{à l’aide d’un langage de programmation, simuler la marche au hasard d’un grand nombre de particules à partir d’un centre et caractériser l’étalement spatial de cet ensemble de particules au cours du temps.}},
+}
+
+\cpgerubrique{PC/3/3}{
+  parent = {PC/3},
+  numero = {3.3},
+  niveau = {2},
+  titre = {Diffusion thermique},
+  chapeau = {
+    \cpgeitem{Dans la partie \cpgecettepartie, la mise en équations de la diffusion thermique est limitée au cas des solides ; on peut étendre les résultats ainsi établis aux milieux fluides en l’absence de convection en affirmant la généralisation des équations obtenues dans les solides. La loi phénoménologique de Newton à l’interface entre un solide et un fluide peut être utilisée dès lors qu’elle est fournie.}},
+}
+
+\cpgeligne{PC/3/3/1}{
+  parent = {PC/3/3},
+  numero = {3.3.1},
+  contenu = {
+    \cpgeitem{Vecteur densité de flux thermique jQ}},
+  capacites = {
+    \cpgeitem{Exprimer le flux thermique à travers une surface orientée en utilisant le vecteur jQ.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/3/3/2}{
+  parent = {PC/3/3},
+  numero = {3.3.2},
+  contenu = {
+    \cpgeitem{Premier principe de la thermodynamique.}},
+  capacites = {
+    \cpgeitem{Établir, pour un milieu solide, l’équation locale traduisant le premier principe dans le cas d’un problème ne dépendant qu’une d’une seule coordonnée d’espace en coordonnées cartésiennes, cylindriques et sphériques, éventuellement en présence de sources internes.}
+    \cpgeitem{Utiliser l’opérateur divergence et son expression fournie pour exprimer le bilan local dans le cas d’une géométrie quelconque, éventuellement en présence de sources internes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/3/3/3}{
+  parent = {PC/3/3},
+  numero = {3.3.3},
+  contenu = {
+    \cpgeitem{Loi de Fourier.}},
+  capacites = {
+    \cpgeitem{Utiliser la loi de Fourier.}
+    \cpgeitem{Citer quelques ordres de grandeur de conductivité thermique dans les conditions usuelles : air, eau, béton, métaux.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/3/3/4}{
+  parent = {PC/3/3},
+  numero = {3.3.4},
+  contenu = {
+    \cpgeitem{Régimes stationnaires. Résistance thermique.}},
+  capacites = {
+    \cpgeitem{Utiliser la conservation du flux thermique sous forme locale ou globale en l’absence de source interne.}
+    \cpgeitem{Définir la notion de résistance thermique par analogie avec l’électrocinétique.}
+    \cpgeitem{Établir l’expression d’une résistance thermique dans le cas d’un modèle unidimensionnel.}
+    \cpgeitem{Utiliser les lois d’associations de résistances thermiques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/3/3/5}{
+  parent = {PC/3/3},
+  numero = {3.3.5},
+  contenu = {
+    \cpgeitem{Équation de la diffusion thermique.}},
+  capacites = {
+    \cpgeitem{Établir une équation de diffusion thermique.}
+    \cpgeitem{Utiliser l’opérateur laplacien et son expression fournie pour écrire l’équation de diffusion dans le cas d’une géométrie quelconque.}
+    \cpgeitem{Analyser une équation de diffusion en ordres de grandeur pour relier des échelles caractéristiques spatiale et temporelle.}
+    \cpgeitem{Utiliser la loi de Newton fournie comme condition aux limites à une interface solide-fluide.}},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre un dispositif expérimental utilisant une caméra thermique ou un capteur dans le domaine des infrarouges.}},
+  numeriques = {
+    \cpgeitem{à l’aide d’un langage de programmation, résoudre l’équation de la diffusion thermique à une dimension par une méthode des différences finies dérivée de la méthode d’Euler explicite de résolution des équations différentielles ordinaires.}},
+}
+
+\cpgerubrique{PC/3/4}{
+  parent = {PC/3},
+  numero = {3.4},
+  niveau = {2},
+  titre = {Rayonnement thermique},
+  chapeau = {
+    \cpgeitem{Dans la partie \cpgecettepartie, une étude qualitative du rayonnement du corps noir est proposée sans qu’aucune formule ne soit exigible. Celle-ci permet également d’aborder de manière quantitative l’effet de serre.}},
+}
+
+\cpgeligne{PC/3/4/1}{
+  parent = {PC/3/4},
+  numero = {3.4.1},
+  contenu = {
+    \cpgeitem{Approche descriptive du rayonnement du corps noir.}},
+  capacites = {
+    \cpgeitem{Exploiter les expressions fournies des lois de Wien et de Stefan.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/3/4/2}{
+  parent = {PC/3/4},
+  numero = {3.4.2},
+  contenu = {
+    \cpgeitem{Loi de Wien, loi de Stefan.}
+    \cpgeitem{Effet de serre. Albédo.}},
+  capacites = {
+    \cpgeitem{Analyser quantitativement l’effet de serre en s’appuyant sur un bilan énergétique dans le cadre d’un modèle à une couche.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/4}{
+  parent = {PC},
+  numero = {4},
+  niveau = {1},
+  titre = {Mécanique},
+  chapeau = {
+    \cpgeitem{Le programme de mécanique de PC s’inscrit dans le prolongement du thème « Mouvements et interactions » et de la partie « Statique des fluides dans un référentiel galiléen » du thème « Énergie : conversion et transfert » du programme de PCSI. Il est constitué de trois parties relevant successivement de la mécanique du point ou des fluides.}},
+}
+
+\cpgerubrique{PC/4/1}{
+  parent = {PC/4},
+  numero = {4.1},
+  niveau = {2},
+  titre = {Changements de référentiel},
+  chapeau = {
+    \cpgeitem{Dans la première partie \cpgecettepartie, la cinématique des changements de référentiels n’est pas étudiée pour elle-même mais en vue d’applications en dynamique du point ou des fluides.}},
+}
+
+\cpgeligne{PC/4/1/1}{
+  parent = {PC/4/1},
+  numero = {4.1.1},
+  contenu = {
+    \cpgeitem{Référentiel en translation rectiligne uniforme par rapport à un autre : transformation de Galilée, composition des vitesses.}},
+  capacites = {
+    \cpgeitem{Relier la transformation de Galilée et la formule de composition des vitesses à la relation de Chasles et au caractère supposé absolu du temps.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/1/2}{
+  parent = {PC/4/1},
+  numero = {4.1.2},
+  contenu = {
+    \cpgeitem{Composition des vitesses et des accélérations dans le cas d’un référentiel en translation par rapport à un autre : point coïncident, vitesse d’entraînement, accélération d’entraînement.}},
+  capacites = {
+    \cpgeitem{Exprimer la vitesse d’entraînement et l’accélération d’entraînement.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/1/3}{
+  parent = {PC/4/1},
+  numero = {4.1.3},
+  contenu = {
+    \cpgeitem{Composition des vitesses et des accélérations dans le cas d’un référentiel en rotation uniforme autour d’un axe fixe : point coïncident, vitesse d’entraînement, accélération d’entraînement, accélération de Coriolis.}},
+  capacites = {
+    \cpgeitem{Exprimer la vitesse d’entraînement et l’accélération d’entraînement.}
+    \cpgeitem{Citer et utiliser l’expression de l’accélération de Coriolis.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/4/2}{
+  parent = {PC/4},
+  numero = {4.2},
+  niveau = {2},
+  titre = {Dynamique dans un référentiel non galiléen},
+  chapeau = {
+    \cpgeitem{Dans la partie \cpgecettepartie, l’étude du champ de pesanteur est conduite en supposant le référentiel géocentrique galiléen. De nombreuses applications permettent d’illustrer cette partie : le pendule de Foucault, la déviation vers l’est, les vents géostrophiques, les courants marins ; l’étude statique des marées constitue également une ouverture pertinente.}},
+}
+
+\cpgeligne{PC/4/2/1}{
+  parent = {PC/4/2},
+  numero = {4.2.1},
+  contenu = {
+    \cpgeitem{Cas d’un référentiel en translation par rapport à un référentiel galiléen : force d’inertie d’entrainement.}},
+  capacites = {
+    \cpgeitem{Déterminer la force d’inertie d’entraînement.}
+    \cpgeitem{Appliquer la deuxième loi de Newton, le théorème du moment cinétique et le théorème de l’énergie cinétique dans un référentiel non galiléen.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/2/2}{
+  parent = {PC/4/2},
+  numero = {4.2.2},
+  contenu = {
+    \cpgeitem{Cas d’un référentiel en rotation uniforme autour d’un axe fixe dans un référentiel galiléen : force d’inertie d’entraînement, force d’inertie de Coriolis.}},
+  capacites = {
+    \cpgeitem{Exprimer la force d’inertie d’entraînement et la force d’inertie de Coriolis.}
+    \cpgeitem{Associer la force d’inertie d’entraînement axifuge à l’expression familière « force centrifuge ».}
+    \cpgeitem{Appliquer la deuxième loi de Newton, le théorème du moment cinétique et le théorème de l’énergie cinétique dans un référentiel non galiléen.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/2/3}{
+  parent = {PC/4/2},
+  numero = {4.2.3},
+  contenu = {
+    \cpgeitem{Champ de pesanteur terrestre : définition, évolution qualitative avec la latitude, ordres de grandeur.}},
+  capacites = {
+    \cpgeitem{Distinguer le champ de pesanteur et le champ gravitationnel.}},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{à l’aide d’un langage de programmation, illustrer un effet lié au caractère non galiléen du référentiel terrestre}},
+}
+
+\cpgeligne{PC/4/2/4}{
+  parent = {PC/4/2},
+  numero = {4.2.4},
+  contenu = {
+    \cpgeitem{Équilibre d’un fluide dans un référentiel non galiléen en translation ou en rotation uniforme autour d’un axe fixe dans un référentiel galiléen.}},
+  capacites = {
+    \cpgeitem{Établir et utiliser l’expression de la force d’inertie d’entraînement volumique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/4/3}{
+  parent = {PC/4},
+  numero = {4.3},
+  niveau = {2},
+  titre = {Mécanique des fluides},
+  chapeau = {
+    \cpgeitem{La partie intitulée \cpgecettepartie est conçue comme une initiation de telle sorte que de nombreux concepts sont introduits de manière élémentaire. Toute extension du programme vers les cours spécialisés doit être évitée : par exemple l’approche lagrangienne, la fonction de courant, le potentiel complexe, l’étude locale du champ des vitesses, la relation de Bernoulli pour des écoulements compressibles ou instationnaires, le théorème de Reynolds et le théorème d’Euler sont hors programme. L’apprentissage de la mécanique des fluides contribue à la maîtrise progressive des opérateurs d’analyse vectorielle qui sont utilisés par ailleurs en thermodynamique et en électromagnétisme. Quel que soit l’ordre dans lequel le professeur choisit de présenter ces parties, il convient d’introduire ces opérateurs en insistant sur le contenu physique sous-jacent. En outre, la recherche de lignes de courants est traitée exclusivement à l’aide d’outils numériques.}},
+}
+
+\cpgerubrique{PC/4/3/1}{
+  parent = {PC/4/3},
+  numero = {4.3.1},
+  niveau = {3},
+  titre = {Description d’un fluide en mouvement},
+  chapeau = {},
+}
+
+\cpgeligne{PC/4/3/1/1}{
+  parent = {PC/4/3/1},
+  numero = {4.3.1.1},
+  contenu = {
+    \cpgeitem{Champ eulérien des vitesses. Lignes de champ. Tubes de champ.}},
+  capacites = {
+    \cpgeitem{Définir et utiliser l’approche eulérienne.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/1/2}{
+  parent = {PC/4/3/1},
+  numero = {4.3.1.2},
+  contenu = {
+    \cpgeitem{Écoulement stationnaire.}},
+  capacites = {
+    \cpgeitem{Discuter du caractère stationnaire d’un écoulement en fonction du référentiel d’étude.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/1/3}{
+  parent = {PC/4/3/1},
+  numero = {4.3.1.3},
+  contenu = {
+    \cpgeitem{Dérivée particulaire de la masse volumique.}
+    \cpgeitem{Écoulement incompressible.}},
+  capacites = {
+    \cpgeitem{Établir l’expression de la dérivée particulaire de la masse volumique.}
+    \cpgeitem{Utiliser l’expression de la dérivée particulaire de la masse volumique pour caractériser un écoulement incompressible.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/1/4}{
+  parent = {PC/4/3/1},
+  numero = {4.3.1.4},
+  contenu = {
+    \cpgeitem{Débit massique. Débit volumique.}},
+  capacites = {
+    \cpgeitem{Définir le débit massique et l’écrire comme le flux du vecteur densité de courant de masse à travers une surface orientée.}
+    \cpgeitem{Définir le débit volumique et l’écrire comme le flux du champ de vitesse à travers une surface orientée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/1/5}{
+  parent = {PC/4/3/1},
+  numero = {4.3.1.5},
+  contenu = {
+    \cpgeitem{Équation locale de conservation de la masse.}},
+  capacites = {
+    \cpgeitem{Établir l’équation locale de conservation de la masse dans le seul cas d’un problème unidimensionnel en géométrie cartésienne.}
+    \cpgeitem{Citer et utiliser une généralisation admise en géométrie quelconque à l’aide de l’opérateur divergence et son expression fournie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/1/6}{
+  parent = {PC/4/3/1},
+  numero = {4.3.1.6},
+  contenu = {
+    \cpgeitem{Caractérisation d’un écoulement incompressible par la divergence du champ des vitesses.}},
+  capacites = {
+    \cpgeitem{Traduire localement, en fonction du champ de vitesses, le caractère incompressible d’un écoulement.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/1/7}{
+  parent = {PC/4/3/1},
+  numero = {4.3.1.7},
+  contenu = {
+    \cpgeitem{Dérivée particulaire du champ de vitesse : terme local ; terme convectif.}},
+  capacites = {
+    \cpgeitem{Associer la dérivée particulaire de la vitesse à l’accélération de la particule de fluide qui passe en un point.}
+    \cpgeitem{Utiliser l’expression de l’accélération, le terme convectif étant écrit sous la forme}
+    \cpgeitem{Utiliser l'expression fournie de l'accélération convective en fonction de $\cpgegrad(v^2/2)$ et $\cpgerot\cpgevec{v} \wedge \cpgevec{v}$.}},
+  experimentales = {
+    \cpgeitem{$(\cpgevec{v} \cdot \cpgegrad)\cpgevec{v}$.}},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/1/8}{
+  parent = {PC/4/3/1},
+  numero = {4.3.1.8},
+  contenu = {
+    \cpgeitem{Écoulement irrotationnel défini par la nullité du rotationnel du champ des vitesses en tout point ; potentiel des vitesses.}},
+  capacites = {
+    \cpgeitem{Traduire localement, en fonction du champ de vitesses, le caractère irrotationnel d’un écoulement et en déduire l’existence d’un potentiel des vitesses.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/4/3/2}{
+  parent = {PC/4/3},
+  numero = {4.3.2},
+  niveau = {3},
+  titre = {Actions de contact dans un fluide en mouvement},
+  chapeau = {},
+}
+
+\cpgeligne{PC/4/3/2/1}{
+  parent = {PC/4/3/2},
+  numero = {4.3.2.1},
+  contenu = {
+    \cpgeitem{Forces de pression. Équivalent volumique.}},
+  capacites = {
+    \cpgeitem{Exprimer la force de pression exercée par un fluide sur une surface élémentaire.}
+    \cpgeitem{Exprimer l’équivalent volumique des forces de pression à l’aide d’un gradient.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/2/2}{
+  parent = {PC/4/3/2},
+  numero = {4.3.2.2},
+  contenu = {
+    \cpgeitem{Contraintes tangentielles dans un écoulement $\cpgevec{v} = v_x(y)\,\cpgevec{u_x}$ au sein d’un fluide newtonien ; viscosité.}},
+  capacites = {
+    \cpgeitem{Utiliser l’expression fournie $\cpgedd\cpgevec{F} = \eta \dfrac{\partial v_x}{\partial y} \cpgedd S\,\cpgevec{u_x}$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/2/3}{
+  parent = {PC/4/3/2},
+  numero = {4.3.2.3},
+  contenu = {
+    \cpgeitem{Équivalent volumique des forces de viscosité dans un écoulement incompressible.}},
+  capacites = {
+    \cpgeitem{Établir l’expression de l’équivalent volumique des forces de viscosité dans le cas d’un écoulement de cisaillement à une dimension et utiliser sa généralisation admise pour un écoulement incompressible quelconque.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/2/4}{
+  parent = {PC/4/3/2},
+  numero = {4.3.2.4},
+  contenu = {
+    \cpgeitem{Traînée d’une sphère solide en mouvement rectiligne uniforme dans un fluide newtonien : nombre de Reynolds ; coefficient de traînée Cx ; graphe de Cx en fonction du nombre de Reynolds.}},
+  capacites = {
+    \cpgeitem{Évaluer un nombre de Reynolds pour choisir un modèle de traînée linéaire ou un modèle de traînée quadratique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/4/3/3}{
+  parent = {PC/4/3},
+  numero = {4.3.3},
+  niveau = {3},
+  titre = {Équations dynamiques locales},
+  chapeau = {},
+}
+
+\cpgeligne{PC/4/3/3/1}{
+  parent = {PC/4/3/3},
+  numero = {4.3.3.1},
+  contenu = {
+    \cpgeitem{Équation de Navier-Stokes dans un fluide newtonien en écoulement incompressible.}
+    \cpgeitem{Terme convectif. Terme diffusif. Nombre de Reynolds dans le cas d’une unique échelle spatiale.}},
+  capacites = {
+    \cpgeitem{Utiliser l’équation de Navier-Stokes dans un fluide newtonien en écoulement incompressible.}
+    \cpgeitem{Évaluer en ordre de grandeur le rapport du terme convectif sur le terme diffusif et le relier au nombre de Reynolds dans le cas d’une unique échelle spatiale.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/3/2}{
+  parent = {PC/4/3/3},
+  numero = {4.3.3.2},
+  contenu = {
+    \cpgeitem{Notion d’écoulement parfait et de couche limite.}},
+  capacites = {
+    \cpgeitem{Exploiter l’absence de forces de viscosité et le caractère isentropique de l’évolution des particules de fluide.}
+    \cpgeitem{Utiliser la condition aux limites sur la composante normale du champ des vitesses.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/3/3}{
+  parent = {PC/4/3/3},
+  numero = {4.3.3.3},
+  contenu = {
+    \cpgeitem{Relation de Bernoulli pour un écoulement parfait, stationnaire, incompressible et homogène dans le champ de pesanteur uniforme dans un référentiel galiléen.}},
+  capacites = {
+    \cpgeitem{Établir et utiliser la relation de Bernoulli pour un écoulement parfait, stationnaire, incompressible et homogène dans le champ de pesanteur uniforme dans un référentiel galiléen.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/4/3/4}{
+  parent = {PC/4/3},
+  numero = {4.3.4},
+  niveau = {3},
+  titre = {Bilans macroscopiques},
+  chapeau = {},
+}
+
+\cpgeligne{PC/4/3/4/1}{
+  parent = {PC/4/3/4},
+  numero = {4.3.4.1},
+  contenu = {
+    \cpgeitem{Bilans de masse.}},
+  capacites = {
+    \cpgeitem{Établir un bilan de masse en raisonnant sur un système ouvert et fixe ou sur un système fermé et mobile.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/4/3/4/2}{
+  parent = {PC/4/3/4},
+  numero = {4.3.4.2},
+  contenu = {
+    \cpgeitem{Bilans de quantité de mouvement ou d’énergie cinétique pour un écoulement stationnaire unidimensionnel à une entrée et une sortie.}},
+  capacites = {
+    \cpgeitem{Associer un système fermé à un système ouvert pour faire un bilan.}
+    \cpgeitem{Utiliser le théorème de la quantité de mouvement et le théorème de l’énergie cinétique pour réaliser un bilan.}
+    \cpgeitem{Exploiter la nullité (admise) de la puissance des forces intérieures dans un écoulement parfait et incompressible.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5}{
+  parent = {PC},
+  numero = {5},
+  niveau = {1},
+  titre = {Électromagnétisme},
+  chapeau = {
+    \cpgeitem{L’électromagnétisme a été abordé en classe de PCSI dans un domaine restreint (magnétostatique, induction électromagnétique et forces de Laplace) et sans le support des équations locales. Le programme de la classe de PC couvre en revanche tout le spectre des fréquences, des régimes stationnaires jusqu’aux phénomènes de propagation en passant par les régimes quasi-stationnaires et prend appui sur les équations locales (équation de conservation de la charge et équations de Maxwell). Le programme est découpé en parties indépendantes dont l’ordre de présentation relève de la liberté pédagogique du professeur. De nombreuses approches sont possibles, y compris en fractionnant les parties. Les phénomènes de propagation sont étudiés essentiellement dans le cadre du thème « Physique des ondes » du programme : l’articulation entre les parties « Électromagnétisme » et « Physique des ondes » relève elle aussi de la liberté pédagogique. Toute étude de distributions de courants superficiels est exclue. La modélisation superficielle d’une distribution de charges est strictement limitée à la modélisation du condensateur plan par deux plans infinis uniformément chargés : on fait remarquer la discontinuité du champ à la traversée d’une nappe de charges superficielles mais les relations de passage ne figurent pas au programme. S’agissant des potentiels, on se limite à introduire le potentiel scalaire en électrostatique et à faire remarquer que le champ électrique ne dérive pas d’un potentiel scalaire en régime variable. L’apprentissage de l’électromagnétisme contribue à la maîtrise progressive des opérateurs d’analyse vectorielle qui sont utilisés par ailleurs en thermodynamique et en mécanique des fluides. Quel que soit l’ordre dans lequel le professeur choisit de présenter ces parties, il convient d’introduire ces opérateurs en insistant sur le contenu physique sous-jacent. L’étude de l’électromagnétisme n’est pas centrée sur les calculs de champs : ceux-ci se limitent donc à des calculs motivés par des applications pratiques d’intérêt évident. La recherche des lignes de champ d’un champ donné est traitée exclusivement à l’aide d’outils numériques.}},
+}
+
+\cpgerubrique{PC/5/1}{
+  parent = {PC/5},
+  numero = {5.1},
+  niveau = {2},
+  titre = {Sources du champ électromagnétique},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie étudie les sources du champ électromagnétique dans l’approximation des milieux continus. Par ailleurs, il convient de souligner et d’exploiter les analogies formelles avec les autres théories de champs : diffusion de particules, diffusion thermique, gravitation, mécanique des fluides.}},
+}
+
+\cpgerubrique{PC/5/1/1}{
+  parent = {PC/5/1},
+  numero = {5.1.1},
+  niveau = {3},
+  titre = {Description microscopique et mésoscopique des sources},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/1/1/1}{
+  parent = {PC/5/1/1},
+  numero = {5.1.1.1},
+  contenu = {
+    \cpgeitem{Densité volumique de charges. Charge traversant un élément de surface fixe et vecteur densité de courant. Intensité du courant.}},
+  capacites = {
+    \cpgeitem{Exprimer la densité volumique de charge et le vecteur densité de courant en fonction de la vitesse moyenne des porteurs de charge, de leur charge et de leur densité volumique.}
+    \cpgeitem{Relier l’intensité du courant et le flux du vecteur densité de courant.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/1/2}{
+  parent = {PC/5/1},
+  numero = {5.1.2},
+  niveau = {3},
+  titre = {Conservation de la charge},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/1/2/1}{
+  parent = {PC/5/1/2},
+  numero = {5.1.2.1},
+  contenu = {
+    \cpgeitem{Équation locale de conservation de la charge.}},
+  capacites = {
+    \cpgeitem{Établir l’équation traduisant la conservation de la charge dans le seul cas d’un problème unidimensionnel en géométrie cartésienne.}
+    \cpgeitem{Citer et utiliser une généralisation admise en géométrie quelconque utilisant l’opérateur divergence, son expression étant fournie.}
+    \cpgeitem{Exploiter le caractère conservatif du vecteur densité de courant en régime stationnaire ; relier cette propriété à la loi des nœuds de l’électrocinétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/1/3}{
+  parent = {PC/5/1},
+  numero = {5.1.3},
+  niveau = {3},
+  titre = {Conduction électrique dans un conducteur ohmique},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/1/3/1}{
+  parent = {PC/5/1/3},
+  numero = {5.1.3.1},
+  contenu = {
+    \cpgeitem{Loi d’Ohm locale. Conductivité électrique.}},
+  capacites = {
+    \cpgeitem{Établir l’expression de la conductivité électrique à l’aide d’un modèle microscopique, l’action de l’agitation thermique et des défauts du réseau étant décrite par une force de frottement fluide linéaire.}
+    \cpgeitem{Discuter de l’influence de la fréquence sur la conductivité électrique.}
+    \cpgeitem{Établir l’expression de la résistance d’une portion de conducteur filiforme.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/1/3/2}{
+  parent = {PC/5/1/3},
+  numero = {5.1.3.2},
+  contenu = {
+    \cpgeitem{Effet Hall.}},
+  capacites = {
+    \cpgeitem{Interpréter qualitativement l’effet Hall dans une géométrie parallélépipédique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/1/3/3}{
+  parent = {PC/5/1/3},
+  numero = {5.1.3.3},
+  contenu = {
+    \cpgeitem{Effet thermique du courant électrique : loi de Joule locale.}},
+  capacites = {
+    \cpgeitem{Exprimer la puissance volumique dissipée par effet Joule dans un conducteur ohmique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/2}{
+  parent = {PC/5},
+  numero = {5.2},
+  niveau = {2},
+  titre = {Électrostatique},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie étudie les lois de l’électrostatique et quelques applications. Les calculs de champs doivent être motivés par l’utilisation de ces champs pour étudier des situations d’intérêt pratique évident. Ces calculs ne s’appuient sur la loi de Coulomb que pour des distributions de charges discrètes. Dans le cas des distributions continues, on se limite aux situations de haute symétrie permettant de calculer le champ par le théorème de Gauss et aux superpositions de champs ainsi obtenus. Cette rubrique permet aussi d’introduire et d’exploiter des analogies avec le champ gravitationnel qui a été étudié en PCSI dans le seul cas d’astres ponctuels.}},
+}
+
+\cpgerubrique{PC/5/2/1}{
+  parent = {PC/5/2},
+  numero = {5.2.1},
+  niveau = {3},
+  titre = {Champ électrostatique},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/2/1/1}{
+  parent = {PC/5/2/1},
+  numero = {5.2.1.1},
+  contenu = {
+    \cpgeitem{Loi de Coulomb.}
+    \cpgeitem{Champ et potentiel électrostatiques créés par une charge ponctuelle. Principe de superposition.}},
+  capacites = {
+    \cpgeitem{Exprimer le champ électrostatique et le potentiel créés par une distribution discrète de charges.}
+    \cpgeitem{Citer quelques ordres de grandeur de champs électrostatiques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/1/2}{
+  parent = {PC/5/2/1},
+  numero = {5.2.1.2},
+  contenu = {
+    \cpgeitem{\cpgenotion{Propriétés du champ électrostatique}}
+    \cpgeitem{Symétries.}},
+  capacites = {
+    \cpgeitem{Exploiter les propriétés de symétrie des sources (translation, rotation, symétrie plane, conjugaison de charges) pour prévoir des propriétés du champ créé.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/1/3}{
+  parent = {PC/5/2/1},
+  numero = {5.2.1.3},
+  contenu = {
+    \cpgeitem{Circulation du champ électrostatique.}
+    \cpgeitem{Potentiel électrostatique. Équations locales.}},
+  capacites = {
+    \cpgeitem{Relier l’existence d’un potentiel électrostatique à la nullité du rotationnel du vecteur champ électrostatique.}
+    \cpgeitem{Justifier l’orthogonalité des lignes de champ avec les surfaces équipotentielles et leur orientation dans le sens des potentiels décroissants.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/1/4}{
+  parent = {PC/5/2/1},
+  numero = {5.2.1.4},
+  contenu = {
+    \cpgeitem{Théorème de Gauss et équation locale de Maxwell-Gauss.}},
+  capacites = {
+    \cpgeitem{Choisir une surface adaptée et utiliser le théorème de Gauss.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/1/5}{
+  parent = {PC/5/2/1},
+  numero = {5.2.1.5},
+  contenu = {
+    \cpgeitem{Lignes de champ électrostatique.}
+    \cpgeitem{Équipotentielles.}},
+  capacites = {
+    \cpgeitem{Justifier qu’une carte de lignes de champ puisse ou non être celle d’un champ électrostatique.}
+    \cpgeitem{Repérer, sur une carte de champ électrostatique, d’éventuelles sources du champ et leur signe.}
+    \cpgeitem{Associer l’évolution de la norme du champ électrostatique à l’évasement des tubes de champ loin des sources.}
+    \cpgeitem{Relier équipotentielles et lignes de champ électrostatique.}
+    \cpgeitem{Évaluer la norme du champ électrostatique à partir d’un réseau de lignes équipotentielles.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/2/2}{
+  parent = {PC/5/2},
+  numero = {5.2.2},
+  niveau = {3},
+  titre = {Exemples de champs électrostatiques},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/2/2/1}{
+  parent = {PC/5/2/2},
+  numero = {5.2.2.1},
+  contenu = {
+    \cpgeitem{Dipôle électrostatique. Moment dipolaire.}},
+  capacites = {
+    \cpgeitem{Citer les conditions de l’approximation dipolaire.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/2/2}{
+  parent = {PC/5/2/2},
+  numero = {5.2.2.2},
+  contenu = {
+    \cpgeitem{Potentiel et champ créés par un dipôle.}},
+  capacites = {
+    \cpgeitem{Établir l’expression du potentiel électrostatique.}
+    \cpgeitem{Comparer la décroissance du champ et du potentiel avec la distance dans le cas d’une charge ponctuelle et dans le cas d’un dipôle.}
+    \cpgeitem{Tracer l’allure des lignes de champ électrostatique engendrées par un dipôle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/2/3}{
+  parent = {PC/5/2/2},
+  numero = {5.2.2.3},
+  contenu = {
+    \cpgeitem{Actions subies par un dipôle placé dans un champ électrostatique d’origine extérieure : résultante et moment.}},
+  capacites = {
+    \cpgeitem{Utiliser les expressions fournies de la résultante et du moment des actions subies par un dipôle placé dans un champ électrostatique d’origine extérieure.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/2/4}{
+  parent = {PC/5/2/2},
+  numero = {5.2.2.4},
+  contenu = {
+    \cpgeitem{Énergie potentielle d’un dipôle rigide dans un champ électrostatique d’origine extérieure.}},
+  capacites = {
+    \cpgeitem{Utiliser l’expression fournie de l’énergie potentielle d’un dipôle rigide dans un champ électrostatique d’origine extérieure.}
+    \cpgeitem{Prévoir qualitativement l’évolution d’un dipôle rigide dans un champ électrostatique d’origine extérieure.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/2/5}{
+  parent = {PC/5/2/2},
+  numero = {5.2.2.5},
+  contenu = {
+    \cpgeitem{Interactions ion-molécule et molécule-molécule.}},
+  capacites = {
+    \cpgeitem{Expliquer qualitativement la solvatation des ions dans un solvant polaire.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/2/6}{
+  parent = {PC/5/2/2},
+  numero = {5.2.2.6},
+  contenu = {
+    \cpgeitem{Dipôle induit. Polarisabilité.}},
+  capacites = {
+    \cpgeitem{Associer la polarisabilité et le volume de l’atome en ordre de grandeur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/2/7}{
+  parent = {PC/5/2/2},
+  numero = {5.2.2.7},
+  contenu = {
+    \cpgeitem{Plan infini uniformément chargé en surface.}},
+  capacites = {
+    \cpgeitem{Établir l’expression du champ créé par un plan infini uniformément chargé en surface.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/2/8}{
+  parent = {PC/5/2/2},
+  numero = {5.2.2.8},
+  contenu = {
+    \cpgeitem{Condensateur plan. Capacité.}
+    \cpgeitem{Densité volumique d’énergie électrostatique.}},
+  capacites = {
+    \cpgeitem{Établir l’expression du champ créé par un condensateur plan.}
+    \cpgeitem{Déterminer l’expression de la capacité d’un condensateur plan.}
+    \cpgeitem{Citer l’ordre de grandeur du champ disruptif dans l’air.}
+    \cpgeitem{Déterminer l’expression de la densité volumique d’énergie électrostatique dans le cas du condensateur plan à partir de celle de l’énergie du condensateur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/2/2/9}{
+  parent = {PC/5/2/2},
+  numero = {5.2.2.9},
+  contenu = {
+    \cpgeitem{Énergie de constitution d’un noyau atomique modélisé par une boule uniformément chargée.}},
+  capacites = {
+    \cpgeitem{Exprimer l’énergie de constitution d’un noyau en construisant le noyau par adjonction progressive de charges apportées de l’infini.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/2/3}{
+  parent = {PC/5/2},
+  numero = {5.2.3},
+  niveau = {3},
+  titre = {Analogies avec le champ gravitationnel},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/2/3/1}{
+  parent = {PC/5/2/3},
+  numero = {5.2.3.1},
+  contenu = {
+    \cpgeitem{Analogies entre champ électrostatique et champ gravitationnel.}},
+  capacites = {
+    \cpgeitem{Utiliser les analogies entre les forces électrostatique et gravitationnelle pour déterminer l’expression de champs gravitationnels.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/3}{
+  parent = {PC/5},
+  numero = {5.3},
+  niveau = {2},
+  titre = {Magnétostatique},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie aborde l’étude du champ magnétique en régime stationnaire en prenant appui sur les équations locales : la loi de Biot et Savart ne figure pas au programme. L’objectif réside davantage dans l’étude des propriétés des champs magnétiques que dans leur calcul : les calculs de champ magnétique doivent donc se limiter à des situations d’intérêt pratique évident. Enfin, la notion de potentiel-vecteur est hors programme.}},
+}
+
+\cpgerubrique{PC/5/3/1}{
+  parent = {PC/5/3},
+  numero = {5.3.1},
+  niveau = {3},
+  titre = {Champ magnétostatique},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/3/1/1}{
+  parent = {PC/5/3/1},
+  numero = {5.3.1.1},
+  contenu = {
+    \cpgeitem{Équations locales de la magnétostatique et formes intégrales : flux conservatif et théorème d’Ampère.}},
+  capacites = {
+    \cpgeitem{Choisir un contour fermé et une surface et les orienter pour appliquer le théorème d’Ampère.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/3/1/2}{
+  parent = {PC/5/3/1},
+  numero = {5.3.1.2},
+  contenu = {
+    \cpgeitem{Linéarité des équations.}},
+  capacites = {
+    \cpgeitem{Utiliser une méthode de superposition.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/3/1/3}{
+  parent = {PC/5/3/1},
+  numero = {5.3.1.3},
+  contenu = {
+    \cpgeitem{Propriétés de symétrie.}},
+  capacites = {
+    \cpgeitem{Exploiter les propriétés de symétrie des sources (rotation, symétrie plane) pour prévoir des propriétés du champ créé.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/3/1/4}{
+  parent = {PC/5/3/1},
+  numero = {5.3.1.4},
+  contenu = {
+    \cpgeitem{Propriétés topographiques.}},
+  capacites = {
+    \cpgeitem{Justifier qu’une carte de lignes de champ puisse ou non être celle d’un champ magnétostatique.}
+    \cpgeitem{Repérer, sur une carte de champ magnétostatique, d’éventuelles sources du champ et leur sens.}
+    \cpgeitem{Associer l’évolution de la norme d’un champ magnétique à l’évasement des tubes de champ.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/3/2}{
+  parent = {PC/5/3},
+  numero = {5.3.2},
+  niveau = {3},
+  titre = {Exemples de champs magnétostatiques},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/3/2/1}{
+  parent = {PC/5/3/2},
+  numero = {5.3.2.1},
+  contenu = {
+    \cpgeitem{Modèle du câble rectiligne infini.}},
+  capacites = {
+    \cpgeitem{Déterminer le champ créé par un câble rectiligne infini.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/3/2/2}{
+  parent = {PC/5/3/2},
+  numero = {5.3.2.2},
+  contenu = {
+    \cpgeitem{Solénoïde long sans effets de bords.}},
+  capacites = {
+    \cpgeitem{Établir et citer l’expression du champ à l’intérieur d’un solénoïde long, la nullité du champ extérieur étant admise.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/3/2/3}{
+  parent = {PC/5/3/2},
+  numero = {5.3.2.3},
+  contenu = {
+    \cpgeitem{Inductance propre.}
+    \cpgeitem{Densité volumique d’énergie magnétique.}},
+  capacites = {
+    \cpgeitem{Établir les expressions de l’inductance propre et de l’énergie d’une bobine modélisée par un solénoïde long.}
+    \cpgeitem{Associer l’énergie d’une bobine à une densité volumique d’énergie magnétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/3/3}{
+  parent = {PC/5/3},
+  numero = {5.3.3},
+  niveau = {3},
+  titre = {Dipôles magnétostatiques},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/3/3/1}{
+  parent = {PC/5/3/3},
+  numero = {5.3.3.1},
+  contenu = {
+    \cpgeitem{Moment magnétique d’une boucle de courant plane.}},
+  capacites = {
+    \cpgeitem{Relier le moment magnétique d’un atome d’hydrogène à son moment cinétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/3/3/2}{
+  parent = {PC/5/3/3},
+  numero = {5.3.3.2},
+  contenu = {
+    \cpgeitem{Rapport gyromagnétique de l’électron.}
+    \cpgeitem{Magnéton de Bohr.}},
+  capacites = {
+    \cpgeitem{Construire en ordre de grandeur le magnéton de Bohr par analyse dimensionnelle.}
+    \cpgeitem{Évaluer l’ordre de grandeur maximal du moment magnétique volumique d’un aimant permanent.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/3/3/3}{
+  parent = {PC/5/3/3},
+  numero = {5.3.3.3},
+  contenu = {
+    \cpgeitem{Actions subies par un dipôle magnétique placé dans un champ magnétostatique d’origine extérieure : résultante et moment.}},
+  capacites = {
+    \cpgeitem{Utiliser les expressions fournies de la résultante et du moment des actions subies par un dipôle magnétique placé dans un champ magnétostatique d’origine extérieure.}
+    \cpgeitem{Décrire l’expérience de Stern et Gerlach et expliquer ses enjeux.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/3/3/4}{
+  parent = {PC/5/3/3},
+  numero = {5.3.3.4},
+  contenu = {
+    \cpgeitem{Énergie potentielle d’un dipôle magnétique rigide placé dans un champ magnétostatique d’origine extérieure.}},
+  capacites = {
+    \cpgeitem{Utiliser l’expression fournie de l’énergie potentielle d’un dipôle rigide dans un champ magnétostatique d’origine extérieure.}
+    \cpgeitem{Prévoir qualitativement l’évolution d’un dipôle rigide dans un champ magnétostatique d’origine extérieure.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/4}{
+  parent = {PC/5},
+  numero = {5.4},
+  niveau = {2},
+  titre = {Équations de Maxwell},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie présente les équations de Maxwell en régime dépendant du temps. La notion de potentiel-vecteur est hors-programme mais on insiste sur le fait que le champ électrique ne dérive pas en général d’un potentiel scalaire. L’étude détaillée des ondes électromagnétiques qui prolonge cette partie est placée dans la partie « Physique des ondes ». On ne mentionne ici les phénomènes de propagation que pour les négliger dans le cadre des régimes lentement variables. Le cadre adopté est celui de l’approximation des régimes quasi-stationnaires (ARQS) magnétique, pour lequel les effets des distributions de courants dominent ceux des distributions de charges.}},
+}
+
+\cpgerubrique{PC/5/4/1}{
+  parent = {PC/5/4},
+  numero = {5.4.1},
+  niveau = {3},
+  titre = {Postulats de l’électromagnétisme},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/4/1/1}{
+  parent = {PC/5/4/1},
+  numero = {5.4.1.1},
+  contenu = {
+    \cpgeitem{Force de Lorentz. Équations locales de Maxwell. Formes intégrales.}},
+  capacites = {
+    \cpgeitem{Utiliser les équations de Maxwell sous forme locale ou intégrale.}
+    \cpgeitem{Relier l’équation de Maxwell-Faraday et la loi de Faraday.}
+    \cpgeitem{Établir l’équation locale de la conservation de la charge à partir des équations de Maxwell.}
+    \cpgeitem{Utiliser une méthode de superposition.}},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre un dispositif expérimental utilisant des capteurs inductifs.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/4/2}{
+  parent = {PC/5/4},
+  numero = {5.4.2},
+  niveau = {3},
+  titre = {Aspects énergétiques},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/4/2/1}{
+  parent = {PC/5/4/2},
+  numero = {5.4.2.1},
+  contenu = {
+    \cpgeitem{Vecteur de Poynting. Densité volumique d’énergie électromagnétique. Équation locale de Poynting.}},
+  capacites = {
+    \cpgeitem{Utiliser les grandeurs énergétiques pour conduire des bilans d’énergie électromagnétique.}
+    \cpgeitem{Associer le vecteur de Poynting et l’intensité lumineuse utilisée dans le domaine de l’optique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/5/4/3}{
+  parent = {PC/5/4},
+  numero = {5.4.3},
+  niveau = {3},
+  titre = {Approximation des régimes quasi-stationnaires magnétique},
+  chapeau = {},
+}
+
+\cpgeligne{PC/5/4/3/1}{
+  parent = {PC/5/4/3},
+  numero = {5.4.3.1},
+  contenu = {
+    \cpgeitem{Équations de propagation des champs électrique et magnétique dans le vide.}},
+  capacites = {
+    \cpgeitem{Établir les équations de propagation des champs électrique et magnétique dans le vide.}
+    \cpgeitem{Expliquer le caractère non instantané des interactions électromagnétiques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/5/4/3/2}{
+  parent = {PC/5/4/3},
+  numero = {5.4.3.2},
+  contenu = {
+    \cpgeitem{ARQS magnétique.}},
+  capacites = {
+    \cpgeitem{Discuter l’approximation des régimes quasi-stationnaires.}
+    \cpgeitem{Simplifier et utiliser les équations de Maxwell et l’équation de conservation de la charge dans l’approximation du régime quasi-stationnaire.}
+    \cpgeitem{Étendre le domaine de validité des expressions des champs magnétiques obtenues en régime stationnaire.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6}{
+  parent = {PC},
+  numero = {6},
+  niveau = {1},
+  titre = {Physique des ondes},
+  chapeau = {
+    \cpgeitem{Le programme de physique des ondes de la classe de PC s’inscrit dans le prolongement de la partie « Propagation d’un signal » du thème « Ondes et signaux » du programme de PCSI où des propriétés unificatrices (interférences, battements, etc.) ont été abordées en s’appuyant sur une approche expérimentale et sans référence à une équation d’onde. Il s’agit désormais de mettre en place l’équation d’onde de d’Alembert en mécanique, en acoustique et en électromagnétisme. On aborde ensuite l’étude de la dispersion, de l’atténuation et de l’absorption associées à des phénomènes de propagation régis par des équations aux dérivées partielles linéaires à coefficients constants. La propagation d’ondes dans des milieux différents conduit naturellement à étudier la réflexion et la transmission d’ondes à une interface. L’étude de la physique des ondes s’achève par une introduction à la physique du laser et par une introduction à l’approche ondulatoire de la mécanique quantique.}},
+}
+
+\cpgerubrique{PC/6/1}{
+  parent = {PC/6},
+  numero = {6.1},
+  niveau = {2},
+  titre = {Phénomènes de propagation non dispersifs : équation de d’Alembert},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est consacrée à l’étude de phénomènes ondulatoires non dispersifs régis par l’équation d’onde de d’Alembert. Le choix a été fait ici de privilégier les solutions harmoniques dans la résolution pour leur universalité comme solutions adaptées aux équations d’ondes linéaires. S’agissant de la modélisation microscopique des solides, l’objectif est uniquement de proposer une interprétation du module d’Young d’un solide ; par la suite, la mise en équations des ondes longitudinales dans les solides est conduite directement dans l’approximation du solide continu. Dans le cadre de la physique des ondes, on qualifiera de plane ou sphérique une onde par référence à sa dépendance spatiale f(x,t) ou f(r,t).}},
+}
+
+\cpgerubrique{PC/6/1/1}{
+  parent = {PC/6/1},
+  numero = {6.1.1},
+  niveau = {3},
+  titre = {Ondes mécaniques unidimensionnelles dans les solides déformables},
+  chapeau = {},
+}
+
+\cpgeligne{PC/6/1/1/1}{
+  parent = {PC/6/1/1},
+  numero = {6.1.1.1},
+  contenu = {
+    \cpgeitem{Ondes transversales sur une corde vibrante.}},
+  capacites = {
+    \cpgeitem{Établir l’équation d’onde décrivant les ondes transversales sur une corde vibrante infiniment souple dans l’approximation des petits mouvements transverses.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/1/2}{
+  parent = {PC/6/1/1},
+  numero = {6.1.1.2},
+  contenu = {
+    \cpgeitem{Domaine d’élasticité d’un solide : module d’Young, loi de Hooke.}},
+  capacites = {
+    \cpgeitem{Exploiter le modèle de la chaîne d’atomes élastiquement liés pour relier le module d’Young d’un solide élastique à ses caractéristiques microscopiques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/1/3}{
+  parent = {PC/6/1/1},
+  numero = {6.1.1.3},
+  contenu = {
+    \cpgeitem{Ondes mécaniques longitudinales dans une tige solide dans l’approximation des milieux continus.}},
+  capacites = {
+    \cpgeitem{Établir l’équation d’onde décrivant les ondes mécaniques longitudinales dans une tige solide.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/1/4}{
+  parent = {PC/6/1/1},
+  numero = {6.1.1.4},
+  contenu = {
+    \cpgeitem{Équation de d’Alembert ; célérité.}},
+  capacites = {
+    \cpgeitem{Identifier l’équation de d’Alembert.}
+    \cpgeitem{Relier qualitativement la célérité d’ondes mécaniques, la raideur et l’inertie du milieu support.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/1/5}{
+  parent = {PC/6/1/1},
+  numero = {6.1.1.5},
+  contenu = {
+    \cpgeitem{Ondes progressives, ondes progressives harmoniques ; ondes stationnaires.}},
+  capacites = {
+    \cpgeitem{Différencier une onde stationnaire d’une onde progressive.}
+    \cpgeitem{Utiliser qualitativement l’analyse de Fourier pour décrire une onde non harmonique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/1/6}{
+  parent = {PC/6/1/1},
+  numero = {6.1.1.6},
+  contenu = {
+    \cpgeitem{Modes propres d’une corde vibrante fixée à ses deux extrémités. Résonances d’une corde de Melde.}},
+  capacites = {
+    \cpgeitem{Décrire les modes propres d’une corde vibrante fixée à ses deux extrémités.}
+    \cpgeitem{Interpréter quantitativement les résonances observées avec la corde de Melde en négligeant l’amortissement.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6/1/2}{
+  parent = {PC/6/1},
+  numero = {6.1.2},
+  niveau = {3},
+  titre = {Ondes acoustiques dans les fluides},
+  chapeau = {},
+}
+
+\cpgeligne{PC/6/1/2/1}{
+  parent = {PC/6/1/2},
+  numero = {6.1.2.1},
+  contenu = {
+    \cpgeitem{Approximation acoustique. Équation de d’Alembert pour la surpression acoustique.}},
+  capacites = {
+    \cpgeitem{Classer les ondes acoustiques par domaines fréquentiels.}
+    \cpgeitem{Valider l’approximation acoustique.}
+    \cpgeitem{Établir, par une approche eulérienne, l’équation de propagation de la surpression acoustique dans une situation unidimensionnelle en coordonnées cartésiennes.}
+    \cpgeitem{Utiliser l’opérateur laplacien pour généraliser l’équation d’onde.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/2/2}{
+  parent = {PC/6/1/2},
+  numero = {6.1.2.2},
+  contenu = {
+    \cpgeitem{Célérité des ondes acoustiques.}},
+  capacites = {
+    \cpgeitem{Exprimer la célérité des ondes acoustiques en fonction de la température pour un gaz parfait.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/2/3}{
+  parent = {PC/6/1/2},
+  numero = {6.1.2.3},
+  contenu = {
+    \cpgeitem{Ondes planes progressives harmoniques : caractère longitudinal, impédance acoustique.}},
+  capacites = {
+    \cpgeitem{Exploiter la notion d’impédance acoustique pour faire le lien entre les champs de surpression et de vitesse d’une onde plane progressive harmonique.}
+    \cpgeitem{Utiliser le principe de superposition des ondes planes progressives harmoniques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/2/4}{
+  parent = {PC/6/1/2},
+  numero = {6.1.2.4},
+  contenu = {
+    \cpgeitem{Densité volumique d’énergie acoustique, vecteur densité de courant énergétique.}
+    \cpgeitem{Intensité sonore. Niveau d’intensité sonore.}},
+  capacites = {
+    \cpgeitem{Utiliser les expressions admises du vecteur densité de courant énergétique et de la densité volumique d’énergie associés à la propagation de l’onde.}
+    \cpgeitem{Citer quelques ordres de grandeur de niveaux d’intensité sonore.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/2/5}{
+  parent = {PC/6/1/2},
+  numero = {6.1.2.5},
+  contenu = {
+    \cpgeitem{Ondes acoustiques sphériques harmoniques.}},
+  capacites = {
+    \cpgeitem{Utiliser une expression fournie de la surpression pour interpréter par un argument énergétique la décroissance en 1/r de l’amplitude.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6/1/3}{
+  parent = {PC/6/1},
+  numero = {6.1.3},
+  niveau = {3},
+  titre = {Ondes électromagnétiques dans le vide},
+  chapeau = {},
+}
+
+\cpgeligne{PC/6/1/3/1}{
+  parent = {PC/6/1/3},
+  numero = {6.1.3.1},
+  contenu = {
+    \cpgeitem{Équations de propagation d’un champ électromagnétique dans une région sans charge ni courant.}},
+  capacites = {
+    \cpgeitem{Établir et citer les équations de propagation d’un champ électromagnétique dans le vide.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/3/2}{
+  parent = {PC/6/1/3},
+  numero = {6.1.3.2},
+  contenu = {
+    \cpgeitem{Structure d’une onde plane progressive harmonique.}},
+  capacites = {
+    \cpgeitem{Établir et exploiter la structure d’une onde électromagnétique plane progressive harmonique.}
+    \cpgeitem{Utiliser la superposition d’ondes planes progressives harmoniques pour justifier les propriétés d’ondes électromagnétiques planes progressives non harmoniques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/3/3}{
+  parent = {PC/6/1/3},
+  numero = {6.1.3.3},
+  contenu = {
+    \cpgeitem{Aspects énergétiques.}},
+  capacites = {
+    \cpgeitem{Relier la direction du vecteur de Poynting et la direction de propagation de l’onde électromagnétique.}
+    \cpgeitem{Interpréter le flux du vecteur de Poynting en termes particulaires.}
+    \cpgeitem{Citer quelques ordres de grandeur de flux énergétiques surfaciques moyens et les relier aux ordres de grandeur des champs électriques associés.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/1/3/4}{
+  parent = {PC/6/1/3},
+  numero = {6.1.3.4},
+  contenu = {
+    \cpgeitem{Polarisation des ondes électromagnétiques planes progressives harmoniques : polarisation elliptique, circulaire et rectiligne.}
+    \cpgeitem{Loi de Malus.}},
+  capacites = {
+    \cpgeitem{Relier l’expression du champ électrique à l’état de polarisation de l’onde.}},
+  experimentales = {
+    \cpgeitem{Utiliser la loi de Malus.}
+    \cpgeitem{Reconnaître une lumière polarisée rectilignement.}
+    \cpgeitem{Distinguer une lumière non polarisée d’une lumière totalement polarisée.}
+    \cpgeitem{Utiliser une lame quart d’onde ou demi-onde pour modifier ou analyser un état de polarisation, avec de la lumière totalement polarisée.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6/2}{
+  parent = {PC/6},
+  numero = {6.2},
+  niveau = {2},
+  titre = {Phénomènes de propagation linéaires unidimensionnels},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est consacrée aux phénomènes de propagation régis par des équations aux dérivées partielles linéaires à coefficients constants. L’étude s’appuie sur des exemples variés empruntés aux domaines de la mécanique ou de l’électromagnétisme. Elle est menée sur des ondes harmoniques planes en représentation complexe puis sur des paquets d’ondes harmoniques planes. S’agissant des paquets d’ondes, on se limite au cas où l’étalement est négligeable. L’étude de la propagation des ondes dans un plasma dilué est exclusivement limitée aux ondes transverses électriques ; le professeur est invité à signaler, sans soucis d’exhaustivité, quelques limites du modèle.}},
+}
+
+\cpgerubrique{PC/6/2/1}{
+  parent = {PC/6/2},
+  numero = {6.2.1},
+  niveau = {3},
+  titre = {Dispersion et absorption},
+  chapeau = {},
+}
+
+\cpgeligne{PC/6/2/1/1}{
+  parent = {PC/6/2/1},
+  numero = {6.2.1.1},
+  contenu = {
+    \cpgeitem{Propagation unidimensionnelle d’une onde harmonique dans un milieu linéaire.}},
+  capacites = {
+    \cpgeitem{Identifier le caractère linéaire d'une équation aux dérivées partielles.}
+    \cpgeitem{Établir la relation de dispersion caractéristique d’un phénomène de propagation en utilisant des ondes de la forme $\exp[\pm\cpgejj(kx - \omega t)]$.}
+    \cpgeitem{Distinguer différents types de comportements selon la valeur de la pulsation.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/2/1/2}{
+  parent = {PC/6/2/1},
+  numero = {6.2.1.2},
+  contenu = {
+    \cpgeitem{Dispersion, absorption.}},
+  capacites = {
+    \cpgeitem{Associer les parties réelle et imaginaire de k aux phénomènes de dispersion et d’absorption.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/2/1/3}{
+  parent = {PC/6/2/1},
+  numero = {6.2.1.3},
+  contenu = {
+    \cpgeitem{Propagation d’un paquet d’ondes dans un milieu non absorbant et faiblement dispersif : vitesse de phase et vitesse de groupe.}},
+  capacites = {
+    \cpgeitem{Énoncer et exploiter la relation entre les ordres de grandeur de la durée temporelle d’un paquet d’onde et la largeur fréquentielle de son spectre.}
+    \cpgeitem{Déterminer la vitesse de groupe d’un paquet d’ondes à partir de la relation de dispersion.}
+    \cpgeitem{Associer la vitesse de groupe à la propagation de l’enveloppe du paquet d’ondes.}},
+  experimentales = {
+    \cpgeitem{Étudier la propagation d’une onde électrique dans un câble coaxial.}},
+  numeriques = {
+    \cpgeitem{à l’aide d’un langage de programmation, simuler la propagation d’un paquet d’ondes dans un milieu dispersif et visualiser le phénomène d’étalement.}},
+}
+
+\cpgerubrique{PC/6/2/2}{
+  parent = {PC/6/2},
+  numero = {6.2.2},
+  niveau = {3},
+  titre = {Ondes électromagnétiques dans les milieux matériels},
+  chapeau = {},
+}
+
+\cpgeligne{PC/6/2/2/1}{
+  parent = {PC/6/2/2},
+  numero = {6.2.2.1},
+  contenu = {
+    \cpgeitem{Propagation d’une onde électromagnétique plane harmonique unidirectionnelle dans un conducteur ohmique de conductivité réelle.}
+    \cpgeitem{Effet de peau dans un conducteur ohmique.}},
+  capacites = {
+    \cpgeitem{Identifier une analogie avec un phénomène de diffusion.}
+    \cpgeitem{Établir la relation de dispersion des ondes électromagnétiques dans un conducteur ohmique à basses fréquences.}
+    \cpgeitem{Associer l’atténuation de l’onde dans le milieu conducteur à une dissipation d’énergie.}
+    \cpgeitem{Estimer l’ordre de grandeur de l’épaisseur de peau du cuivre à différentes fréquences.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/2/2/2}{
+  parent = {PC/6/2/2},
+  numero = {6.2.2.2},
+  contenu = {
+    \cpgeitem{Propagation d’une onde électromagnétique plane harmonique transverse et unidirectionnelle dans un plasma dilué.}
+    \cpgeitem{Conductivité électrique complexe.}},
+  capacites = {
+    \cpgeitem{Justifier la neutralité électrique locale du plasma en présence d’une onde transverse.}
+    \cpgeitem{Établir l’expression de la conductivité électrique complexe du plasma.}
+    \cpgeitem{Interpréter énergétiquement le caractère imaginaire pur de la conductivité électrique complexe du plasma.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/2/2/3}{
+  parent = {PC/6/2/2},
+  numero = {6.2.2.3},
+  contenu = {
+    \cpgeitem{Relation de dispersion. Pulsation plasma.}
+    \cpgeitem{Domaine de transparence.}
+    \cpgeitem{Domaine réactif, onde évanescente.}},
+  capacites = {
+    \cpgeitem{Établir la relation de dispersion des ondes planes progressives harmoniques transverses.}
+    \cpgeitem{Exprimer la vitesse de phase et la vitesse de groupe d’un paquet d’ondes dans le domaine de transparence du plasma.}
+    \cpgeitem{Interpréter la pulsation plasma comme une pulsation de coupure.}
+    \cpgeitem{Citer les caractéristiques d’une onde stationnaire évanescente.}
+    \cpgeitem{Justifier que, dans le domaine réactif, une onde électromagnétique harmonique ne transporte aucune puissance en moyenne.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6/3}{
+  parent = {PC/6},
+  numero = {6.3},
+  niveau = {2},
+  titre = {Interfaces entre deux milieux},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est consacrée à la réflexion et la transmission d’ondes à une interface plane sous incidence normale en acoustique et en électromagnétisme. Dans ce dernier cas, on admet que les milieux diélectriques, linéaires, homogènes et isotropes (DLHI) relèvent d’un traitement faisant apparaître l’indice complexe, mais aucune modélisation du comportement des DLHI ne figure au programme. On se limite dans tous les cas à des milieux non magnétiques. La notion de densité de courants superficiels et les relations de passage du champ électromagnétique ne figurent pas au programme de même que la notion de conducteur parfait. Les conditions aux limites sur la composante normale du champ électrique et la composante tangentielle du champ magnétique doivent être fournies si nécessaire.}},
+}
+
+\cpgeligne{PC/6/3/1}{
+  parent = {PC/6/3},
+  numero = {6.3.1},
+  contenu = {
+    \cpgeitem{Réflexion et transmission d’une onde acoustique plane progressive sous incidence normale sur une interface plane infinie entre deux fluides : coefficients de réflexion et de transmission en amplitude des vitesses, des surpressions et des puissances acoustiques surfaciques moyennes.}},
+  capacites = {
+    \cpgeitem{Expliciter des conditions aux limites à une interface.}
+    \cpgeitem{Établir les expressions des coefficients de transmission et de réflexion.}
+    \cpgeitem{Associer l’adaptation des impédances au transfert maximum de puissance.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/3/2}{
+  parent = {PC/6/3},
+  numero = {6.3.2},
+  contenu = {
+    \cpgeitem{Réflexion et transmission d’une onde électromagnétique plane progressive harmonique polarisée rectilignement à l’interface entre deux milieux d’indices complexes n1 et n2 dans le cas d’une incidence normale : coefficients de réflexion et de transmission du champ électrique.}},
+  capacites = {
+    \cpgeitem{Exploiter la continuité admise du champ électromagnétique dans cette configuration pour obtenir l’expression des coefficients de réflexion et de transmission en fonction des indices complexes.}
+    \cpgeitem{Utiliser les expressions des coefficients de réflexion et de transmission du champ électrique dans des situations variées.}
+    \cpgeitem{Établir et interpréter les expressions des coefficients de réflexion et de transmission en puissance dans le cas d’une interface entre deux milieux diélectriques linéaires, homogènes, isotropes et transparents.}},
+  experimentales = {
+    \cpgeitem{Étudier la réflexion en amplitude de tension d’une onde électrique à l’extrémité d’un câble coaxial pour une impédance terminale nulle, infinie ou résistive.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6/4}{
+  parent = {PC/6},
+  numero = {6.4},
+  niveau = {2},
+  titre = {Introduction à la physique du laser},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est consacrée à une introduction modeste à la physique du laser. Une approche descriptive des milieux amplificateurs de lumière est d’abord proposée ainsi qu’une introduction descriptive simplifiée à l’optique des faisceaux spatialement limités, dont l’un des objectifs est de pouvoir déterminer la puissance surfacique disponible, à partir de la prévision des dimensions de la tache de section minimale dans des configurations optiques élémentaires. On se limite au mode fondamental gaussien.}},
+}
+
+\cpgerubrique{PC/6/4/1}{
+  parent = {PC/6/4},
+  numero = {6.4.1},
+  niveau = {3},
+  titre = {Milieu amplificateur de lumière},
+  chapeau = {},
+}
+
+\cpgeligne{PC/6/4/1/1}{
+  parent = {PC/6/4/1},
+  numero = {6.4.1.1},
+  contenu = {
+    \cpgeitem{Absorption, émission stimulée, émission spontanée.}},
+  capacites = {
+    \cpgeitem{Distinguer les propriétés d’un photon émis par émission spontanée ou stimulée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/4/1/2}{
+  parent = {PC/6/4/1},
+  numero = {6.4.1.2},
+  contenu = {
+    \cpgeitem{Coefficients d’Einstein.}},
+  capacites = {
+    \cpgeitem{Associer l’émission spontanée à la durée de vie d’un niveau excité.}
+    \cpgeitem{Utiliser les coefficients d’Einstein dans le cas d’un système à plusieurs niveaux non dégénérés.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/4/1/3}{
+  parent = {PC/6/4/1},
+  numero = {6.4.1.3},
+  contenu = {
+    \cpgeitem{Amplification d’ondes lumineuses par émission stimulée.}},
+  capacites = {
+    \cpgeitem{Justifier qualitativement la nécessité d’une inversion de population pour parvenir à amplifier une onde électromagnétique dans un laser.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6/4/2}{
+  parent = {PC/6/4},
+  numero = {6.4.2},
+  niveau = {3},
+  titre = {Propriétés optiques d’un faisceau spatialement limité},
+  chapeau = {
+    \cpgeitem{Les parties précédentes ont permis d’introduire les outils et concepts de base associés à la physique des ondes, particulièrement tant qu’elle est régie par des équations aux dérivées partielles linéaires. S’il est un domaine où cette notion de linéarité joue un rôle central, c’est bien celui de la mécanique quantique.}},
+}
+
+\cpgeligne{PC/6/4/2/1}{
+  parent = {PC/6/4/2},
+  numero = {6.4.2.1},
+  contenu = {
+    \cpgeitem{Description simplifiée d’un faisceau de profil gaussien : waist, longueur de Rayleigh, ouverture angulaire.}},
+  capacites = {
+    \cpgeitem{Justifier qualitativement l’inadéquation du modèle de l’onde plane pour décrire un faisceau laser.}
+    \cpgeitem{Utiliser l’expression fournie du profil radial d’intensité.}
+    \cpgeitem{Construire l’allure d’un faisceau de profil gaussien à partir de l’enveloppe d’un faisceau cylindrique et d’un faisceau conique.}
+    \cpgeitem{Exploiter qualitativement le phénomène de diffraction pour relier le waist et l’ouverture angulaire du faisceau à grande distance.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/4/2/2}{
+  parent = {PC/6/4/2},
+  numero = {6.4.2.2},
+  contenu = {
+    \cpgeitem{Transformation à l’aide d’une lentille d’un faisceau cylindrique en faisceau conique et réciproquement.}
+    \cpgeitem{Élargisseur de faisceau.}},
+  capacites = {
+    \cpgeitem{Déterminer la dimension et la position de la section minimale du faisceau émergeant d’une lentille éclairée par un faisceau cylindrique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6/5}{
+  parent = {PC/6},
+  numero = {6.5},
+  niveau = {2},
+  titre = {Approche ondulatoire de la mécanique quantique},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie présente quelques-unes des notions associées à une description ondulatoire de ce domaine. La démarche adoptée, volontairement modeste, est centrée sur un approfondissement des notions introduites en première année que sont la dualité onde-corpuscule et l’inégalité de Heisenberg spatiale, les objectifs étant désormais quantitatifs. Il s’agit, sur des systèmes unidimensionnels et des situations physiques simplifiées d’envisager quelques conséquences qui découlent de cette description ondulatoire : l’effet tunnel et ses applications sont ainsi discutés comme aboutissement naturel des notions abordées dans cette partie. Elle est ancrée dans le réel : on insiste sur le fait que les situations envisagées décrivent des systèmes physiques réels effectivement unidimensionnels Toute discussion autour de la mesure et de ses effets sur un système est exclue, de même que toute introduction au spin. L’accent est mis avant tout sur la mise en équations des situations physiques proposées à l’aide des outils de la physique des ondes, et sur la discussion graphique des résultats qui en découlent. Tout développement des calculs intermédiaires est donc naturellement proscrit et les expressions sur lesquelles s’appuient les discussions qualitatives doivent être fournies. Le courant de probabilité est introduit dans un contexte restreint avec pour seul objectif d’exprimer le coefficient de transmission d’une barrière de potentiel.}},
+}
+
+\cpgerubrique{PC/6/5/1}{
+  parent = {PC/6/5},
+  numero = {6.5.1},
+  niveau = {3},
+  titre = {Amplitude de probabilité},
+  chapeau = {},
+}
+
+\cpgeligne{PC/6/5/1/1}{
+  parent = {PC/6/5/1},
+  numero = {6.5.1.1},
+  contenu = {
+    \cpgeitem{Fonction d’onde $\psi(x,t)$ associée à une particule dans un problème unidimensionnel. Densité linéique de probabilité de présence.}},
+  capacites = {
+    \cpgeitem{Normaliser une fonction d’onde.}
+    \cpgeitem{Relier qualitativement la fonction d’onde à la notion d’orbitale en chimie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/5/1/2}{
+  parent = {PC/6/5/1},
+  numero = {6.5.1.2},
+  contenu = {
+    \cpgeitem{Principe de superposition. Interférences.}},
+  capacites = {
+    \cpgeitem{Relier la superposition de fonctions d’ondes à la description d’une expérience d’interférences entre particules.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6/5/2}{
+  parent = {PC/6/5},
+  numero = {6.5.2},
+  niveau = {3},
+  titre = {Équation de Schrödinger pour une particule libre},
+  chapeau = {},
+}
+
+\cpgeligne{PC/6/5/2/1}{
+  parent = {PC/6/5/2},
+  numero = {6.5.2.1},
+  contenu = {
+    \cpgeitem{Équation de Schrödinger.}},
+  capacites = {
+    \cpgeitem{Utiliser l’équation de Schrödinger fournie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/5/2/2}{
+  parent = {PC/6/5/2},
+  numero = {6.5.2.2},
+  contenu = {
+    \cpgeitem{États stationnaires.}},
+  capacites = {
+    \cpgeitem{Associer les états stationnaires aux états d’énergie déterminée.}
+    \cpgeitem{Établir et utiliser la forme $\psi(x,t) = \varphi(x)\exp(-\cpgeii Et/\hbar)$ pour la fonction d’onde d’un état stationnaire et l’associer à la relation de Planck-Einstein.}
+    \cpgeitem{Distinguer l’onde associée à un état stationnaire en mécanique quantique d’une onde stationnaire au sens usuel de la physique des ondes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/5/2/3}{
+  parent = {PC/6/5/2},
+  numero = {6.5.2.3},
+  contenu = {
+    \cpgeitem{Paquet d’ondes associé à une particule libre. Relation $\Delta k_x \, \Delta x \geqslant 1/2$.}},
+  capacites = {
+    \cpgeitem{Utiliser l’équation de Schrödinger pour déterminer la partie spatiale $\varphi(x)$ des fonctions d’onde stationnaires décrivant une particule libre.}
+    \cpgeitem{Identifier la vitesse d’une particule libre et la vitesse du paquet d’ondes la décrivant.}
+    \cpgeitem{Exploiter l’inégalité de Heisenberg pour relier l’étendue spatiale et l’étendue spectrale du paquet d’ondes décrivant une particule libre.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/5/2/4}{
+  parent = {PC/6/5/2},
+  numero = {6.5.2.4},
+  contenu = {
+    \cpgeitem{Courant de probabilité associé à une particule libre.}},
+  capacites = {
+    \cpgeitem{Utiliser l’expression admise du courant de probabilité associé à une particule libre et l’interpréter comme un produit densité*vitesse.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6/5/3}{
+  parent = {PC/6/5},
+  numero = {6.5.3},
+  niveau = {3},
+  titre = {Équation de Schrödinger dans un potentiel V(x) uniforme par morceaux},
+  chapeau = {},
+}
+
+\cpgeligne{PC/6/5/3/1}{
+  parent = {PC/6/5/3},
+  numero = {6.5.3.1},
+  contenu = {
+    \cpgeitem{Quantification de l’énergie dans un puits de potentiel rectangulaire de profondeur infinie.}},
+  capacites = {
+    \cpgeitem{Établir les expressions des énergies des états stationnaires.}
+    \cpgeitem{Retrouver qualitativement l’énergie minimale à partir de l’inégalité de Heisenberg spatiale.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/5/3/2}{
+  parent = {PC/6/5/3},
+  numero = {6.5.3.2},
+  contenu = {
+    \cpgeitem{Énergie de confinement quantique.}},
+  capacites = {
+    \cpgeitem{Associer le confinement d’une particule quantique à une augmentation de l’énergie cinétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/5/3/3}{
+  parent = {PC/6/5/3},
+  numero = {6.5.3.3},
+  contenu = {
+    \cpgeitem{Évolution temporelle d’une particule confinée dans une superposition d’états.}},
+  capacites = {
+    \cpgeitem{Mettre en évidence les oscillations d’une particule dont la fonction d’onde s’écrit comme la superposition de deux états stationnaires et relier la fréquence d’oscillation à la différence des énergies.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/5/3/4}{
+  parent = {PC/6/5/3},
+  numero = {6.5.3.4},
+  contenu = {
+    \cpgeitem{Quantification de l’énergie des états liés dans un puits de profondeur finie.}},
+  capacites = {
+    \cpgeitem{Décrire la forme des fonctions d’onde dans les différents domaines.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/5/3/5}{
+  parent = {PC/6/5/3},
+  numero = {6.5.3.5},
+  contenu = {
+    \cpgeitem{Élargissement effectif du puits par les ondes évanescentes.}},
+  capacites = {
+    \cpgeitem{Utiliser les conditions aux limites admises : continuité de $\varphi$ et $\cpgedd\varphi/\cpgedd x$.}
+    \cpgeitem{Associer la quantification de l’énergie au caractère lié de la particule.}
+    \cpgeitem{Mener une discussion graphique.}
+    \cpgeitem{Interpréter qualitativement, à partir de l’inégalité de Heisenberg spatiale, l’abaissement des niveaux d’énergie par rapport au puits de profondeur infinie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/6/5/4}{
+  parent = {PC/6/5},
+  numero = {6.5.4},
+  niveau = {3},
+  titre = {Effet tunnel},
+  chapeau = {},
+}
+
+\cpgeligne{PC/6/5/4/1}{
+  parent = {PC/6/5/4},
+  numero = {6.5.4.1},
+  contenu = {
+    \cpgeitem{Effet tunnel.}},
+  capacites = {
+    \cpgeitem{Citer quelques applications de l’effet tunnel.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/6/5/4/2}{
+  parent = {PC/6/5/4},
+  numero = {6.5.4.2},
+  contenu = {
+    \cpgeitem{Coefficient de transmission associé à une particule libre incidente sur une barrière de potentiel.}},
+  capacites = {
+    \cpgeitem{Définir le coefficient de transmission comme un rapport de courants de probabilités.}
+    \cpgeitem{Utiliser une expression fournie du coefficient de transmission à travers une barrière de potentiel.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PCA/A1}{
+  parent = {PC},
+  numero = {A1},
+  niveau = {1},
+  titre = {Matériel},
+  chapeau = {
+    \cpgeitem{Cette liste complète celle donnée en annexe 1 du programme de physique de PCSI. À elles deux, ces listes regroupent le matériel que les étudiants doivent savoir utiliser avec l’aide d’une notice simplifiée. Une utilisation de matériel hors de ces listes lors d’épreuves d’évaluation n’est pas exclue, mais elle doit obligatoirement s’accompagner d’une aide.}},
+}
+
+\cpgeligne{PCA/A1/1}{
+  parent = {PCA/A1},
+  numero = {A1.1},
+  contenu = {
+    \cpgeitem{Domaine optique}},
+  capacites = {
+    \cpgeitem{Lames quart d’onde, lames demi-onde}
+    \cpgeitem{Interféromètre de Michelson}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A1/2}{
+  parent = {PCA/A1},
+  numero = {A1.2},
+  contenu = {
+    \cpgeitem{Domaine électrique}},
+  capacites = {
+    \cpgeitem{Générateurs de signaux basse fréquence à modulation de fréquence}
+    \cpgeitem{Câbles coaxiaux, bouchons adaptés}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A1/3}{
+  parent = {PCA/A1},
+  numero = {A1.3},
+  contenu = {
+    \cpgeitem{Domaine thermodynamique}},
+  capacites = {
+    \cpgeitem{Caméra thermique}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PCA/A2}{
+  parent = {PC},
+  numero = {A2},
+  niveau = {1},
+  titre = {Outils mathématiques},
+  chapeau = {
+    \cpgeitem{Les outils mathématiques dont la maîtrise est nécessaire à la mise en œuvre du programme de physique de la classe de PC sont d’une part ceux qui figurent dans l’annexe 2 du programme de la classe de PCSI et d’autre part ceux qui figurent dans la liste ci-dessous.}
+    \cpgeitem{Le thème « analyse vectorielle » prolonge l’étude de l’outil gradient abordée en classe de PCSI en introduisant de nouveaux opérateurs : seules leurs expressions en coordonnées cartésiennes sont exigibles. Toutes les autres formules utiles (expressions en coordonnées cylindriques ou sphériques, actions sur des produits, combinaisons d’opérateurs, etc.) doivent être fournies.}
+    \cpgeitem{Le thème « analyse de Fourier » prolonge l’étude de l’outil « séries de Fourier » abordée en classe de PCSI en admettant la décomposition d’une fonction non périodique du temps en une somme continue de fonctions sinusoïdales. De même qu’en classe de PCSI où le calcul des coefficients d’un développement en série de Fourier est exclu, on ne cherche pas à expliciter le poids relatif et les déphasages relatifs des différentes composantes de Fourier, de telle sorte que la transformée de Fourier n’est pas exigible. On insiste en revanche sur la relation liant en ordre de grandeur la largeur spectrale « utile » ($\Delta\omega$ ou $\Delta$kx) et l’étendue caractéristique d’un signal non périodique ($\Delta$t ou $\Delta$x).}
+    \cpgeitem{Dans le thème « équations aux dérivées partielles », aucune méthode générale d’étude n’est exigible : on se limite à chercher des solutions d’une forme donnée par substitution, menant soit à des équations différentielles classiques, soit à une relation de dispersion.}},
+}
+
+\cpgerubrique{PCA/A2/1}{
+  parent = {PCA/A2},
+  numero = {A2.1},
+  niveau = {2},
+  titre = {Calcul différentiel},
+  chapeau = {},
+}
+
+\cpgeligne{PCA/A2/1/1}{
+  parent = {PCA/A2/1},
+  numero = {A2.1.1},
+  contenu = {
+    \cpgeitem{Fonctions de plusieurs variables à valeurs réelles. Dérivées partielles. Différentielle.}},
+  capacites = {
+    \cpgeitem{Relier la différentielle et les dérivées partielles premières.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A2/1/2}{
+  parent = {PCA/A2/1},
+  numero = {A2.1.2},
+  contenu = {
+    \cpgeitem{Théorème de Schwarz.}},
+  capacites = {
+    \cpgeitem{Utiliser le théorème de Schwarz (admis).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A2/1/3}{
+  parent = {PCA/A2/1},
+  numero = {A2.1.3},
+  contenu = {
+    \cpgeitem{Intégration de l’expression d’une dérivée partielle.}},
+  capacites = {
+    \cpgeitem{Intégrer une expression de la forme $\partial f/\partial x = g(x,y)$ à $y$ fixé en introduisant une fonction $\varphi(y)$ inconnue comme « constante d’intégration ».}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PCA/A2/2}{
+  parent = {PCA/A2},
+  numero = {A2.2},
+  niveau = {2},
+  titre = {Analyse vectorielle},
+  chapeau = {},
+}
+
+\cpgeligne{PCA/A2/2/1}{
+  parent = {PCA/A2/2},
+  numero = {A2.2.1},
+  contenu = {
+    \cpgeitem{Gradient.}},
+  capacites = {
+    \cpgeitem{Relier le gradient à la différentielle d’un champ scalaire à une date fixée.}
+    \cpgeitem{Exprimer les composantes du gradient en coordonnées cartésiennes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A2/2/2}{
+  parent = {PCA/A2/2},
+  numero = {A2.2.2},
+  contenu = {
+    \cpgeitem{Divergence.}},
+  capacites = {
+    \cpgeitem{Citer et utiliser le théorème d’Ostrogradski.}
+    \cpgeitem{Exprimer la divergence en coordonnées cartésiennes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A2/2/3}{
+  parent = {PCA/A2/2},
+  numero = {A2.2.3},
+  contenu = {
+    \cpgeitem{Rotationnel.}},
+  capacites = {
+    \cpgeitem{Citer et utiliser le théorème de Stokes.}
+    \cpgeitem{Exprimer le rotationnel en coordonnées cartésiennes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A2/2/4}{
+  parent = {PCA/A2/2},
+  numero = {A2.2.4},
+  contenu = {
+    \cpgeitem{Opérateur $\cpgevec{b} \cdot \cpgegrad$.}},
+  capacites = {
+    \cpgeitem{Exprimer la différentielle d’un champ de vecteurs à une date fixée.}
+    \cpgeitem{Exprimer les composantes de $(\cpgevec{b} \cdot \cpgegrad)\cpgevec{a}$ en coordonnées cartésiennes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A2/2/5}{
+  parent = {PCA/A2/2},
+  numero = {A2.2.5},
+  contenu = {
+    \cpgeitem{Laplacien d’un champ scalaire.}},
+  capacites = {
+    \cpgeitem{Définir le laplacien à l’aide de la divergence et du gradient.}
+    \cpgeitem{Exprimer le laplacien en coordonnées cartésiennes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A2/2/6}{
+  parent = {PCA/A2/2},
+  numero = {A2.2.6},
+  contenu = {
+    \cpgeitem{Laplacien d’un champ de vecteurs.}},
+  capacites = {
+    \cpgeitem{Exprimer le laplacien d’un champ de vecteurs en coordonnées cartésiennes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A2/2/7}{
+  parent = {PCA/A2/2},
+  numero = {A2.2.7},
+  contenu = {
+    \cpgeitem{Cas des champs proportionnels à $\exp(\cpgeii\omega t - \cpgeii\cpgevec{k}\cdot\cpgevec{r})$ ou $\exp(\cpgeii\cpgevec{k}\cdot\cpgevec{r} - \cpgeii\omega t)$.}},
+  capacites = {
+    \cpgeitem{Exprimer l’action des opérateurs d’analyse vectorielle sur un tel champ à l’aide du vecteur ik.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PCA/A2/3}{
+  parent = {PCA/A2},
+  numero = {A2.3},
+  niveau = {2},
+  titre = {Analyse de Fourier},
+  chapeau = {},
+}
+
+\cpgeligne{PCA/A2/3/1}{
+  parent = {PCA/A2/3},
+  numero = {A2.3.1},
+  contenu = {
+    \cpgeitem{Synthèse spectrale d’une fonction périodique.}},
+  capacites = {
+    \cpgeitem{Utiliser un développement en série de Fourier fourni.}
+    \cpgeitem{Utiliser un raisonnement par superposition.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PCA/A2/3/2}{
+  parent = {PCA/A2/3},
+  numero = {A2.3.2},
+  contenu = {
+    \cpgeitem{Synthèse spectrale d’une fonction non périodique.}},
+  capacites = {
+    \cpgeitem{Utiliser un raisonnement par superposition.}
+    \cpgeitem{Citer et utiliser la relation liant en ordre de grandeur la largeur spectrale « utile » ($\Delta\omega$ ou $\Delta k_x$) et l’étendue caractéristique d’un signal non périodique ($\Delta$t ou $\Delta$x).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PCA/A2/4}{
+  parent = {PCA/A2},
+  numero = {A2.4},
+  niveau = {2},
+  titre = {Équations aux dérivées partielles},
+  chapeau = {},
+}
+
+\cpgeligne{PCA/A2/4/1}{
+  parent = {PCA/A2/4},
+  numero = {A2.4.1},
+  contenu = {
+    \cpgeitem{Exemples d’équations aux dérivées partielles : équation de Laplace, équation de diffusion, équation de d’Alembert, équation de Schrödinger.}},
+  capacites = {
+    \cpgeitem{Identifier une équation aux dérivées partielles connue.}
+    \cpgeitem{Transposer une solution familière dans un domaine de la physique à un autre domaine.}
+    \cpgeitem{Obtenir des solutions de forme donnée par substitution.}
+    \cpgeitem{Utiliser des conditions initiales et des conditions aux limites}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PCA/A3}{
+  parent = {PC},
+  numero = {A3},
+  niveau = {1},
+  titre = {Outils numériques},
+  chapeau = {
+    \cpgeitem{La prise en compte de capacités de codage en langage Python dans la formation des étudiants inclut l’utilisation de fonctions extraites de diverses bibliothèques. Elle vise à une meilleure appréhension des principes mis en œuvre par les différents logiciels de traitement des données dont l’utilisation est par ailleurs toujours recommandée. Elle a aussi pour objectif de mobiliser ces capacités dans un contexte concret, celui de la physique. Cette formation par le codage permet également de développer des capacités utiles à la physique comme le raisonnement, la logique ou la décomposition d’un problème complexe en étapes plus simples.}
+    \cpgeitem{Le tableau ci-dessous complète les outils numériques identifiés dans le programme de physique de première année de la classe de PCSI.}},
+}
+
+\cpgerubrique{PCA/A3/1}{
+  parent = {PCA/A3},
+  numero = {A3.1},
+  niveau = {2},
+  titre = {Tableaux},
+  chapeau = {},
+}
+
+\cpgeligne{PCA/A3/1/1}{
+  parent = {PCA/A3/1},
+  numero = {A3.1.1},
+  contenu = {
+    \cpgeitem{Tableaux à une ou deux dimensions.}},
+  capacites = {},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{Choisir une structure de données appropriée à la modélisation d’un problème physique.}
+    \cpgeitem{Réaliser des opérations algébriques simples sur des tableaux.}
+    \cpgeitem{Utiliser les fonctions de base de la bibliothèque numpy (leurs spécifications étant fournies) pour manipuler des tableaux.}},
+}
+
+\cpgerubrique{PCA/A3/2}{
+  parent = {PCA/A3},
+  numero = {A3.2},
+  niveau = {2},
+  titre = {Équations différentielles et équations aux dérivées partielles},
+  chapeau = {},
+}
+
+\cpgeligne{PCA/A3/2/1}{
+  parent = {PCA/A3/2},
+  numero = {A3.2.1},
+  contenu = {
+    \cpgeitem{Équation de diffusion à une dimension.}},
+  capacites = {},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{Mettre en œuvre une méthode des différences finies explicite pour résoudre l’équation de diffusion à une dimension en régime variable.}},
+}
+
+\cpgerubrique{PC/E}{
+  parent = {PC},
+  numero = {E},
+  niveau = {1},
+  titre = {Formation expérimentale},
+  chapeau = {
+    \cpgeitem{Cette partie est spécifiquement dédiée à la mise en œuvre de la formation expérimentale des étudiants lors des séances de travaux pratiques.}
+    \cpgeitem{Dans un premier temps, elle précise les connaissances et savoir-faire qui doivent être acquis dans le domaine de la mesure et de l’évaluation des incertitudes. Elle présente ensuite de façon détaillée l’ensemble des capacités expérimentales qui doivent être acquises en autonomie par les étudiants à l’issue de leur seconde année de CPGE. Enfin, elle aborde la question de la prévention du risque au laboratoire de physique-chimie.}},
+}
+
+\cpgerubrique{PC/E/1}{
+  parent = {PC/E},
+  numero = {E.1},
+  niveau = {2},
+  titre = {Mesures et incertitudes},
+  chapeau = {
+    \cpgeitem{Les notions et capacités identifiées ci-dessous couvrent les deux années de formation en classe préparatoire aux grandes écoles ; leur pleine maîtrise est donc un objectif de fin de seconde année. L’accent est mis sur la variabilité de la mesure d’une grandeur physique et sa caractérisation à l’aide de l’incertitude-type. La comparaison entre deux valeurs mesurées d’une même grandeur physique est conduite au moyen de l’écart normalisé, l’objectif principal étant de développer l’esprit critique des étudiants en s’appuyant sur un critère quantitatif. Le même esprit prévaut dans l’analyse des résultats d’une régression linéaire qui ne saurait s’appuyer sur l’exploitation non raisonnée du coefficient de corrélation (R$^{2}$). Le recours à la simulation vise à illustrer, sur la base de mesures expérimentales, différents effets de la variabilité de la mesure d’une grandeur physique dans les cas des incertitudes-types composées et de la régression linéaire.}},
+}
+
+\cpgeligne{PC/E/1/1}{
+  parent = {PC/E/1},
+  numero = {E.1.1},
+  contenu = {
+    \cpgeitem{Variabilité de la mesure d’une grandeur physique. Incertitude.}
+    \cpgeitem{Incertitude-type.}},
+  capacites = {
+    \cpgeitem{Identifier les incertitudes liées, par exemple, à l’opérateur, à l’environnement, aux instruments ou à la méthode de mesure.}
+    \cpgeitem{Procéder à l’évaluation d’une incertitude-type par une approche statistique (évaluation de type A).}
+    \cpgeitem{Procéder à l’évaluation d’une incertitude-type par une autre approche que statistique (évaluation de type B).}
+    \cpgeitem{Associer un intervalle de confiance à l’écart-type dans l’hypothèse d’une distribution suivant la loi normale.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/1/2}{
+  parent = {PC/E/1},
+  numero = {E.1.2},
+  contenu = {
+    \cpgeitem{Incertitudes-types composées.}},
+  capacites = {
+    \cpgeitem{Évaluer l’incertitude-type d’une grandeur s’exprimant en fonction d’autres grandeurs, dont les incertitudes-types sont connues, à l’aide d’une somme, d’une différence, d’un produit ou d’un quotient.}
+    \cpgeitem{Comparer entre elles les différentes contributions lors de l’évaluation d’une incertitude-type composée.}},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{simuler, à l’aide d’un langage de programmation ou d’un tableur, un processus aléatoire permettant de caractériser la variabilité de la valeur d’une grandeur composée.}},
+}
+
+\cpgeligne{PC/E/1/3}{
+  parent = {PC/E/1},
+  numero = {E.1.3},
+  contenu = {
+    \cpgeitem{Écriture du résultat d’une mesure.}},
+  capacites = {
+    \cpgeitem{Écrire, avec un nombre adapté de chiffres significatifs, le résultat d’une mesure.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/1/4}{
+  parent = {PC/E/1},
+  numero = {E.1.4},
+  contenu = {
+    \cpgeitem{Comparaison de deux valeurs ; écart normalisé.}},
+  capacites = {
+    \cpgeitem{Comparer deux valeurs dont les incertitudes-types sont connues à l’aide de leur écart normalisé.}
+    \cpgeitem{Analyser les causes d’une éventuelle incompatibilité entre le résultat d’une mesure et le résultat attendu par une modélisation.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/1/5}{
+  parent = {PC/E/1},
+  numero = {E.1.5},
+  contenu = {
+    \cpgeitem{Régression linéaire.}},
+  capacites = {
+    \cpgeitem{Utiliser un logiciel de régression linéaire afin d’obtenir les valeurs des paramètres du modèle.}
+    \cpgeitem{Analyser les résultats obtenus à l’aide d’une procédure de validation : analyse graphique intégrant les barres d’incertitude ou analyse des écarts normalisés.}},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{simuler, à l’aide d’un langage de programmation ou d’un tableur, un processus aléatoire de variation des valeurs expérimentales de l’une des grandeurs – simulation Monte-Carlo – pour évaluer l’incertitude sur les paramètres du modèle.}},
+}
+
+\cpgerubrique{PC/E/2}{
+  parent = {PC/E},
+  numero = {E.2},
+  niveau = {2},
+  titre = {Mesures et capacités expérimentales},
+  chapeau = {
+    \cpgeitem{Cette partie présente l’ensemble des capacités expérimentales nouvelles que les étudiants doivent acquérir au cours de l’année de PC durant les séances de travaux pratiques. Elle vient prolonger la partie correspondante de PCSI dont les capacités doivent être complètement acquises à l’issue des deux années de préparation, et restent donc naturellement au programme de seconde année PC.}
+    \cpgeitem{Les capacités rassemblées ici ne constituent en aucun cas une liste de travaux pratiques qui s’articuleraient autour d’une découverte du matériel, mais doivent au contraire faire l’objet d’un apprentissage progressif contextualisé où chaque élément apparaît naturellement à l’occasion d’un problème concret. À ce titre, elle vient compléter la liste des thèmes d’étude – en gras dans la colonne « capacités exigibles » de la partie « Contenus thématiques » – à partir desquels la problématique d’une séance peut être définie.}},
+}
+
+\cpgeligne{PC/E/2/1}{
+  parent = {PC/E/2},
+  numero = {E.2.1},
+  contenu = {
+    \cpgeitem{\textbf{1. Mesures de temps et de fréquences}}
+    \cpgeitem{Mesurer indirectement une fréquence par comparaison avec une fréquence connue voisine, en utilisant une détection synchrone.}},
+  capacites = {
+    \cpgeitem{Réaliser une détection « synchrone » à l’aide d’un multiplieur et d’un passe-bas simple adapté à la mesure.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/2/2}{
+  parent = {PC/E/2},
+  numero = {E.2.2},
+  contenu = {
+    \cpgeitem{Réaliser une analyse spectrale.}},
+  capacites = {
+    \cpgeitem{Mettre en évidence le phénomène de repliement du spectre provoqué par l’échantillonnage avec un oscilloscope numérique ou une carte d’acquisition.}
+    \cpgeitem{Choisir les paramètres d’une acquisition numérique destinée à une analyse spectrale afin de respecter la condition de Nyquist-Shannon, tout en optimisant la résolution spectrale.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/2/3}{
+  parent = {PC/E/2},
+  numero = {E.2.3},
+  contenu = {
+    \cpgeitem{\textbf{2. Électricité}}
+    \cpgeitem{Générateurs basse fréquence à modulation interne ou externe.}},
+  capacites = {
+    \cpgeitem{Élaborer un signal électrique analogique modulé en fréquence.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/2/4}{
+  parent = {PC/E/2},
+  numero = {E.2.4},
+  contenu = {
+    \cpgeitem{Montages utilisant un amplificateur linéaire intégré (ALI).}},
+  capacites = {
+    \cpgeitem{Mettre en œuvre divers montages utilisant un ALI, les schémas des montages étant fournis.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/2/5}{
+  parent = {PC/E/2},
+  numero = {E.2.5},
+  contenu = {
+    \cpgeitem{\textbf{3. Optique}}
+    \cpgeitem{Analyser une lumière complètement polarisée.}},
+  capacites = {
+    \cpgeitem{Identifier de façon absolue l’axe d’un polariseur par une méthode mettant en œuvre la réflexion vitreuse.}
+    \cpgeitem{Identifier les lignes neutres d’une lame quart d’onde ou demi-onde, sans distinction entre axe lent et rapide.}
+    \cpgeitem{Modifier la direction d’une polarisation rectiligne.}
+    \cpgeitem{Obtenir une polarisation circulaire à partir d’une polarisation rectiligne, sans prescription sur le sens de rotation.}
+    \cpgeitem{Mesurer un pouvoir rotatoire naturel.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/2/6}{
+  parent = {PC/E/2},
+  numero = {E.2.6},
+  contenu = {
+    \cpgeitem{Étudier la cohérence temporelle d’une source.}},
+  capacites = {
+    \cpgeitem{Régler un interféromètre de Michelson pour une observation en lame d’air avec une source étendue par une démarche autonome non imposée.}
+    \cpgeitem{Obtenir une estimation semi-quantitative de la longueur de cohérence d’une radiation à l’aide d’un interféromètre de Michelson en lame d’air.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/2/7}{
+  parent = {PC/E/2},
+  numero = {E.2.7},
+  contenu = {
+    \cpgeitem{Mesurer une faible différence de longueurs d’onde : doublet spectral, modes d’une diode laser.}},
+  capacites = {
+    \cpgeitem{Réaliser la mesure d’un faible écart spectral avec un interféromètre de Michelson.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/E/3}{
+  parent = {PC/E},
+  numero = {E.3},
+  niveau = {2},
+  titre = {Prévention du risque au laboratoire de physique},
+  chapeau = {
+    \cpgeitem{L’apprentissage et le respect des règles de sécurité électrique, optique et celles liées à la pression et à la température permettent aux étudiants de prévenir et de minimiser les risques. Futurs ingénieurs, chercheurs, enseignants, ils doivent être sensibilisés au respect de la législation et à l’impact de leur activité sur l’environnement.}},
+}
+
+\cpgeligne{PC/E/3/1}{
+  parent = {PC/E/3},
+  numero = {E.3.1},
+  contenu = {
+    \cpgeitem{\textbf{Prévention des risques au laboratoire}}},
+  capacites = {
+    \cpgeitem{Adopter une attitude responsable et adaptée au travail en laboratoire.}
+    \cpgeitem{Développer une attitude autonome dans la prévention des risques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/3/2}{
+  parent = {PC/E/3},
+  numero = {E.3.2},
+  contenu = {
+    \cpgeitem{\begin{itemize} \item Risque électrique \end{itemize}}},
+  capacites = {
+    \cpgeitem{Adopter une attitude responsable lors de l’utilisation d’appareils électriques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/3/3}{
+  parent = {PC/E/3},
+  numero = {E.3.3},
+  contenu = {
+    \cpgeitem{\begin{itemize} \item Risque optique \end{itemize}}},
+  capacites = {
+    \cpgeitem{Utiliser les sources laser et les diodes électroluminescentes de manière adaptée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/E/3/4}{
+  parent = {PC/E/3},
+  numero = {E.3.4},
+  contenu = {
+    \cpgeitem{\begin{itemize} \item Risques liés à la pression et à la température \end{itemize}}},
+  capacites = {
+    \cpgeitem{Adopter une attitude responsable lors de manipulations de corps chauds ou de dispositifs engageant des hautes ou des basses pressions.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/P}{
+  parent = {PC},
+  numero = {P},
+  niveau = {1},
+  titre = {Préambule},
+  chapeau = {},
+}
+
+\cpgerubrique{PC/P/1}{
+  parent = {PC/P},
+  numero = {P.1},
+  niveau = {2},
+  titre = {Objectifs de formation},
+  chapeau = {
+    \cpgeitem{Le programme de physique de la classe de PC est conçu comme un socle cohérent et ambitieux de connaissances et de capacités scientifiques s’appuyant sur celles déjà travaillées au lycée et en classe de PCSI. Le programme vise à préparer les étudiants à un cursus d’ingénieur, de chercheur ou d’enseignant. Il s’agit de renforcer chez l’étudiant les compétences inhérentes à la pratique de la démarche scientifique : observer et s’approprier, analyser et modéliser, réaliser et valider, et enfin communiquer et valoriser ses résultats.}
+    \cpgeitem{L’acquisition de ce socle par les étudiants constitue un objectif prioritaire pour l’enseignant. Parce que la physique et la chimie sont avant tout des sciences expérimentales qui développent la curiosité, la créativité et l’analyse critique, l’expérience est au cœur de son enseignement, que ce soit en cours ou lors des séances de travaux pratiques. Les activités expérimentales habituent les étudiants à se confronter au réel, comme ces derniers auront à le faire dans l’exercice de leur métier.}
+    \cpgeitem{De même, l’introduction de capacités numériques dans le programme prend en compte la place nouvelle des sciences numériques dans la formation des scientifiques notamment dans le domaine de la simulation. Elles offrent aux étudiants la possibilité d’effectuer une modélisation avancée du monde réel, par exemple par la prise en compte d’effets non linéaires.}
+    \cpgeitem{La démarche de modélisation occupe également une place centrale dans le programme pour former les étudiants à établir, de manière autonome, un lien fait d’allers-retours entre le « monde » des objets, des expériences, des faits, et celui des modèles et des théories. L’enseignant doit rechercher un point d’équilibre entre des approches complémentaires : conceptuelle et expérimentale, abstraite et concrète, théorique et appliquée, inductive et déductive, qualitative et quantitative. La construction d’un modèle passe aussi par l’utilisation maîtrisée des mathématiques dont un des fondateurs de la physique expérimentale, Galilée, énonçait déjà qu’elles sont le langage dans lequel est écrit le monde.}
+    \cpgeitem{Enfin, l’autonomie et la prise d’initiative sont spécifiquement développées à travers la pratique d’activités du type « résolution de problèmes » qui visent à exercer les étudiants à mobiliser de façon complémentaire connaissances et capacités pour répondre à un questionnement ou atteindre un but sans qu’aucune démarche de résolution ne soit fournie.}},
+}
+
+\cpgerubrique{PC/P/2}{
+  parent = {PC/P},
+  numero = {P.2},
+  niveau = {2},
+  titre = {Organisation du programme},
+  chapeau = {
+    \cpgeitem{Le programme est organisé en deux parties.}
+    \cpgeitem{Dans la première partie, intitulée « Formation expérimentale », sont décrits les objectifs de formation sur le thème « Mesures et incertitudes » ainsi que les méthodes et les capacités expérimentales que les étudiants doivent maîtriser à la fin de l’année scolaire. Leur mise en œuvre doit notamment s’appuyer sur des problématiques concrètes identifiées en gras dans la colonne « capacités exigibles » de la seconde partie du programme intitulée « Contenus thématiques ». Elles doivent être programmées par l’enseignant de façon à assurer un apprentissage progressif de l’ensemble des capacités attendues.}
+    \cpgeitem{La seconde partie, intitulée « Contenus thématiques » est structurée autour de six thèmes : « Optique », « Électronique », « Thermodynamique », « Mécanique », « Électromagnétisme » et « Physique des ondes ». La présentation en deux colonnes (« notions et contenus » et « capacités exigibles ») met en valeur les éléments clefs constituant le socle de connaissances et de capacités dont l’assimilation par tous les étudiants est requise. Certains items de cette seconde partie, identifiés en caractères gras dans la colonne « capacités exigibles », se prêtent particulièrement à une approche expérimentale. Ils doivent être abordés en priorité lors de séances de travaux pratiques où l’autonomie et l’initiative individuelle de l’étudiant doivent être privilégiées. La présence de capacités numériques explicitées atteste par ailleurs de la volonté de renforcer ce volet de la formation des étudiants.}
+    \cpgeitem{Trois annexes sont consacrées, d’une part, au matériel nécessaire à la mise en œuvre des programmes et, d’autre part, aux outils mathématiques et aux outils numériques que les étudiants doivent savoir mobiliser de façon autonome dans le cadre des enseignements de physique-chimie à la fin de la classe de PC.}
+    \cpgeitem{Ce programme précise les objectifs de formation à atteindre pour tous les étudiants. Il n’impose en aucun cas une progression, celle-ci relève de la liberté pédagogique de l’enseignant.}},
+}
+
+\cpgerubrique{PC/P/3}{
+  parent = {PC/P},
+  numero = {P.3},
+  niveau = {2},
+  titre = {Les compétences travaillées dans le cadre de la démarche scientifique},
+  chapeau = {
+    \cpgeitem{L’ensemble des activités proposées en classe préparatoire aux grandes écoles – activités expérimentales, résolutions de problèmes, TIPE, etc. – permet de travailler les compétences de la démarche scientifique qui figurent dans le tableau ci-dessous. Des capacités associées sont explicitées afin de préciser les contours de chaque compétence, elles ne constituent donc pas une liste exhaustive et peuvent parfois relever de plusieurs domaines de compétences. L’ordre de présentation de ces compétences ne préjuge pas d’un ordre de mobilisation de ces dernières lors d’une activité.}
+    \cpgeitem{Les compétences doivent être acquises à l’issue de la formation en CPGE. Elles nécessitent d’être régulièrement mobilisées par les étudiants et sont évaluées en s’appuyant, par exemple, sur l’utilisation de grilles d’évaluation.}
+    \cpgeitem{Le niveau de maîtrise de ces compétences dépend de l’autonomie et de l’initiative requises dans les activités proposées aux étudiants sur les notions et capacités exigibles du programme.}
+    \cpgeitem{La mise en œuvre des programmes doit aussi être l’occasion d’aborder avec les étudiants des questions liées à l’histoire de l’évolution des idées, des modèles et des théories en physique-chimie, à des questions liées à la recherche scientifique actuelle et à des enjeux citoyens comme la responsabilité individuelle et collective, la sécurité pour soi et pour autrui, l’environnement et le développement durable ou encore le réchauffement climatique.}},
+}
+
+\cpgerubrique{PC/P/3/APP}{
+  parent = {PC/P/3},
+  numero = {APP},
+  niveau = {3},
+  titre = {S’approprier},
+  chapeau = {},
+}
+
+\cpgeligne{PC/P/3/APP/1}{
+  parent = {PC/P/3/APP},
+  numero = {APP.1},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Rechercher, extraire et organiser l’information en lien avec la situation étudiée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/APP/2}{
+  parent = {PC/P/3/APP},
+  numero = {APP.2},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Identifier la complémentarité d’informations présentées sous des formes différentes (texte, graphe, tableau, etc.).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/APP/3}{
+  parent = {PC/P/3/APP},
+  numero = {APP.3},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Énoncer ou dégager une problématique scientifique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/APP/4}{
+  parent = {PC/P/3/APP},
+  numero = {APP.4},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Représenter la situation par un schéma modèle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/APP/5}{
+  parent = {PC/P/3/APP},
+  numero = {APP.5},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Identifier les grandeurs pertinentes, leur attribuer un symbole.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/APP/6}{
+  parent = {PC/P/3/APP},
+  numero = {APP.6},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Relier le problème à une situation modèle connue.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/APP/7}{
+  parent = {PC/P/3/APP},
+  numero = {APP.7},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Acquérir de nouvelles connaissances en autonomie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/P/3/ANA}{
+  parent = {PC/P/3},
+  numero = {ANA},
+  niveau = {3},
+  titre = {Analyser /Raisonner},
+  chapeau = {},
+}
+
+\cpgeligne{PC/P/3/ANA/1}{
+  parent = {PC/P/3/ANA},
+  numero = {ANA.1},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Formuler des hypothèses.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/ANA/2}{
+  parent = {PC/P/3/ANA},
+  numero = {ANA.2},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Décomposer un problème en plusieurs problèmes plus simples.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/ANA/3}{
+  parent = {PC/P/3/ANA},
+  numero = {ANA.3},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Proposer une stratégie pour répondre à une problématique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/ANA/4}{
+  parent = {PC/P/3/ANA},
+  numero = {ANA.4},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Choisir, concevoir, justifier un protocole, un dispositif expérimental, un modèle ou des lois physiques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/ANA/5}{
+  parent = {PC/P/3/ANA},
+  numero = {ANA.5},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Évaluer des ordres de grandeur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/ANA/6}{
+  parent = {PC/P/3/ANA},
+  numero = {ANA.6},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Identifier les idées essentielles d’un document et leurs articulations.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/ANA/7}{
+  parent = {PC/P/3/ANA},
+  numero = {ANA.7},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Relier qualitativement ou quantitativement différents éléments d’un ou de documents.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/P/3/REA}{
+  parent = {PC/P/3},
+  numero = {REA},
+  niveau = {3},
+  titre = {Réaliser},
+  chapeau = {},
+}
+
+\cpgeligne{PC/P/3/REA/1}{
+  parent = {PC/P/3/REA},
+  numero = {REA.1},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Mettre en œuvre les étapes d’une démarche, un protocole, un modèle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/REA/2}{
+  parent = {PC/P/3/REA},
+  numero = {REA.2},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Extraire une information d’un texte, d’un graphe, d’un tableau, d’un schéma, d’une photo.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/REA/3}{
+  parent = {PC/P/3/REA},
+  numero = {REA.3},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Schématiser un dispositif, une expérience, une méthode de mesure.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/REA/4}{
+  parent = {PC/P/3/REA},
+  numero = {REA.4},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Utiliser le matériel et les produits de manière adaptée en respectant des règles de sécurité.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/REA/5}{
+  parent = {PC/P/3/REA},
+  numero = {REA.5},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Effectuer des représentations graphiques à partir de données.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/REA/6}{
+  parent = {PC/P/3/REA},
+  numero = {REA.6},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Mener des calculs analytiques ou à l’aide d’un langage de programmation, effectuer des applications numériques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/REA/7}{
+  parent = {PC/P/3/REA},
+  numero = {REA.7},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Conduire une analyse dimensionnelle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/P/3/VAL}{
+  parent = {PC/P/3},
+  numero = {VAL},
+  niveau = {3},
+  titre = {Valider},
+  chapeau = {},
+}
+
+\cpgeligne{PC/P/3/VAL/1}{
+  parent = {PC/P/3/VAL},
+  numero = {VAL.1},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Exploiter des observations, des mesures en estimant les incertitudes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/VAL/2}{
+  parent = {PC/P/3/VAL},
+  numero = {VAL.2},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Confronter les résultats d’un modèle à des résultats expérimentaux, à des données figurant dans un document, à ses connaissances.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/VAL/3}{
+  parent = {PC/P/3/VAL},
+  numero = {VAL.3},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Confirmer ou infirmer une hypothèse, une information.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/VAL/4}{
+  parent = {PC/P/3/VAL},
+  numero = {VAL.4},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Analyser les résultats de manière critique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/VAL/5}{
+  parent = {PC/P/3/VAL},
+  numero = {VAL.5},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Repérer les points faibles d’une argumentation (contradiction, partialité, incomplétude, etc.).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/VAL/6}{
+  parent = {PC/P/3/VAL},
+  numero = {VAL.6},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Proposer des améliorations de la démarche ou du modèle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/P/3/COM}{
+  parent = {PC/P/3},
+  numero = {COM},
+  niveau = {3},
+  titre = {Communiquer},
+  chapeau = {},
+}
+
+\cpgeligne{PC/P/3/COM/1}{
+  parent = {PC/P/3/COM},
+  numero = {COM.1},
+  contenu = {
+    \cpgeitem{Communiquer}},
+  capacites = {
+    \cpgeitem{À l’écrit comme à l’oral : présenter les étapes de sa démarche de manière synthétique, organisée et cohérente. rédiger une synthèse, une analyse, une argumentation. utiliser un vocabulaire scientifique précis et choisir des modes de représentation adaptés (schémas, graphes, cartes mentales, etc.).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PC/P/3/COM/2}{
+  parent = {PC/P/3/COM},
+  numero = {COM.2},
+  contenu = {
+    \cpgeitem{Communiquer}},
+  capacites = {
+    \cpgeitem{Écouter, confronter son point de vue.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PC/P/4}{
+  parent = {PC/P},
+  numero = {P.4},
+  niveau = {2},
+  titre = {Repères pour l’enseignement},
+  chapeau = {
+    \cpgeitem{Dans le cadre de la liberté pédagogique, l’enseignant organise son enseignement en respectant trois grands principes directeurs : \begin{itemize} \item privilégier la mise en activité des étudiants en évitant tout dogmatisme : l’acquisition des connaissances, des capacités et des compétences est d’autant plus efficace que les étudiants sont acteurs de leur formation. Les supports pédagogiques utilisés doivent notamment favoriser la réflexion, le raisonnement, la participation et l’autonomie des étudiants. L’investigation expérimentale et la résolution de problèmes facilitent cette mise en activité ; \item recourir à la mise en contexte des contenus scientifiques : le questionnement scientifique peut être introduit à partir de phénomènes naturels, de procédés industriels ou d’objets technologiques. Le recours à des approches documentaires est un moyen pertinent pour diversifier les supports d’accès à l’information scientifique et technologique et ainsi former l’étudiant à mieux en appréhender la complexité et à apprendre par lui-même. Lorsque le thème traité s’y prête, l’enseignant peut le mettre en perspective avec l’histoire des sciences et des techniques, avec des questions d’actualité ou des débats d’idées ; \item contribuer à la nécessaire mise en cohérence des enseignements scientifiques : la progression en physique-chimie doit être articulée avec celles mises en œuvre dans les autres disciplines scientifiques (mathématiques, chimie, informatique). \end{itemize}}
+    \cpgeitem{Concernant l’évaluation, qui vise à mesurer le degré de maîtrise du socle ainsi défini et le niveau d’autonomie et d’initiative des étudiants, l’enseignant veille soigneusement à identifier les compétences et les capacités mobilisées dans les activités proposées afin d’en élargir le plus possible le spectre.}
+    \cpgeitem{Le professeur veille aussi à développer chez les étudiants des compétences transversales et préprofessionnelles relatives aux capacités suivantes : \begin{itemize} \item identifier les différents champs professionnels et les parcours pour y accéder ; \item valoriser ses compétences scientifiques et techniques en lien avec son projet de poursuite d'études ou professionnel. \end{itemize}}},
+}
+

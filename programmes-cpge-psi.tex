@@ -1,0 +1,4005 @@
+% programmes-cpge-psi.tex — programme de physique-chimie de la classe de PSI
+% Texte officiel de 2021 (voie Physique et sciences de l’ingénieur), publié par le ministère de
+% l’Enseignement supérieur. Fichier de données du paquet programmes-cpge.
+% Format : voir la documentation, « Ajouter un programme ».
+
+\cpgefiliere{PSI}{
+  discipline = {Physique-chimie},
+  classe = {PSI},
+  voie = {Physique et sciences de l’ingénieur},
+  annee = {2021},
+}
+
+\cpgerubrique{PSI/1}{
+  parent = {PSI},
+  numero = {1},
+  niveau = {1},
+  titre = {Électronique},
+  chapeau = {
+    \cpgeitem{Cette partie renforce et complète l’étude des circuits électriques linéaires conduite dans le thème « Ondes et signaux » du programme de première année de la classe de PCSI. Ainsi, les notions de filtrage et d’analyse spectrale sont réinvesties, en particulier dans les activités expérimentales. Le programme de deuxième année ajoute la rétroaction et le bouclage des systèmes linéaires dans le but d’aborder la stabilité, les oscillateurs et la réalisation de filtres actifs à forte impédance d’entrée pour une association en cascade. Ces différentes thématiques sont illustrées à l’aide de l’amplificateur linéaire intégré ALI (également appelé amplificateur opérationnel) dont l’étude n’est pas une fin en soi mais un outil permettant des réalisations expérimentales variées. Par ailleurs, des exemples de manifestations des non linéarités sont abordés à l’occasion de la saturation d’un amplificateur ou de la réalisation d’une fonction mémoire (comparateur à hystérésis). Afin de compléter l’approche analogique des circuits électriques, un module à vocation expérimentale est consacré au traitement numérique des signaux à travers les sujets suivants : \begin{itemize} \item l’échantillonnage et le repliement de spectre ; \item le filtrage numérique ; \item les conversions analogique/numérique et numérique/analogique. Enfin, la problématique de la transmission d’un signal temporel codant une information est abordée dans l’étude et la réalisation d’une modulation, en relation avec la partie du programme consacrée à la propagation des ondes électromagnétiques. \end{itemize}}},
+}
+
+\cpgerubrique{PSI/1/1}{
+  parent = {PSI/1},
+  numero = {1.1},
+  niveau = {2},
+  titre = {Stabilité des systèmes linéaires},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie s’intéresse aux propriétés des systèmes linéaires déjà abordés en première année. Les capacités relatives au filtrage et à la décomposition harmonique d’un signal périodique sont révisées sans ajout de nouvelles capacités. Dans le but de faciliter le lien avec le cours de sciences industrielles pour l'ingénieur, la notation symbolique de la fonction de transfert $H(p)$ est utilisée sans faire référence à la transformée de Laplace. L’étude est complétée par une analyse de la stabilité des systèmes du premier et du second ordre en examinant le régime transitoire associé à l’équation différentielle.}},
+}
+
+\cpgeligne{PSI/1/1/1}{
+  parent = {PSI/1/1},
+  numero = {1.1.1},
+  contenu = {
+    \cpgeitem{Fonction de transfert d’un système entrée-sortie linéaire continu et invariant.}},
+  capacites = {
+    \cpgeitem{Transposer la fonction de transfert opérationnelle dans les domaines fréquentiel (fonction de transfert harmonique) ou temporel (équation différentielle).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/1/1/2}{
+  parent = {PSI/1/1},
+  numero = {1.1.2},
+  contenu = {
+    \cpgeitem{Stabilité.}},
+  capacites = {
+    \cpgeitem{Étudier la stabilité d’un système d’ordre 1 ou 2 à partir des signes des coefficients de l’équation différentielle ou de la fonction de transfert.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/1/2}{
+  parent = {PSI/1},
+  numero = {1.2},
+  niveau = {2},
+  titre = {Rétroaction},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie illustre quelques propriétés sur l’exemple de l’amplificateur linéaire intégré. L’étude des circuits est strictement limitée à des situations pouvant être facilement abordées avec les outils introduits en première année (loi des mailles, loi des nœuds, diviseur de tension). La vitesse limite de balayage de l’ALI est évoquée en travaux pratiques afin d’identifier les distorsions harmoniques traduisant un comportement non linéaire. Les limitations associées aux courants de polarisation et la tension de décalage ne sont pas étudiées.}},
+}
+
+\cpgeligne{PSI/1/2/1}{
+  parent = {PSI/1/2},
+  numero = {1.2.1},
+  contenu = {
+    \cpgeitem{Modèle de l'ALI défini par une résistance d’entrée infinie, une résistance de sortie nulle, une fonction de transfert du premier ordre en régime linéaire, une saturation de la tension de sortie.}
+    \cpgeitem{Limites du modèle : vitesse limite de balayage, saturation de l’intensité du courant de sortie.}},
+  capacites = {
+    \cpgeitem{Citer les hypothèses du modèle et les ordres de grandeur du gain différentiel statique et du temps de réponse.}},
+  experimentales = {
+    \cpgeitem{Détecter, dans un montage à ALI, les manifestations de la vitesse limite de balayage et de la saturation de l’intensité du courant de sortie.}},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/1/2/2}{
+  parent = {PSI/1/2},
+  numero = {1.2.2},
+  contenu = {
+    \cpgeitem{Montages amplificateur non inverseur et comparateur à hystérésis.}},
+  capacites = {
+    \cpgeitem{Analyser la stabilité du régime linéaire.}
+    \cpgeitem{Établir la conservation du produit gain-bande passante du montage non inverseur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/1/2/3}{
+  parent = {PSI/1/2},
+  numero = {1.2.3},
+  contenu = {
+    \cpgeitem{ALI idéal de gain infini en régime linéaire.}},
+  capacites = {
+    \cpgeitem{Identifier la présence d’une rétroaction sur la borne inverseuse comme un indice de probable stabilité du régime linéaire.}
+    \cpgeitem{Établir la relation entrée-sortie des montages non inverseur, suiveur, inverseur et intégrateur.}
+    \cpgeitem{Déterminer les impédances d’entrée de ces montages.}
+    \cpgeitem{Expliquer l’intérêt, pour garantir leur fonctionnement lors de mises en cascade, de réaliser des filtres de tension de forte impédance d’entrée et de faible impédance de sortie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/1/2/4}{
+  parent = {PSI/1/2},
+  numero = {1.2.4},
+  contenu = {
+    \cpgeitem{ALI idéal de gain infini en régime saturé.}},
+  capacites = {
+    \cpgeitem{Identifier l’absence de rétroaction ou la présence d’une unique rétroaction sur la borne non inverseuse comme l’indice d’un probable comportement en saturation.}
+    \cpgeitem{Établir la relation entrée-sortie d’un comparateur simple.}
+    \cpgeitem{Associer, pour un signal d’entrée sinusoïdal, le caractère non-linéaire du système et la génération d’harmoniques en sortie.}
+    \cpgeitem{Établir le cycle d’un comparateur à hystérésis.}
+    \cpgeitem{Décrire le phénomène d’hystérésis en relation avec la notion de fonction mémoire.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/1/3}{
+  parent = {PSI/1},
+  numero = {1.3},
+  niveau = {2},
+  titre = {Oscillateurs},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie s’intéresse à une étude non exhaustive des oscillateurs en électronique. Les exemples sont choisis à l’initiative du professeur et les calculs des fonctions de transfert des filtres ne constituent pas un objectif de formation. En travaux pratiques, on complète l’étude par une analyse spectrale des signaux.}},
+}
+
+\cpgeligne{PSI/1/3/1}{
+  parent = {PSI/1/3},
+  numero = {1.3.1},
+  contenu = {
+    \cpgeitem{Oscillateur quasi-sinusoïdal réalisé en bouclant un filtre passe-bande du deuxième ordre avec un amplificateur.}},
+  capacites = {
+    \cpgeitem{Exprimer les conditions théoriques (gain et fréquence) d’auto-oscillation sinusoïdale d’un système linéaire bouclé.}
+    \cpgeitem{Analyser sur l’équation différentielle l’inégalité que doit vérifier le gain de l’amplificateur afin d’assurer le démarrage des oscillations.}
+    \cpgeitem{Interpréter le rôle des non-linéarités dans la stabilisation de l’amplitude des oscillations.}},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre un oscillateur quasi-sinusoïdal et analyser les spectres des signaux générés.}},
+  numeriques = {
+    \cpgeitem{à l’aide d’un langage de programmation, simuler l’évolution temporelle d’un signal généré par un oscillateur.}},
+}
+
+\cpgeligne{PSI/1/3/2}{
+  parent = {PSI/1/3},
+  numero = {1.3.2},
+  contenu = {
+    \cpgeitem{Oscillateur de relaxation associant un intégrateur et un comparateur à hystérésis.}},
+  capacites = {
+    \cpgeitem{Décrire les différentes séquences de fonctionnement.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/1/3/3}{
+  parent = {PSI/1/3},
+  numero = {1.3.3},
+  contenu = {
+    \cpgeitem{Générateur de signaux non sinusoïdaux.}},
+  capacites = {
+    \cpgeitem{Exprimer les conditions de basculement.}
+    \cpgeitem{Déterminer l’expression de la période d’oscillation.}},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre un oscillateur de relaxation et analyser les spectres des signaux générés.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/1/4}{
+  parent = {PSI/1},
+  numero = {1.4},
+  niveau = {2},
+  titre = {Électronique numérique},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est étudiée de manière expérimentale et aborde la question du traitement numérique du signal dans le prolongement du programme de première année. Le phénomène de repliement de spectre est expliqué qualitativement à l’aide par exemple d’une analogie stroboscopique, l’objectif étant de mettre en place la condition de Nyquist-Shannon et de réaliser convenablement une acquisition numérique en vue d’une analyse spectrale.}
+    \cpgeitem{Afin de mettre en évidence d’autres effets associés à l’échantillonnage, on réalise de manière comparative un filtre analogique passe-bas et un filtre numérique remplissant la même fonction. Ce dernier est réalisé à l’aide d’une chaîne de traitement : CAN, algorithme numérique, CNA. On étudie expérimentalement l’influence de la fréquence d’échantillonnage.}},
+}
+
+\cpgeligne{PSI/1/4/1}{
+  parent = {PSI/1/4},
+  numero = {1.4.1},
+  contenu = {
+    \cpgeitem{Échantillonnage.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Expliquer l’influence de la fréquence d’échantillonnage.}},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/1/4/2}{
+  parent = {PSI/1/4},
+  numero = {1.4.2},
+  contenu = {
+    \cpgeitem{Condition de Nyquist-Shannon.}},
+  capacites = {
+    \cpgeitem{Utiliser la condition de Nyquist-Shannon.}},
+  experimentales = {
+    \cpgeitem{Mettre en évidence le phénomène de repliement de spectre au moyen d’un oscilloscope numérique ou d’un logiciel de calcul numérique.}},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/1/4/3}{
+  parent = {PSI/1/4},
+  numero = {1.4.3},
+  contenu = {
+    \cpgeitem{Analyse spectrale numérique.}},
+  capacites = {
+    \cpgeitem{Choisir les paramètres (durée, nombre d’échantillons, fréquence d’échantillonnage) d’une acquisition numérique afin de respecter la condition de Nyquist-Shannon.}},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{calculer, à l’aide d’un langage de programmation, la transformée de Fourier discrète d’un signal numérique.}},
+}
+
+\cpgeligne{PSI/1/4/4}{
+  parent = {PSI/1/4},
+  numero = {1.4.4},
+  contenu = {
+    \cpgeitem{Filtrage numérique.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre une chaîne d’acquisition et de conversion.}},
+  numeriques = {
+    \cpgeitem{réaliser, à l’aide d’un langage de programmation, un filtrage numérique d’un signal issu d’une acquisition, et mettre en évidence la limitation introduite par l’échantillonnage.}},
+}
+
+\cpgerubrique{PSI/1/5}{
+  parent = {PSI/1},
+  numero = {1.5},
+  niveau = {2},
+  titre = {Modulation-démodulation},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est l’occasion de faire le lien entre la propagation des ondes électromagnétiques et le traitement du signal afin d’expliquer la problématique de la transmission d’une information. Cette étude est illustrée en travaux pratiques à l’aide d’un multiplieur analogique.}},
+}
+
+\cpgeligne{PSI/1/5/1}{
+  parent = {PSI/1/5},
+  numero = {1.5.1},
+  contenu = {
+    \cpgeitem{Transmission d’un signal codant une information variant dans le temps.}},
+  capacites = {
+    \cpgeitem{Définir un signal modulé en amplitude, en fréquence, en phase.}
+    \cpgeitem{Citer les ordres de grandeur des fréquences utilisées pour les signaux radio AM, FM, la téléphonie mobile.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/1/5/2}{
+  parent = {PSI/1/5},
+  numero = {1.5.2},
+  contenu = {
+    \cpgeitem{Modulation d’amplitude.}},
+  capacites = {
+    \cpgeitem{Interpréter le signal modulé comme le produit d’une porteuse par une modulante.}
+    \cpgeitem{Décrire le spectre d’un signal modulé.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/1/5/3}{
+  parent = {PSI/1/5},
+  numero = {1.5.3},
+  contenu = {
+    \cpgeitem{Démodulation d’amplitude.}},
+  capacites = {
+    \cpgeitem{À partir de l’analyse fréquentielle, justifier la nécessité d’utiliser une opération non linéaire.}
+    \cpgeitem{Expliquer le principe de la démodulation synchrone.}},
+  experimentales = {
+    \cpgeitem{Réaliser une modulation d’amplitude et une démodulation synchrone avec un multiplieur analogique.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2}{
+  parent = {PSI},
+  numero = {2},
+  niveau = {1},
+  titre = {Phénomènes de transport},
+  chapeau = {
+    \cpgeitem{Cette partie présente le formalisme nécessaire à l'étude générale des phénomènes de transport abordés au programme de la classe de PSI (conduction électrique, conduction thermique, diffusion de particules, fluides en écoulement). Ce formalisme, commun à différents domaines de la physique, repose essentiellement sur la notion de bilan, global ou local. Il permet d’exprimer des lois de conservation (charge, énergie, masse) et d’établir des équations d’évolution en relation avec des propriétés phénoménologiques. Le professeur peut aborder les différentes notions dans l’ordre qu’il souhaite, en relation avec les autres parties du programme. Il est cependant essentiel de faire apparaître les analogies et les différences entre les différents domaines d’étude.}},
+}
+
+\cpgerubrique{PSI/2/1}{
+  parent = {PSI/2},
+  numero = {2.1},
+  niveau = {2},
+  titre = {Transport de charge},
+  chapeau = {
+    \cpgeitem{Dans la partie \cpgecettepartie, le transport de charge et les milieux conducteurs sont étudiés en présentant un modèle microscopique. Pour sensibiliser les étudiants à l'aspect complexe de la matière, le professeur est invité à conduire une critique du modèle historique de Drude en comparant le libre parcours moyen d’un électron libre avec la distance interatomique du réseau. La conductivité électrique est réutilisée lors de l'étude des ondes électromagnétiques dans les conducteurs (effet de peau et réflexion sur un métal).}},
+}
+
+\cpgerubrique{PSI/2/1/1}{
+  parent = {PSI/2/1},
+  numero = {2.1.1},
+  niveau = {3},
+  titre = {Conservation de la charge},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/2/1/1/1}{
+  parent = {PSI/2/1/1},
+  numero = {2.1.1.1},
+  contenu = {
+    \cpgeitem{Densité volumique de charge électrique ${\rho}$, vecteur densité de courant électrique $\cpgevec{j}$.}},
+  capacites = {
+    \cpgeitem{Passer d’une description microscopique (porteurs de charges, vitesse des porteurs) aux grandeurs mésoscopiques ${\rho}$ et $\cpgevec{j}$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/1/1/2}{
+  parent = {PSI/2/1/1},
+  numero = {2.1.1.2},
+  contenu = {
+    \cpgeitem{Intensité du courant électrique.}},
+  capacites = {
+    \cpgeitem{Écrire l'intensité comme le flux du vecteur densité de courant électrique à travers une surface orientée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/1/1/3}{
+  parent = {PSI/2/1/1},
+  numero = {2.1.1.3},
+  contenu = {
+    \cpgeitem{Bilan de charge. Équation locale de la conservation de la charge.}},
+  capacites = {
+    \cpgeitem{Établir, en coordonnées cartésiennes, l’équation locale traduisant la conservation de la charge électrique.}
+    \cpgeitem{Énoncer l’équation locale et en interpréter chacun des termes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/1/1/4}{
+  parent = {PSI/2/1/1},
+  numero = {2.1.1.4},
+  contenu = {
+    \cpgeitem{Régime stationnaire.}},
+  capacites = {
+    \cpgeitem{Définir une ligne de courant et un tube de courant.}
+    \cpgeitem{Exploiter le caractère conservatif du vecteur densité de courant électrique en régime stationnaire et relier cette propriété à la loi des nœuds usuelle de l’électrocinétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2/1/2}{
+  parent = {PSI/2/1},
+  numero = {2.1.2},
+  niveau = {3},
+  titre = {Conducteur ohmique},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/2/1/2/1}{
+  parent = {PSI/2/1/2},
+  numero = {2.1.2.1},
+  contenu = {
+    \cpgeitem{Loi d’Ohm locale.}},
+  capacites = {
+    \cpgeitem{Relier le vecteur densité de courant au champ électrique dans un conducteur ohmique.}
+    \cpgeitem{Citer des ordres de grandeur de la conductivité.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/1/2/2}{
+  parent = {PSI/2/1/2},
+  numero = {2.1.2.2},
+  contenu = {
+    \cpgeitem{Modèle de Drude.}},
+  capacites = {
+    \cpgeitem{Établir, en régime stationnaire, une expression de la conductivité électrique à l’aide d’un modèle microscopique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/1/2/3}{
+  parent = {PSI/2/1/2},
+  numero = {2.1.2.3},
+  contenu = {
+    \cpgeitem{Résistance d'un conducteur cylindrique.}},
+  capacites = {
+    \cpgeitem{Établir l'expression de la résistance d’un câble cylindrique parcouru uniformément par un courant parallèle à son axe.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/1/2/4}{
+  parent = {PSI/2/1/2},
+  numero = {2.1.2.4},
+  contenu = {
+    \cpgeitem{Puissance électrique. Effet Joule.}},
+  capacites = {
+    \cpgeitem{Établir l'expression de la puissance volumique reçue par un conducteur ohmique.}
+    \cpgeitem{Interpréter l’effet Joule.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2/2}{
+  parent = {PSI/2},
+  numero = {2.2},
+  niveau = {2},
+  titre = {Transfert thermique par conduction},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est consacrée à la conduction thermique en relation avec le cours de thermodynamique de première année. Après avoir écrit les premier et deuxième principes sous forme infinitésimale, on s’attache à l’étude de la diffusion thermique avec une visée applicative et résolument concrète. L’établissement de l’équation de diffusion thermique est limité au cas des systèmes de volume constant et les mises en équation locale sont faites exclusivement en géométries unidimensionnelles. On admet ensuite les formes générales des équations en utilisant les opérateurs d’analyse vectorielle. Cette partie contribue aussi à asseoir la maîtrise des opérateurs d’analyse vectorielle (gradient, divergence, laplacien), sans dérive calculatoire. L’étude de l’équation de diffusion thermique sans terme source, en régime stationnaire ou dans le cadre de l’approximation des régimes quasi-stationnaires (ARQS), est menée par analogie avec l’électrocinétique. La notion de résistance thermique, dont la connaissance des conditions d’application est aussi importante que son utilisation, doit être illustrée par des exemples pratiques. Aucune connaissance sur les termes sources n’est exigible sauf pour l’effet Joule. On néglige le rayonnement thermique. Dans le cadre de l’interface solide-fluide, la loi de Newton peut être utilisée, mais ni sa mémorisation, ni aucune connaissance sur son établissement ne peuvent être exigées. Aucune méthode générale de résolution ne peut être demandée aux étudiants, mais les solutions de l'équation de diffusion en géométrie unidimensionnelle cartésienne, sans terme source, en régime stationnaire ou en régime d’ondes harmoniques doivent être connues.}},
+}
+
+\cpgerubrique{PSI/2/2/1}{
+  parent = {PSI/2/2},
+  numero = {2.2.1},
+  niveau = {3},
+  titre = {Formulation infinitésimale des principes de la thermodynamique},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/2/2/1/1}{
+  parent = {PSI/2/2/1},
+  numero = {2.2.1.1},
+  contenu = {
+    \cpgeitem{Premier principe.}
+    \cpgeitem{Deuxième principe : $\cpgedd{S} = \delta{S_e} + \delta{S_c}$ avec $\delta{S_e} = \delta{Q} / T_0$ pour une évolution monotherme.}},
+  capacites = {
+    \cpgeitem{Énoncer et exploiter les principes de la thermodynamique pour une transformation élémentaire.}
+    \cpgeitem{Utiliser avec rigueur les notations $\cpgedd{}$ et $\delta{}$ en leur attachant une signification.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2/2/2}{
+  parent = {PSI/2/2},
+  numero = {2.2.2},
+  niveau = {3},
+  titre = {Équation de la diffusion thermique},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/2/2/2/1}{
+  parent = {PSI/2/2/2},
+  numero = {2.2.2.1},
+  contenu = {
+    \cpgeitem{Les différents modes de transfert thermique : diffusion, convection et rayonnement.}},
+  capacites = {
+    \cpgeitem{Décrire les trois modes de transfert thermique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/2/2/2}{
+  parent = {PSI/2/2/2},
+  numero = {2.2.2.2},
+  contenu = {
+    \cpgeitem{Flux thermique. Vecteur densité de courant thermique $\cpgevec{j_Q}$.}},
+  capacites = {
+    \cpgeitem{Exprimer le flux thermique comme le flux du vecteur $\cpgevec{j_Q}$ à travers une surface orientée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/2/2/3}{
+  parent = {PSI/2/2/2},
+  numero = {2.2.2.3},
+  contenu = {
+    \cpgeitem{Équilibre thermodynamique local.}},
+  capacites = {
+    \cpgeitem{Énoncer l’hypothèse de l’équilibre thermodynamique local.}
+    \cpgeitem{Utiliser les champs scalaires intensifs (volumiques ou massiques) associés à des grandeurs extensives de la thermodynamique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/2/2/4}{
+  parent = {PSI/2/2/2},
+  numero = {2.2.2.4},
+  contenu = {
+    \cpgeitem{Loi de Fourier.}},
+  capacites = {
+    \cpgeitem{Énoncer et utiliser la loi de Fourier.}
+    \cpgeitem{Citer quelques ordres de grandeur de conductivité thermique dans les conditions usuelles : air, eau, béton, acier.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/2/2/5}{
+  parent = {PSI/2/2/2},
+  numero = {2.2.2.5},
+  contenu = {
+    \cpgeitem{Bilan d’énergie.}},
+  capacites = {
+    \cpgeitem{Établir, pour un milieu évoluant à volume constant, l’équation locale traduisant le premier principe dans le cas d’un problème ne dépendant que d’une seule coordonnée d’espace en coordonnées cartésiennes, cylindriques ou sphériques.}
+    \cpgeitem{Utiliser une généralisation admise en géométrie quelconque à l’aide de l’opérateur divergence et son expression fournie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/2/2/6}{
+  parent = {PSI/2/2/2},
+  numero = {2.2.2.6},
+  contenu = {
+    \cpgeitem{Équation de la diffusion thermique.}},
+  capacites = {
+    \cpgeitem{Établir l’équation de diffusion thermique avec ou sans terme source.}
+    \cpgeitem{Analyser une équation de diffusion en ordre de grandeur pour relier des échelles caractéristiques spatiale et temporelle.}
+    \cpgeitem{Relier l’équation de diffusion à l’irréversibilité temporelle du phénomène.}},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{à l’aide d’un langage de programmation, résoudre l’équation de la diffusion thermique à une dimension par une méthode des différences finies dérivée de la méthode d’Euler explicite de résolution des équations différentielles ordinaires.}},
+}
+
+\cpgeligne{PSI/2/2/2/7}{
+  parent = {PSI/2/2/2},
+  numero = {2.2.2.7},
+  contenu = {
+    \cpgeitem{Conditions aux limites.}},
+  capacites = {
+    \cpgeitem{Exploiter la continuité du flux thermique.}
+    \cpgeitem{Exploiter la continuité de la température pour un contact thermique parfait.}
+    \cpgeitem{Utiliser la relation de Newton (fournie) à l’interface solide-fluide.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2/2/3}{
+  parent = {PSI/2/2},
+  numero = {2.2.3},
+  niveau = {3},
+  titre = {Régime stationnaire, ARQS},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/2/2/3/1}{
+  parent = {PSI/2/2/3},
+  numero = {2.2.3.1},
+  contenu = {
+    \cpgeitem{Résistance ou conductance thermique.}},
+  capacites = {
+    \cpgeitem{Définir la notion de résistance thermique par analogie avec l’électrocinétique et énoncer les conditions d’application de l’analogie.}
+    \cpgeitem{Établir l'expression de la résistance thermique d’un cylindre calorifugé latéralement.}
+    \cpgeitem{Exploiter des associations de résistances thermiques en série ou en parallèle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/2/3/2}{
+  parent = {PSI/2/2/3},
+  numero = {2.2.3.2},
+  contenu = {
+    \cpgeitem{ARQS, analogie électrocinétique avec un circuit RC.}},
+  capacites = {
+    \cpgeitem{Mettre en évidence un temps caractéristique d’évolution de la température.}
+    \cpgeitem{Justifier l’ARQS.}
+    \cpgeitem{Établir l’analogie avec un circuit électrique RC.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2/2/4}{
+  parent = {PSI/2/2},
+  numero = {2.2.4},
+  niveau = {3},
+  titre = {Ondes thermiques},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/2/2/4/1}{
+  parent = {PSI/2/2/4},
+  numero = {2.2.4.1},
+  contenu = {
+    \cpgeitem{Relation de dispersion.}},
+  capacites = {
+    \cpgeitem{Établir la relation de dispersion des ondes thermiques en géométrie unidirectionnelle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/2/4/2}{
+  parent = {PSI/2/2/4},
+  numero = {2.2.4.2},
+  contenu = {
+    \cpgeitem{Effet de peau thermique.}},
+  capacites = {
+    \cpgeitem{Mettre en évidence le déphasage lié à la propagation.}
+    \cpgeitem{Établir une distance caractéristique d’atténuation.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2/3}{
+  parent = {PSI/2},
+  numero = {2.3},
+  niveau = {2},
+  titre = {Diffusion de particules},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est traitée par analogie avec les autres phénomènes de transport évoqués (transport de charge, conduction thermique). On peut également utiliser la loi de Fick pour interpréter les paliers de diffusion en électrochimie.}},
+}
+
+\cpgeligne{PSI/2/3/1}{
+  parent = {PSI/2/3},
+  numero = {2.3.1},
+  contenu = {
+    \cpgeitem{Les différents modes de transfert de particules : diffusion et convection.}},
+  capacites = {
+    \cpgeitem{Citer les deux modes de transfert de particules.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/3/2}{
+  parent = {PSI/2/3},
+  numero = {2.3.2},
+  contenu = {
+    \cpgeitem{Vecteur densité de courant de particules $\cpgevec{j_N}$.}},
+  capacites = {
+    \cpgeitem{Exprimer le débit de particules comme le flux du vecteur $\cpgevec{j_N}$ à travers une surface orientée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/3/3}{
+  parent = {PSI/2/3},
+  numero = {2.3.3},
+  contenu = {
+    \cpgeitem{Loi de Fick.}},
+  capacites = {
+    \cpgeitem{Énoncer et utiliser la loi de Fick.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/3/4}{
+  parent = {PSI/2/3},
+  numero = {2.3.4},
+  contenu = {
+    \cpgeitem{Bilan de particules.}},
+  capacites = {
+    \cpgeitem{Établir l’équation locale de bilan de particules avec ou sans terme source.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/3/5}{
+  parent = {PSI/2/3},
+  numero = {2.3.5},
+  contenu = {
+    \cpgeitem{Équation de diffusion.}},
+  capacites = {
+    \cpgeitem{Établir l’équation de diffusion.}
+    \cpgeitem{Relier l’équation de diffusion à l’irréversibilité temporelle du phénomène.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2/4}{
+  parent = {PSI/2},
+  numero = {2.4},
+  niveau = {2},
+  titre = {Fluides en écoulement},
+  chapeau = {
+    \cpgeitem{L’objectif de la partie \cpgecettepartie est d’introduire les grandeurs pertinentes caractérisant un écoulement, en cohérence avec les autres phénomènes de transport. L’expression de l’accélération comme la dérivée particulaire de la vitesse est abordée mais les équations d’Euler ou de Navier-Stokes ne sont pas au programme. La notion de viscosité est introduite sur un exemple d’écoulement de cisaillement simple. Le nombre de Reynolds est présenté comme le rapport de deux temps caractéristiques construits par analyse dimensionnelle. Il est exploité afin d’évoquer les propriétés de similitude entre des systèmes réalisés à des échelles différentes et caractérisés par les mêmes nombres sans dimension.}},
+}
+
+\cpgerubrique{PSI/2/4/1}{
+  parent = {PSI/2/4},
+  numero = {2.4.1},
+  niveau = {3},
+  titre = {Débits et lois de conservation},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/2/4/1/1}{
+  parent = {PSI/2/4/1},
+  numero = {2.4.1.1},
+  contenu = {
+    \cpgeitem{Particule de fluide.}},
+  capacites = {
+    \cpgeitem{Définir la particule de fluide comme un système mésoscopique de masse constante.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/1/2}{
+  parent = {PSI/2/4/1},
+  numero = {2.4.1.2},
+  contenu = {
+    \cpgeitem{Champ eulérien des vitesses.}},
+  capacites = {
+    \cpgeitem{Distinguer vitesse microscopique et vitesse mésoscopique.}
+    \cpgeitem{Définir une ligne de courant, un tube de courant.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/1/3}{
+  parent = {PSI/2/4/1},
+  numero = {2.4.1.3},
+  contenu = {
+    \cpgeitem{Dérivée particulaire du vecteur vitesse : terme local ; terme convectif.}},
+  capacites = {
+    \cpgeitem{Associer la dérivée particulaire du vecteur vitesse à l’accélération de la particule de fluide qui passe en un point.}
+    \cpgeitem{Citer et utiliser l’expression de l’accélération avec le terme convectif sous la forme $(\cpgevec{v} \cdot \cpgegrad) \cpgevec{v}$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/1/4}{
+  parent = {PSI/2/4/1},
+  numero = {2.4.1.4},
+  contenu = {
+    \cpgeitem{Masse volumique ${\mu}$.}},
+  capacites = {
+    \cpgeitem{Citer des ordres de grandeur des masses volumiques de l’eau et de l’air dans les conditions usuelles.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/1/5}{
+  parent = {PSI/2/4/1},
+  numero = {2.4.1.5},
+  contenu = {
+    \cpgeitem{Débit massique.}},
+  capacites = {
+    \cpgeitem{Définir le débit massique et l’écrire comme le flux du vecteur ${\mu} \cpgevec{v}$ à travers une surface orientée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/1/6}{
+  parent = {PSI/2/4/1},
+  numero = {2.4.1.6},
+  contenu = {
+    \cpgeitem{Conservation de la masse.}},
+  capacites = {
+    \cpgeitem{Énoncer l’équation locale traduisant la conservation de la masse.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/1/7}{
+  parent = {PSI/2/4/1},
+  numero = {2.4.1.7},
+  contenu = {
+    \cpgeitem{Écoulement stationnaire.}},
+  capacites = {
+    \cpgeitem{Exploiter la conservation du débit massique le long d’un tube de courant.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/1/8}{
+  parent = {PSI/2/4/1},
+  numero = {2.4.1.8},
+  contenu = {
+    \cpgeitem{Débit volumique.}},
+  capacites = {
+    \cpgeitem{Définir le débit volumique et l’écrire comme le flux de $\cpgevec{v}$ à travers une surface orientée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/1/9}{
+  parent = {PSI/2/4/1},
+  numero = {2.4.1.9},
+  contenu = {
+    \cpgeitem{Écoulement incompressible et homogène.}},
+  capacites = {
+    \cpgeitem{Définir un écoulement incompressible et homogène par un champ de masse volumique constant et uniforme et relier cette propriété à la conservation du volume pour un système fermé.}
+    \cpgeitem{Exploiter la conservation du débit volumique le long d’un tube de courant indéformable.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2/4/2}{
+  parent = {PSI/2/4},
+  numero = {2.4.2},
+  niveau = {3},
+  titre = {Actions de contact sur un fluide},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/2/4/2/1}{
+  parent = {PSI/2/4/2},
+  numero = {2.4.2.1},
+  contenu = {
+    \cpgeitem{Pression.}},
+  capacites = {
+    \cpgeitem{Identifier la force de pression comme étant une action normale à la surface.}
+    \cpgeitem{Utiliser l’équivalent volumique des actions de pression $-\cpgegrad P$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/2/2}{
+  parent = {PSI/2/4/2},
+  numero = {2.4.2.2},
+  contenu = {
+    \cpgeitem{Éléments de statique des fluides.}},
+  capacites = {
+    \cpgeitem{Exprimer l’évolution de la pression avec l’altitude dans les cas d’un fluide incompressible et de l’atmosphère isotherme dans le modèle du gaz parfait.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/2/3}{
+  parent = {PSI/2/4/2},
+  numero = {2.4.2.3},
+  contenu = {
+    \cpgeitem{Viscosité dynamique.}},
+  capacites = {
+    \cpgeitem{Relier l’expression de la force surfacique de viscosité au profil de vitesse dans le cas d’un écoulement parallèle.}
+    \cpgeitem{Citer l’ordre de grandeur de la viscosité de l’eau.}
+    \cpgeitem{Exploiter la condition d’adhérence à l’interface fluide-solide.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2/4/3}{
+  parent = {PSI/2/4},
+  numero = {2.4.3},
+  niveau = {3},
+  titre = {Écoulement interne incompressible et homogène dans une conduite cylindrique},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/2/4/3/1}{
+  parent = {PSI/2/4/3},
+  numero = {2.4.3.1},
+  contenu = {
+    \cpgeitem{Écoulements laminaire, turbulent.}
+    \cpgeitem{Vitesse débitante.}},
+  capacites = {
+    \cpgeitem{Décrire les différents régimes d’écoulement (laminaire et turbulent).}
+    \cpgeitem{Relier le débit volumique à la vitesse débitante.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/3/2}{
+  parent = {PSI/2/4/3},
+  numero = {2.4.3.2},
+  contenu = {
+    \cpgeitem{Nombre de Reynolds.}},
+  capacites = {
+    \cpgeitem{Décrire qualitativement les deux modes de transfert de quantité de mouvement : convection et diffusion.}
+    \cpgeitem{Interpréter le nombre de Reynolds comme le rapport d’un temps caractéristique de diffusion de quantité de mouvement sur un temps caractéristique de convection.}
+    \cpgeitem{Évaluer le nombre de Reynolds et l’utiliser pour caractériser le régime d'écoulement.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/3/3}{
+  parent = {PSI/2/4/3},
+  numero = {2.4.3.3},
+  contenu = {
+    \cpgeitem{Chute de pression dans une conduite horizontale.}
+    \cpgeitem{Résistance hydraulique.}},
+  capacites = {
+    \cpgeitem{Dans le cas d’un écoulement à bas nombre de Reynolds, établir la loi de Hagen-Poiseuille et en déduire la résistance hydraulique.}
+    \cpgeitem{Exploiter le graphe de la chute de pression en fonction du nombre de Reynolds, pour un régime d’écoulement quelconque.}
+    \cpgeitem{Exploiter un paramétrage adimensionné permettant de transposer des résultats expérimentaux ou numériques sur des systèmes similaires réalisés à des échelles différentes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/2/4/4}{
+  parent = {PSI/2/4},
+  numero = {2.4.4},
+  niveau = {3},
+  titre = {Écoulement externe incompressible et homogène autour d’un obstacle},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/2/4/4/1}{
+  parent = {PSI/2/4/4},
+  numero = {2.4.4.1},
+  contenu = {
+    \cpgeitem{Force de traînée subie par une sphère solide en mouvement rectiligne uniforme. Coefficient de traînée $C_x$ ; graphe de $C_x$ en fonction du nombre de Reynolds.}},
+  capacites = {
+    \cpgeitem{Associer une gamme de nombre de Reynolds à un modèle de traînée linéaire ou un modèle quadratique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/4/2}{
+  parent = {PSI/2/4/4},
+  numero = {2.4.4.2},
+  contenu = {
+    \cpgeitem{Notion de couche limite.}},
+  capacites = {
+    \cpgeitem{Pour les écoulements à grand nombre de Reynolds décrire qualitativement la notion de couche limite.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/2/4/4/3}{
+  parent = {PSI/2/4/4},
+  numero = {2.4.4.3},
+  contenu = {
+    \cpgeitem{Forces de traînée et de portance d’une aile d’avion à haut Reynolds.}},
+  capacites = {
+    \cpgeitem{Définir et orienter les forces de portance et de traînée.}
+    \cpgeitem{Exploiter les graphes de $C_x$ et $C_z$ en fonction de l’angle d’incidence.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/3}{
+  parent = {PSI},
+  numero = {3},
+  niveau = {1},
+  titre = {Bilans macroscopiques},
+  chapeau = {
+    \cpgeitem{Cette partie prolonge l’étude des machines thermiques réalisée en première année. Elle a pour objectif d’effectuer des bilans de grandeurs extensives thermodynamiques et mécaniques. Ces bilans sont illustrés sur des situations d’intérêt industriel (réacteur, éolienne, turbine, machines thermiques…). On définit également le modèle de l’écoulement parfait qui permet d’introduire la relation de Bernoulli. Si un bilan mécanique nécessite un changement de référentiel, on peut utiliser la loi de composition des vitesses fournie.}},
+}
+
+\cpgerubrique{PSI/3/1}{
+  parent = {PSI/3},
+  numero = {3.1},
+  niveau = {2},
+  titre = {Définition d’un système fermé pour les bilans macroscopiques},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/3/1/1}{
+  parent = {PSI/3/1},
+  numero = {3.1.1},
+  contenu = {
+    \cpgeitem{Système ouvert, système fermé.}},
+  capacites = {
+    \cpgeitem{Définir un système fermé approprié pour réaliser un bilan de grandeur extensive.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/3/2}{
+  parent = {PSI/3},
+  numero = {3.2},
+  niveau = {2},
+  titre = {Bilans d’énergie},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/3/2/1}{
+  parent = {PSI/3/2},
+  numero = {3.2.1},
+  contenu = {
+    \cpgeitem{Bilans thermodynamiques.}},
+  capacites = {
+    \cpgeitem{Exprimer les principes de la thermodynamique pour un écoulement stationnaire sous la forme : $\Delta h + \Delta e_c + \Delta (g z) = w_u + q$ ; $\Delta s = s_e + s_c$.}
+    \cpgeitem{Étudier des propriétés des machines thermodynamiques réelles à l’aide de diagrammes $(P,h)$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/3/2/2}{
+  parent = {PSI/3/2},
+  numero = {3.2.2},
+  contenu = {
+    \cpgeitem{Modèle de l’écoulement parfait : adiabatique, réversible, non visqueux.}},
+  capacites = {
+    \cpgeitem{Utiliser le modèle de l’écoulement parfait pour un écoulement à haut Reynolds en dehors de la couche limite.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/3/2/3}{
+  parent = {PSI/3/2},
+  numero = {3.2.3},
+  contenu = {
+    \cpgeitem{Relation de Bernoulli.}},
+  capacites = {
+    \cpgeitem{Citer et appliquer la relation de Bernoulli à un écoulement parfait, stationnaire, incompressible et homogène.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/3/2/4}{
+  parent = {PSI/3/2},
+  numero = {3.2.4},
+  contenu = {
+    \cpgeitem{Effet Venturi.}},
+  capacites = {
+    \cpgeitem{Décrire l’effet Venturi.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/3/2/5}{
+  parent = {PSI/3/2},
+  numero = {3.2.5},
+  contenu = {
+    \cpgeitem{Bilan macroscopique d’énergie mécanique.}},
+  capacites = {
+    \cpgeitem{Effectuer un bilan d’énergie sur une installation industrielle.}
+    \cpgeitem{Utiliser le fait admis que la puissance des actions intérieures est nulle pour un écoulement parfait et incompressible.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/3/3}{
+  parent = {PSI/3},
+  numero = {3.3},
+  niveau = {2},
+  titre = {Bilans de quantité de mouvement et de moment cinétique},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/3/3/1}{
+  parent = {PSI/3/3},
+  numero = {3.3.1},
+  contenu = {
+    \cpgeitem{Loi de la quantité de mouvement pour un système fermé.}},
+  capacites = {
+    \cpgeitem{Effectuer l’inventaire des forces extérieures.}
+    \cpgeitem{Effectuer un bilan de quantité de mouvement.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/3/3/2}{
+  parent = {PSI/3/3},
+  numero = {3.3.2},
+  contenu = {
+    \cpgeitem{Loi du moment cinétique pour un système fermé.}},
+  capacites = {
+    \cpgeitem{Effectuer un bilan de moment cinétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/4}{
+  parent = {PSI},
+  numero = {4},
+  niveau = {1},
+  titre = {Électromagnétisme},
+  chapeau = {
+    \cpgeitem{En première année, les champs électrique et magnétique ont été présentés via les effets de la force de Lorentz et une étude du champ magnétique a été effectuée pour introduire les phénomènes d'induction. Le cours de deuxième année aborde les équations locales. Les équations de Maxwell sont présentées comme des postulats de l'électromagnétisme, le but étant de rendre les étudiants rapidement opérationnels dans leur utilisation. L'étude de la conversion de puissance et celle des ondes électromagnétiques en sont une exploitation. Les équations de Maxwell peuvent être formulées dès le début sous leur forme la plus générale, ou bien elles peuvent être introduites de manière progressive en commençant par une forme simplifiée en régime stationnaire.}},
+}
+
+\cpgerubrique{PSI/4/1}{
+  parent = {PSI/4},
+  numero = {4.1},
+  niveau = {2},
+  titre = {Symétries des champs électrique et magnétique},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie présente les relations de symétrie entre les champs électrique et magnétique et les sources, sans recourir à des expressions reliant les champs aux sources, mais en s’appuyant sur des exemples de cartes de champs.}},
+}
+
+\cpgeligne{PSI/4/1/1}{
+  parent = {PSI/4/1},
+  numero = {4.1.1},
+  contenu = {
+    \cpgeitem{Symétries pour le champ électrique, caractère polaire du champ électrique.}
+    \cpgeitem{Symétries pour le champ magnétique, caractère axial du champ magnétique.}},
+  capacites = {
+    \cpgeitem{Exploiter les symétries et invariances d'une distribution de charges et de courants pour en déduire des propriétés des champs électrique et magnétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/4/2}{
+  parent = {PSI/4},
+  numero = {4.2},
+  niveau = {2},
+  titre = {Champ électrique en régime stationnaire},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie introduit les équations de Maxwell-Gauss et Maxwell-Faraday, prises comme des postulats de l'électromagnétisme. Les seuls calculs de champs électriques exigibles doivent pouvoir être faits par application du théorème de Gauss.}},
+}
+
+\cpgeligne{PSI/4/2/1}{
+  parent = {PSI/4/2},
+  numero = {4.2.1},
+  contenu = {
+    \cpgeitem{Équations de Maxwell-Gauss et de Maxwell-Faraday.}},
+  capacites = {
+    \cpgeitem{Citer les équations de Maxwell-Gauss et Maxwell-Faraday en régime variable et en régime stationnaire.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/2/2}{
+  parent = {PSI/4/2},
+  numero = {4.2.2},
+  contenu = {
+    \cpgeitem{Potentiel scalaire électrique.}},
+  capacites = {
+    \cpgeitem{Relier l'existence du potentiel scalaire électrique au caractère irrotationnel du champ électrique.}
+    \cpgeitem{Exprimer une différence de potentiel comme une circulation du champ électrique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/2/3}{
+  parent = {PSI/4/2},
+  numero = {4.2.3},
+  contenu = {
+    \cpgeitem{Propriétés topographiques.}},
+  capacites = {
+    \cpgeitem{Associer l’évasement des tubes de champ à l’évolution de la norme du champ électrique en dehors des sources.}
+    \cpgeitem{Représenter les lignes de champ connaissant les surfaces équipotentielles et inversement.}
+    \cpgeitem{Évaluer la valeur d’un champ électrique à partir d’un réseau de surfaces équipotentielles.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/2/4}{
+  parent = {PSI/4/2},
+  numero = {4.2.4},
+  contenu = {
+    \cpgeitem{Équation de Poisson.}},
+  capacites = {
+    \cpgeitem{Établir l’équation de Poisson reliant le potentiel à la densité volumique de charge.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/2/5}{
+  parent = {PSI/4/2},
+  numero = {4.2.5},
+  contenu = {
+    \cpgeitem{Théorème de Gauss.}},
+  capacites = {
+    \cpgeitem{Énoncer et appliquer le théorème de Gauss.}
+    \cpgeitem{Établir le champ électrique et le potentiel créés par une charge ponctuelle, une distribution de charge à symétrie sphérique, une distribution de charge à symétrie cylindrique.}
+    \cpgeitem{Exploiter le théorème de superposition.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/2/6}{
+  parent = {PSI/4/2},
+  numero = {4.2.6},
+  contenu = {
+    \cpgeitem{Distribution surfacique de charge.}},
+  capacites = {
+    \cpgeitem{Utiliser le modèle de la distribution surfacique de charge.}
+    \cpgeitem{Établir le champ électrique créé par un plan infini uniformément chargé en surface.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/2/7}{
+  parent = {PSI/4/2},
+  numero = {4.2.7},
+  contenu = {
+    \cpgeitem{Énergie potentielle électrique d'une charge ponctuelle dans un champ électrique extérieur.}},
+  capacites = {
+    \cpgeitem{Établir la relation entre l’énergie potentielle d’une charge ponctuelle et le potentiel.}
+    \cpgeitem{Appliquer le théorème de l’énergie cinétique à une particule chargée dans un champ électrique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/2/8}{
+  parent = {PSI/4/2},
+  numero = {4.2.8},
+  contenu = {
+    \cpgeitem{Champ gravitationnel.}},
+  capacites = {
+    \cpgeitem{Établir les analogies entre les champs électrique et gravitationnel.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/4/3}{
+  parent = {PSI/4},
+  numero = {4.3},
+  niveau = {2},
+  titre = {Condensateur},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie aborde le condensateur dans la géométrie plane. Cette étude permet d'introduire l'expression de l'énergie volumique du champ électrique sur ce cas particulier, la généralité de cette expression est admise. Aucune notion sur les conducteurs en équilibre électrostatique n’est exigible. La modification de la permittivité introduite par la présence d’un isolant est affirmée sans relation avec une description microscopique de la polarisation.}},
+}
+
+\cpgeligne{PSI/4/3/1}{
+  parent = {PSI/4/3},
+  numero = {4.3.1},
+  contenu = {
+    \cpgeitem{Phénomène d'influence électrostatique.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Décrire qualitativement le phénomène d'influence électrostatique.}},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/3/2}{
+  parent = {PSI/4/3},
+  numero = {4.3.2},
+  contenu = {
+    \cpgeitem{Capacité d'un condensateur plan.}},
+  capacites = {
+    \cpgeitem{Déterminer l’expression du champ d’un condensateur plan en négligeant les effets de bord.}
+    \cpgeitem{Déterminer l'expression de la capacité.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/3/3}{
+  parent = {PSI/4/3},
+  numero = {4.3.3},
+  contenu = {
+    \cpgeitem{Rôle des isolants.}},
+  capacites = {
+    \cpgeitem{Prendre en compte la permittivité du milieu dans l’expression de la capacité.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/3/4}{
+  parent = {PSI/4/3},
+  numero = {4.3.4},
+  contenu = {
+    \cpgeitem{Densité volumique d'énergie électrique.}},
+  capacites = {
+    \cpgeitem{Déterminer l’expression de la densité volumique d’énergie électrique dans le cas du condensateur plan à partir de celle de l’énergie du condensateur.}
+    \cpgeitem{Citer l'expression de la densité volumique d'énergie électrique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/4/4}{
+  parent = {PSI/4},
+  numero = {4.4},
+  niveau = {2},
+  titre = {Champ magnétique en régime stationnaire},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie introduit les équations de Maxwell-Ampère et Maxwell-Thomson comme des postulats de l'électromagnétisme. La conservation du flux du champ magnétique, traduction intégrale de l'équation de Maxwell-Thomson, est l'occasion de revenir sur les connaissances de première année. La loi de Biot et Savart et le potentiel vecteur sont hors programme. L'expression de la densité volumique d'énergie magnétique est établie sur le cas particulier d'une bobine longue, sa généralisation est admise. L’usage des distributions surfaciques de courant sont strictement limité à l’étude de la réflexion d’une onde électromagnétique sur un métal parfait.}},
+}
+
+\cpgeligne{PSI/4/4/1}{
+  parent = {PSI/4/4},
+  numero = {4.4.1},
+  contenu = {
+    \cpgeitem{Équations de Maxwell-Ampère et Maxwell-Thomson.}},
+  capacites = {
+    \cpgeitem{Énoncer les équations de Maxwell-Ampère et Maxwell-Thomson en régime variable et en régime stationnaire}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/4/2}{
+  parent = {PSI/4/4},
+  numero = {4.4.2},
+  contenu = {
+    \cpgeitem{Conservation du flux magnétique.}},
+  capacites = {
+    \cpgeitem{Exploiter la conservation du flux magnétique et ses conséquences sur les lignes de champ magnétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/4/3}{
+  parent = {PSI/4/4},
+  numero = {4.4.3},
+  contenu = {
+    \cpgeitem{Théorème d'Ampère.}},
+  capacites = {
+    \cpgeitem{Énoncer et appliquer le théorème d'Ampère.}
+    \cpgeitem{Établir l'expression du champ magnétique créé par un fil épais et infini, par un solénoïde infini en admettant que le champ extérieur est nul, et par une bobine torique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/4/4}{
+  parent = {PSI/4/4},
+  numero = {4.4.4},
+  contenu = {
+    \cpgeitem{Forces de Laplace.}},
+  capacites = {
+    \cpgeitem{Exprimer les forces de Laplace s’exerçant sur un conducteur filiforme et sur une distribution volumique de courant.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/4/5}{
+  parent = {PSI/4},
+  numero = {4.5},
+  niveau = {2},
+  titre = {Électromagnétisme dans l’ARQS},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie étudie l’électromagnétisme en régime variable, principalement dans le cadre de l’ARQS magnétique, afin d’établir le lien avec le cours sur l’induction de première année. La notion de champ électromoteur est hors programme, la force électromotrice induite est calculée à l’aide de la loi de Faraday. Cette partie prépare également le cours sur la conversion de puissance en abordant les courants de Foucault et l’énergie magnétique.}},
+}
+
+\cpgeligne{PSI/4/5/1}{
+  parent = {PSI/4/5},
+  numero = {4.5.1},
+  contenu = {
+    \cpgeitem{Courants de déplacement.}},
+  capacites = {
+    \cpgeitem{Établir la compatibilité des équations de Maxwell avec la conservation de la charge.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/5/2}{
+  parent = {PSI/4/5},
+  numero = {4.5.2},
+  contenu = {
+    \cpgeitem{ARQS magnétique.}},
+  capacites = {
+    \cpgeitem{Simplifier les équations de Maxwell et l’équation de conservation de la charge dans l’ARQS en admettant que les courants de déplacement sont négligeables.}
+    \cpgeitem{Étendre le domaine de validité des expressions des champs magnétiques obtenues en régime stationnaire.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/5/3}{
+  parent = {PSI/4/5},
+  numero = {4.5.3},
+  contenu = {
+    \cpgeitem{Induction.}},
+  capacites = {
+    \cpgeitem{Relier la circulation du champ électrique à la dérivée temporelle du flux magnétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/5/4}{
+  parent = {PSI/4/5},
+  numero = {4.5.4},
+  contenu = {
+    \cpgeitem{Courants de Foucault.}},
+  capacites = {
+    \cpgeitem{Décrire la géométrie des courants de Foucault dans le cas d’un conducteur cylindrique soumis à un champ magnétique parallèle à son axe, uniforme et oscillant.}
+    \cpgeitem{Exprimer la puissance dissipée par effet Joule en négligeant le champ propre et expliquer le rôle du feuilletage.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/5/5}{
+  parent = {PSI/4/5},
+  numero = {4.5.5},
+  contenu = {
+    \cpgeitem{Énergie magnétique.}
+    \cpgeitem{Densité volumique d'énergie magnétique.}},
+  capacites = {
+    \cpgeitem{Exprimer l’énergie magnétique d’une bobine seule ou de deux bobines couplées en fonction des coefficients d’inductance et des intensités.}
+    \cpgeitem{Déterminer, à partir de l’expression de l’énergie magnétique, l’expression de la densité volumique d’énergie magnétique dans le cas d’une bobine modélisée par un solénoïde long.}
+    \cpgeitem{Citer l’expression de la densité volumique d’énergie magnétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/5/6}{
+  parent = {PSI/4/5},
+  numero = {4.5.6},
+  contenu = {
+    \cpgeitem{Couplage partiel, couplage parfait.}},
+  capacites = {
+    \cpgeitem{Établir, dans le cas de deux bobines couplées, l’inégalité $M^2 \leqslant L_1 L_2$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/4/6}{
+  parent = {PSI/4},
+  numero = {4.6},
+  niveau = {2},
+  titre = {Milieux ferromagnétiques},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie introduit les notions d’aimantation, d’excitation magnétique, et de perméabilité magnétique. Elle conduit à une réécriture de l’équation de Maxwell-Ampère, plus adaptée à l’étude des milieux magnétiques.}},
+}
+
+\cpgeligne{PSI/4/6/1}{
+  parent = {PSI/4/6},
+  numero = {4.6.1},
+  contenu = {
+    \cpgeitem{Aimant permanent, champ magnétique créé dans son environnement.}},
+  capacites = {
+    \cpgeitem{Décrire, à partir d’une formule fournie exprimant le champ d’un dipôle magnétique, le champ créé par un aimant à grande distance et représenter qualitativement les lignes de champ magnétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/2}{
+  parent = {PSI/4/6},
+  numero = {4.6.2},
+  contenu = {
+    \cpgeitem{Actions subies par un dipôle magnétique dans un champ magnétique extérieur.}},
+  capacites = {
+    \cpgeitem{Utiliser les expressions fournies de l’énergie potentielle, de la résultante et du moment.}
+    \cpgeitem{Décrire qualitativement l’évolution d’un dipôle magnétique dans un champ magnétique extérieur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/3}{
+  parent = {PSI/4/6},
+  numero = {4.6.3},
+  contenu = {
+    \cpgeitem{Magnéton de Bohr.}},
+  capacites = {
+    \cpgeitem{Établir l’expression du magnéton de Bohr dans le cadre du modèle de Bohr.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/4}{
+  parent = {PSI/4/6},
+  numero = {4.6.4},
+  contenu = {
+    \cpgeitem{Aimantation d’un milieu magnétique.}},
+  capacites = {
+    \cpgeitem{Définir le champ d’aimantation d’un milieu magnétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/5}{
+  parent = {PSI/4/6},
+  numero = {4.6.5},
+  contenu = {
+    \cpgeitem{Courants d'aimantation.}},
+  capacites = {
+    \cpgeitem{Associer à une distribution d’aimantation une densité volumique de courants liés équivalente, l’expression étant admise.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/6}{
+  parent = {PSI/4/6},
+  numero = {4.6.6},
+  contenu = {
+    \cpgeitem{Vecteurs champ magnétique, excitation magnétique et aimantation. Équation de Maxwell-Ampère écrite avec le vecteur excitation magnétique.}},
+  capacites = {
+    \cpgeitem{Définir le vecteur excitation magnétique.}
+    \cpgeitem{Écrire l’équation de Maxwell-Ampère dans un milieu magnétique.}
+    \cpgeitem{Interpréter qualitativement que les sources de l’excitation magnétique sont les courants électriques libres, et que celles de champ magnétique sont les courants électriques libres et l’aimantation.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/7}{
+  parent = {PSI/4/6},
+  numero = {4.6.7},
+  contenu = {
+    \cpgeitem{Milieu ferromagnétique.}},
+  capacites = {
+    \cpgeitem{Représenter l’allure des cycles d’hystérésis (excitation magnétique, aimantation) et (excitation magnétique, champ magnétique) d’un milieu ferromagnétique.}
+    \cpgeitem{Distinguer milieu dur et milieu doux ; citer des exemples de matériaux.}},
+  experimentales = {
+    \cpgeitem{Tracer le cycle d’hystérésis d’un milieu ferromagnétique.}},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/8}{
+  parent = {PSI/4/6},
+  numero = {4.6.8},
+  contenu = {
+    \cpgeitem{Milieu ferromagnétique doux.}},
+  capacites = {
+    \cpgeitem{Modéliser un milieu doux par une relation constitutive linéaire.}
+    \cpgeitem{Définir la perméabilité relative et donner un ordre de grandeur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/9}{
+  parent = {PSI/4/6},
+  numero = {4.6.9},
+  contenu = {
+    \cpgeitem{Circuit magnétique avec ou sans entrefer.}},
+  capacites = {
+    \cpgeitem{Décrire l’allure des lignes de champ dans un circuit magnétique en admettant que les lignes de champ sortent orthogonalement à l’interface dans un entrefer.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/10}{
+  parent = {PSI/4/6},
+  numero = {4.6.10},
+  contenu = {
+    \cpgeitem{Électroaimant.}},
+  capacites = {
+    \cpgeitem{Exprimer le champ magnétique produit dans l’entrefer d’un électroaimant.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/11}{
+  parent = {PSI/4/6},
+  numero = {4.6.11},
+  contenu = {
+    \cpgeitem{Inductance propre d’une bobine à noyau de fer doux modélisé linéairement.}},
+  capacites = {
+    \cpgeitem{Établir l’expression de l’inductance propre de la bobine à noyau.}
+    \cpgeitem{Vérifier l’expression de l’énergie magnétique : $E_{\text{mag}} = \iiint \frac{B^2}{2 {\mu}_0 {\mu}_r} \cpgedd{{\tau}}$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/4/6/12}{
+  parent = {PSI/4/6},
+  numero = {4.6.12},
+  contenu = {
+    \cpgeitem{Pertes d’une bobine réelle à noyau.}},
+  capacites = {
+    \cpgeitem{Exprimer le lien entre l’aire du cycle hystérésis et la puissance moyenne absorbée.}
+    \cpgeitem{Décrire les différents termes de pertes d’une bobine à noyau : pertes fer par courants de Foucault et par hystérésis, pertes cuivre.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/5}{
+  parent = {PSI},
+  numero = {5},
+  niveau = {1},
+  titre = {Conversion de puissance},
+  chapeau = {
+    \cpgeitem{En première année, la conversion de puissance est abordée à l’occasion des études du transformateur de tension et du moteur à courant continu dans la partie « Induction et forces de Laplace ». Il s’agit ici d’approfondir en donnant le moyen d’aborder tous les éléments d’une chaîne énergétique faisant intervenir des éléments électriques, magnétiques et mécaniques. Afin de pouvoir aborder des problématiques industrielles de forte puissance, le rôle essentiel du fer est considéré. Ainsi, les forces électromagnétiques ne se réduisent pas aux seules forces de Laplace s’exerçant sur les conducteurs traversés par des courants, l’aimantation du milieu participe de manière prépondérante au calcul des actions. De même, la prise en compte de la forte perméabilité du noyau d’un transformateur est indispensable afin d’établir une relation entre les intensités indépendante de la charge. Par ailleurs, on étudie la conversion électronique de puissance permettant d’adapter les différentes sources d’énergie à leur utilisation. Cet enseignement est une initiation dont l’objectif est d’expliquer les principes physiques mis en œuvre dans des réalisations concrètes, il ne s’agit pas de multiplier les exemples de solutions techniques. En particulier, les dispositifs en triphasé ne sont pas étudiés.}},
+}
+
+\cpgerubrique{PSI/5/1}{
+  parent = {PSI/5},
+  numero = {5.1},
+  niveau = {2},
+  titre = {Puissance électrique en régime sinusoïdal},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie présente quelques résultats généraux relatifs à la puissance électrique en régime sinusoïdal. La représentation de Fresnel est introduite pour illustrer le facteur de puissance. La notion de puissance réactive est hors programme.}},
+}
+
+\cpgeligne{PSI/5/1/1}{
+  parent = {PSI/5/1},
+  numero = {5.1.1},
+  contenu = {
+    \cpgeitem{Puissance moyenne, facteur de puissance.}
+    \cpgeitem{Représentation de Fresnel.}},
+  capacites = {
+    \cpgeitem{Définir le facteur de puissance, faire le lien avec la représentation des tensions et des courants sur un diagramme de Fresnel.}
+    \cpgeitem{Citer et exploiter la relation $P = U_{\text{eff}} I_{\text{eff}} \cos {\varphi}$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/1/2}{
+  parent = {PSI/5/1},
+  numero = {5.1.2},
+  contenu = {
+    \cpgeitem{Puissance moyenne absorbée par une impédance.}},
+  capacites = {
+    \cpgeitem{Citer et exploiter les relations : $P = \cpgeRe(\underline{Z}) I_{\text{eff}}^2$ et $P = \cpgeRe(\underline{Y}) U_{\text{eff}}^2$.}
+    \cpgeitem{Justifier qu’un dipôle purement réactif n’absorbe aucune puissance en moyenne.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/5/2}{
+  parent = {PSI/5},
+  numero = {5.2},
+  niveau = {2},
+  titre = {Transformateur},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie complète le modèle du transformateur de tension vu en première année. On ajoute ici le rôle d’un noyau de fer doux de forte perméabilité permettant d’obtenir un transformateur de courant. Les pertes et les défauts sont évoqués mais ne sont pas modélisés. En particulier, l’inductance magnétisante est hors programme. On explique l’intérêt du transformateur pour l’isolement et le transport de l’énergie électrique sur de longues distances.}},
+}
+
+\cpgeligne{PSI/5/2/1}{
+  parent = {PSI/5/2},
+  numero = {5.2.1},
+  contenu = {
+    \cpgeitem{Modèle du transformateur idéal.}},
+  capacites = {
+    \cpgeitem{Citer les hypothèses du transformateur idéal.}
+    \cpgeitem{Établir les lois de transformation des tensions et des courants du transformateur idéal, en respectant l’algébrisation associée aux bornes homologues.}
+    \cpgeitem{Relier le transfert instantané et parfait de puissance à une absence de pertes et de stockage de l’énergie électromagnétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/2/2}{
+  parent = {PSI/5/2},
+  numero = {5.2.2},
+  contenu = {
+    \cpgeitem{Pertes.}},
+  capacites = {
+    \cpgeitem{Citer les pertes cuivre, les pertes fer par courant de Foucault et par hystérésis.}
+    \cpgeitem{Décrire des solutions permettant de réduire ces pertes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/2/3}{
+  parent = {PSI/5/2},
+  numero = {5.2.3},
+  contenu = {
+    \cpgeitem{Applications du transformateur.}},
+  capacites = {
+    \cpgeitem{Expliquer le rôle du transformateur pour l’isolement.}
+    \cpgeitem{Établir le transfert d’impédance entre le primaire et le secondaire.}
+    \cpgeitem{Expliquer l’intérêt du transport de l’énergie électrique à haute tension afin de réduire les pertes en ligne.}
+    \cpgeitem{Expliquer l’avantage d’un facteur de puissance élevé.}},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre un transformateur et étudier son rendement sur charge résistive.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/5/3}{
+  parent = {PSI/5},
+  numero = {5.3},
+  niveau = {2},
+  titre = {Conversion électro-magnéto-mécanique},
+  chapeau = {
+    \cpgeitem{Dans la partie \cpgecettepartie, on privilégie un calcul des actions électromagnétiques en dérivant l’énergie magnétique stockée dans le système par rapport à un paramètre de position notamment afin de prendre en compte le rôle du fer. Les milieux magnétiques sont modélisés par des milieux linéaires. La notion de coénergie est hors programme.}
+    \cpgeitem{Dans une première partie, la méthode de calcul de la force s’exerçant sur une partie mobile de fer est illustrée sur un contacteur en translation faisant partie d’un circuit magnétique dont l’entrefer est variable. À l’aide d’un bilan énergétique, le professeur pourra justifier la relation $F = (\partial E / \partial x)_i$ mais cette démonstration ne doit pas être considérée comme une capacité exigible. On aborde ensuite le moteur synchrone en dérivant l’énergie magnétique localisée dans l’entrefer afin de déterminer le moment du couple électromagnétique. Les champs glissants statorique et rotorique sont radiaux dans l’entrefer et présentent des formes d’onde sinusoïdales. On montre que le moment moyen est non nul si les champs glissants sont synchrones. Le modèle électrique des phases de l’induit est abordé afin de décrire la conversion électromécanique de puissance, mais on n’étudiera pas l’utilisation d’une machine à vide comme compensateur synchrone. Dans un troisième temps, le fonctionnement du moteur à courant continu est traité par analogie avec le moteur synchrone, en montrant que le collecteur réalise le synchronisme entre un champ statorique stationnaire et un champ rotorique qui lui est orthogonal quelle que soit la position angulaire du rotor, produisant ainsi un moment maximal. On évoque enfin la réversibilité énergétique des machines électriques, en distinguant avec rigueur force électromotrice (fem) et force contre-électromotrice (fcem). La puissance mécanique des machines est reliée à la puissance électrique des forces électromotrices induites à l’aide de bilans énergétiques.}},
+}
+
+\cpgerubrique{PSI/5/3/1}{
+  parent = {PSI/5/3},
+  numero = {5.3.1},
+  niveau = {3},
+  titre = {Contacteur électromagnétique en translation},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/5/3/1/1}{
+  parent = {PSI/5/3/1},
+  numero = {5.3.1.1},
+  contenu = {
+    \cpgeitem{Énergie et force électromagnétique.}},
+  capacites = {
+    \cpgeitem{Exprimer l’énergie magnétique d’un enroulement enlaçant un circuit magnétique présentant un entrefer variable.}
+    \cpgeitem{Calculer la force électromagnétique s’exerçant sur une partie mobile en translation en appliquant l’expression fournie $F = (\partial E / \partial x)_i$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/1/2}{
+  parent = {PSI/5/3/1},
+  numero = {5.3.1.2},
+  contenu = {
+    \cpgeitem{Contacteur électromagnétique.}},
+  capacites = {
+    \cpgeitem{Sur l’exemple du relais, expliquer le fonctionnement d’un contacteur électromagnétique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/5/3/2}{
+  parent = {PSI/5/3},
+  numero = {5.3.2},
+  niveau = {3},
+  titre = {Machine synchrone},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/5/3/2/1}{
+  parent = {PSI/5/3/2},
+  numero = {5.3.2.1},
+  contenu = {
+    \cpgeitem{Structure d’un moteur synchrone à pôles lisses et à excitation séparée.}},
+  capacites = {
+    \cpgeitem{Décrire la structure d’un moteur synchrone diphasé et bipolaire : rotor, stator, induit, inducteur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/2/2}{
+  parent = {PSI/5/3/2},
+  numero = {5.3.2.2},
+  contenu = {
+    \cpgeitem{Champ magnétique dans l’entrefer.}},
+  capacites = {
+    \cpgeitem{Exprimer, pour une machine de perméabilité infinie à entrefer constant, le champ magnétique dans l’entrefer généré par une spire passant dans deux encoches opposées. Expliquer qualitativement comment obtenir un champ dont la dépendance angulaire est sinusoïdale dans l’entrefer en associant plusieurs spires décalées.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/2/3}{
+  parent = {PSI/5/3/2},
+  numero = {5.3.2.3},
+  contenu = {
+    \cpgeitem{Champ glissant statorique.}},
+  capacites = {
+    \cpgeitem{Justifier l’existence d’un champ glissant statorique lorsque les deux phases sont alimentées en quadrature.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/2/4}{
+  parent = {PSI/5/3/2},
+  numero = {5.3.2.4},
+  contenu = {
+    \cpgeitem{Champ glissant rotorique.}},
+  capacites = {
+    \cpgeitem{Justifier l’existence d’un champ glissant rotorique associé à la rotation de l’inducteur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/2/5}{
+  parent = {PSI/5/3/2},
+  numero = {5.3.2.5},
+  contenu = {
+    \cpgeitem{Énergie et couple.}},
+  capacites = {
+    \cpgeitem{Exprimer l’énergie magnétique totale stockée dans l’entrefer en fonction de la position angulaire du rotor.}
+    \cpgeitem{Calculer le moment électromagnétique s’exerçant sur le rotor en exploitant l’expression fournie ${\Gamma} = \partial E / \partial {\theta}$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/2/6}{
+  parent = {PSI/5/3/2},
+  numero = {5.3.2.6},
+  contenu = {
+    \cpgeitem{Condition de synchronisme.}},
+  capacites = {
+    \cpgeitem{Justifier la condition de synchronisme entre le champ statorique et le champ rotorique afin d’obtenir un moment moyen non nul.}
+    \cpgeitem{Discuter qualitativement la stabilité du système en fonction du déphasage entre les deux champs glissants.}
+    \cpgeitem{Expliquer la difficulté du démarrage et du contrôle de la vitesse d’un moteur synchrone.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/2/7}{
+  parent = {PSI/5/3/2},
+  numero = {5.3.2.7},
+  contenu = {
+    \cpgeitem{Modèle électrique de l’induit.}},
+  capacites = {
+    \cpgeitem{Établir les équations électriques vérifiées par les phases de l’induit en admettant les expressions des coefficients d’inductance ; donner les représentations de Fresnel associées.}
+    \cpgeitem{Justifier, à l’aide d’un bilan énergétique où seules les pertes cuivre sont envisagées, l’égalité entre la puissance électrique absorbée par les fcem et la puissance mécanique fournie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/2/8}{
+  parent = {PSI/5/3/2},
+  numero = {5.3.2.8},
+  contenu = {
+    \cpgeitem{Fonctionnement réversible.}},
+  capacites = {
+    \cpgeitem{Décrire les conditions d’utilisation de la machine synchrone en alternateur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/2/9}{
+  parent = {PSI/5/3/2},
+  numero = {5.3.2.9},
+  contenu = {
+    \cpgeitem{Machine synchrone.}},
+  capacites = {
+    \cpgeitem{Citer des exemples d’application de la machine synchrone.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/5/3/3}{
+  parent = {PSI/5/3},
+  numero = {5.3.3},
+  niveau = {3},
+  titre = {Machine à courant continu},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/5/3/3/1}{
+  parent = {PSI/5/3/3},
+  numero = {5.3.3.1},
+  contenu = {
+    \cpgeitem{Structure d’un moteur à courant continu à pôles lisses.}},
+  capacites = {
+    \cpgeitem{Décrire la structure d’un moteur à courant continu bipolaire à excitation séparée : rotor, stator, induit, inducteur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/3/2}{
+  parent = {PSI/5/3/3},
+  numero = {5.3.3.2},
+  contenu = {
+    \cpgeitem{Collecteur.}},
+  capacites = {
+    \cpgeitem{Expliquer, par analogie avec le moteur synchrone, que le collecteur établit le synchronisme entre le champ statorique stationnaire et le champ rotorique quelle que soit la position angulaire du rotor.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/3/3}{
+  parent = {PSI/5/3/3},
+  numero = {5.3.3.3},
+  contenu = {
+    \cpgeitem{Couple et fcem.}},
+  capacites = {
+    \cpgeitem{Citer l’expression du moment du couple ${\Gamma} = {\Phi} i$ et établir l’expression de la fcem induite $e = {\Phi} {\Omega}$ par un argument de conservation énergétique.}
+    \cpgeitem{Décrire qualitativement les pertes existant dans une machine réelle : pertes cuivre, pertes fer, pertes mécaniques.}
+    \cpgeitem{Établir les équations électrique et mécanique.}
+    \cpgeitem{Tracer la caractéristique $({\Omega}, {\Gamma})$ à tension d’induit constante.}
+    \cpgeitem{Analyser le démarrage d’un moteur entraînant une charge mécanique exerçant un moment $- f {\Omega}$.}},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre un moteur à courant continu.}},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/3/4}{
+  parent = {PSI/5/3/3},
+  numero = {5.3.3.4},
+  contenu = {
+    \cpgeitem{Fonctionnement réversible.}},
+  capacites = {
+    \cpgeitem{Décrire les conditions d’utilisation de la machine à courant continu en génératrice.}
+    \cpgeitem{Choisir des conventions d’orientation adaptées.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/3/3/5}{
+  parent = {PSI/5/3/3},
+  numero = {5.3.3.5},
+  contenu = {
+    \cpgeitem{Machine à courant continu.}},
+  capacites = {
+    \cpgeitem{Citer des exemples d’application de la machine à courant continu.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/5/4}{
+  parent = {PSI/5},
+  numero = {5.4},
+  niveau = {2},
+  titre = {Conversion électronique statique},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie aborde la conversion électronique statique de puissance principalement sur l’exemple du hacheur série. Il ne s’agit pas de traiter un cours exhaustif sur les convertisseurs en multipliant les exemples de circuits, l’état d’esprit de cet enseignement doit permettre de réinvestir les capacités pour étudier modestement d’autres montages (redresseur, onduleur). On ne décrit pas le circuit de commande d’un transistor.}},
+}
+
+\cpgeligne{PSI/5/4/1}{
+  parent = {PSI/5/4},
+  numero = {5.4.1},
+  contenu = {
+    \cpgeitem{Formes continue et alternative de la puissance électrique.}},
+  capacites = {
+    \cpgeitem{Citer des exemples illustrant la nécessité d’une conversion de puissance électrique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/4/2}{
+  parent = {PSI/5/4},
+  numero = {5.4.2},
+  contenu = {
+    \cpgeitem{Structure d’un convertisseur.}},
+  capacites = {
+    \cpgeitem{Décrire l’architecture générale d’un convertisseur électronique de puissance : générateur, récepteur, processeur de puissance utilisant des interrupteurs électroniques, commande des fonctions de commutation.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/4/3}{
+  parent = {PSI/5/4},
+  numero = {5.4.3},
+  contenu = {
+    \cpgeitem{Fonction de commutation spontanée.}},
+  capacites = {
+    \cpgeitem{Décrire la caractéristique idéale courant-tension de la diode.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/4/4}{
+  parent = {PSI/5/4},
+  numero = {5.4.4},
+  contenu = {
+    \cpgeitem{Fonction de commutation commandée.}},
+  capacites = {
+    \cpgeitem{Décrire la caractéristique idéale courant-tension du transistor.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/4/5}{
+  parent = {PSI/5/4},
+  numero = {5.4.5},
+  contenu = {
+    \cpgeitem{Sources.}},
+  capacites = {
+    \cpgeitem{Définir les notions de sources de courant et de tension.}
+    \cpgeitem{Expliquer le rôle des condensateurs et des bobines comme éléments de stockage d’énergie assurant le lissage de la tension ou de l’intensité à haute fréquence.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/4/6}{
+  parent = {PSI/5/4},
+  numero = {5.4.6},
+  contenu = {
+    \cpgeitem{Réversibilité.}},
+  capacites = {
+    \cpgeitem{Caractériser les sources par leur réversibilité en tension, en intensité, en puissance et citer des exemples.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/4/7}{
+  parent = {PSI/5/4},
+  numero = {5.4.7},
+  contenu = {
+    \cpgeitem{Interconnexion.}},
+  capacites = {
+    \cpgeitem{Citer les règles d’interconnexions entre les sources.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/4/8}{
+  parent = {PSI/5/4},
+  numero = {5.4.8},
+  contenu = {
+    \cpgeitem{Cellule de commutation élémentaire.}},
+  capacites = {
+    \cpgeitem{Expliquer le fonctionnement d’une cellule élémentaire à deux interrupteurs assurant le transfert d’énergie entre une source de courant et une source de tension.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/4/9}{
+  parent = {PSI/5/4},
+  numero = {5.4.9},
+  contenu = {
+    \cpgeitem{Hacheur.}},
+  capacites = {
+    \cpgeitem{Tracer des chronogrammes.}
+    \cpgeitem{Exploiter le fait que la moyenne d’une dérivée est nulle en régime périodique établi.}
+    \cpgeitem{Calculer des moyennes de fonctions affines par morceaux.}
+    \cpgeitem{Utiliser un bilan de puissance moyenne pour établir des relations entre les tensions et les intensités.}
+    \cpgeitem{Justifier le choix des fonctions de commutation pour un hacheur série assurant l’alimentation d’un moteur à courant continu à partir d’un générateur idéal de tension continue.}
+    \cpgeitem{Exprimer les valeurs moyennes des signaux.}
+    \cpgeitem{Calculer l’ondulation en intensité dans l’approximation d’un hachage haute fréquence réalisant une intensité affine par morceaux.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/4/10}{
+  parent = {PSI/5/4},
+  numero = {5.4.10},
+  contenu = {
+    \cpgeitem{Onduleur.}},
+  capacites = {
+    \cpgeitem{Décrire la structure en pont à quatre interrupteurs et les séquences de commutation permises.}
+    \cpgeitem{Étudier, pour un générateur de tension continue et une charge $(R, L)$, la réalisation d’une intensité quasi sinusoïdale par modulation de largeur d’impulsion.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/5/4/11}{
+  parent = {PSI/5/4},
+  numero = {5.4.11},
+  contenu = {
+    \cpgeitem{Convertisseur statique.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre un convertisseur statique.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/6}{
+  parent = {PSI},
+  numero = {6},
+  niveau = {1},
+  titre = {Physique des ondes},
+  chapeau = {
+    \cpgeitem{Le programme de physique des ondes s’inscrit dans le prolongement de la partie « Propagation d’un signal » du thème « Ondes et signaux » du programme de PCSI, où des propriétés unificatrices (interférences, battements, ondes stationnaires…) ont été abordées en s’appuyant sur une approche expérimentale et sans référence à une équation d’onde. Il s’agit désormais de mettre en place l’équation d’onde de d’Alembert, à une ou trois dimensions, sur des systèmes mécaniques ou électromagnétiques. On aborde ensuite l’étude de la dispersion et de l’absorption associées à des phénomènes de propagation régis par des équations aux dérivées partielles linéaires à coefficients constants. Enfin, la propagation d’ondes dans des milieux différents conduit naturellement à étudier la réflexion et la transmission d’ondes à une interface.}},
+}
+
+\cpgerubrique{PSI/6/1}{
+  parent = {PSI/6},
+  numero = {6.1},
+  niveau = {2},
+  titre = {Phénomènes de propagation non dispersifs : équation de d'Alembert},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est consacrée à l’étude de phénomènes ondulatoires non dispersifs. L’équation de d’Alembert unidimensionnelle est d’abord établie en étudiant une partie infinitésimale de corde ou de câble coaxial. On se contente de vérifier que les superpositions de fonctions du type $f(x - ct)$ et $g(x + ct)$ sont solutions de l’équation de d’Alembert à une dimension. Dans un deuxième temps, on étudie les ondes sonores puis les ondes électromagnétiques qui se propagent dans l’espace physique de dimension trois. L’équation de propagation des ondes sonores est établie dans le cadre de l’approximation acoustique avec une approche locale. Le choix a été fait ici de privilégier les solutions harmoniques dans la résolution de l’équation de d’Alembert, pour leur universalité comme solutions adaptées aux équations d’ondes linéaires.}},
+}
+
+\cpgerubrique{PSI/6/1/1}{
+  parent = {PSI/6/1},
+  numero = {6.1.1},
+  niveau = {3},
+  titre = {Propagation unidimensionnelle},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/6/1/1/1}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.1},
+  contenu = {
+    \cpgeitem{Ondes transversales sur une corde vibrante.}},
+  capacites = {
+    \cpgeitem{Établir l’équation d’onde dans le cas d’une corde infiniment souple dans l’approximation des petits mouvements transverses.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/1/2}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.2},
+  contenu = {
+    \cpgeitem{Équation de d'Alembert.}},
+  capacites = {
+    \cpgeitem{Identifier une équation de d’Alembert.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/1/3}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.3},
+  contenu = {
+    \cpgeitem{Onde progressive. Onde stationnaire.}},
+  capacites = {
+    \cpgeitem{Exprimer la célérité en fonction des paramètres du milieu.}
+    \cpgeitem{Citer des exemples de solutions de l’équation de d’Alembert unidimensionnelle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/1/4}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.4},
+  contenu = {
+    \cpgeitem{Ondes progressives harmoniques.}},
+  capacites = {
+    \cpgeitem{Établir la relation de dispersion à partir de l’équation de d’Alembert.}
+    \cpgeitem{Utiliser la notation complexe.}
+    \cpgeitem{Définir le vecteur d’onde, la vitesse de phase.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/1/5}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.5},
+  contenu = {
+    \cpgeitem{Ondes stationnaires harmoniques.}},
+  capacites = {
+    \cpgeitem{Décomposer une onde stationnaire en ondes progressives, une onde progressive en ondes stationnaires.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/1/6}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.6},
+  contenu = {
+    \cpgeitem{Conditions aux limites.}},
+  capacites = {
+    \cpgeitem{Justifier et exploiter des conditions aux limites.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/1/7}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.7},
+  contenu = {
+    \cpgeitem{Régime libre : modes propres d’une corde vibrante fixée à ses deux extrémités.}},
+  capacites = {
+    \cpgeitem{Définir et décrire les modes propres.}
+    \cpgeitem{Construire une solution quelconque par superposition de modes propres.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/1/8}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.8},
+  contenu = {
+    \cpgeitem{Régime forcé : corde de Melde.}},
+  capacites = {
+    \cpgeitem{Associer mode propre et résonance en régime forcé.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/1/9}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.9},
+  contenu = {
+    \cpgeitem{Ondes de tension et de courant dans un câble coaxial.}},
+  capacites = {
+    \cpgeitem{Décrire un câble coaxial par un modèle à constantes réparties sans perte.}
+    \cpgeitem{Établir les équations de propagation dans un câble coaxial sans pertes modélisé comme un milieu continu caractérisé par une inductance linéique et une capacité linéique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/1/10}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.10},
+  contenu = {
+    \cpgeitem{Impédance caractéristique.}},
+  capacites = {
+    \cpgeitem{Établir l’expression de l’impédance caractéristique d’un câble coaxial.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/1/11}{
+  parent = {PSI/6/1/1},
+  numero = {6.1.1.11},
+  contenu = {
+    \cpgeitem{Réflexion en amplitude sur une impédance terminale.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Étudier la réflexion en amplitude de tension pour une impédance terminale nulle, infinie ou résistive.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/6/1/2}{
+  parent = {PSI/6/1},
+  numero = {6.1.2},
+  niveau = {3},
+  titre = {Ondes sonores dans les fluides},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/6/1/2/1}{
+  parent = {PSI/6/1/2},
+  numero = {6.1.2.1},
+  contenu = {
+    \cpgeitem{Approximation acoustique.}},
+  capacites = {
+    \cpgeitem{Classer les ondes sonores par domaines fréquentiels.}
+    \cpgeitem{Justifier les hypothèses de l’approximation acoustique par des ordres de grandeur.}
+    \cpgeitem{Écrire les équations locales linéarisées : conservation de la masse, équation thermodynamique, équation de la dynamique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/2/2}{
+  parent = {PSI/6/1/2},
+  numero = {6.1.2.2},
+  contenu = {
+    \cpgeitem{Équation de d’Alembert pour la surpression.}},
+  capacites = {
+    \cpgeitem{Établir l’équation de propagation de la surpression formulée avec l’opérateur laplacien.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/2/3}{
+  parent = {PSI/6/1/2},
+  numero = {6.1.2.3},
+  contenu = {
+    \cpgeitem{Célérité.}},
+  capacites = {
+    \cpgeitem{Exprimer la célérité en fonction de la température pour un gaz parfait.}
+    \cpgeitem{Citer les ordres de grandeur de la célérité pour l’air et pour l’eau.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/2/4}{
+  parent = {PSI/6/1/2},
+  numero = {6.1.2.4},
+  contenu = {
+    \cpgeitem{Densité volumique d’énergie sonore, vecteur densité de courant énergétique.}},
+  capacites = {
+    \cpgeitem{Utiliser les expressions admises du vecteur densité de courant énergétique et de la densité volumique d’énergie associés à la propagation de l’onde.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/2/5}{
+  parent = {PSI/6/1/2},
+  numero = {6.1.2.5},
+  contenu = {
+    \cpgeitem{Intensité sonore, niveau d’intensité sonore.}},
+  capacites = {
+    \cpgeitem{Définir l’intensité sonore et le niveau d’intensité sonore.}
+    \cpgeitem{Citer quelques ordres de grandeur de niveaux d’intensité sonore.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/2/6}{
+  parent = {PSI/6/1/2},
+  numero = {6.1.2.6},
+  contenu = {
+    \cpgeitem{Ondes planes progressives harmoniques.}},
+  capacites = {
+    \cpgeitem{Décrire le caractère longitudinal de l'onde sonore.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/2/7}{
+  parent = {PSI/6/1/2},
+  numero = {6.1.2.7},
+  contenu = {
+    \cpgeitem{Onde longitudinale.}},
+  capacites = {
+    \cpgeitem{Discuter de la validité du modèle de l’onde plane en relation avec le phénomène de diffraction.}
+    \cpgeitem{Utiliser le principe de superposition des ondes planes progressives harmoniques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/2/8}{
+  parent = {PSI/6/1/2},
+  numero = {6.1.2.8},
+  contenu = {
+    \cpgeitem{Impédance acoustique.}},
+  capacites = {
+    \cpgeitem{Établir et utiliser l’impédance acoustique définie comme le rapport de la surpression sur le débit volumique ou comme le rapport de la surpression sur la vitesse.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/2/9}{
+  parent = {PSI/6/1/2},
+  numero = {6.1.2.9},
+  contenu = {
+    \cpgeitem{Onde sonore sphérique harmonique divergente.}},
+  capacites = {
+    \cpgeitem{Commenter l'expression fournie de la surpression générée par une sphère pulsante : atténuation géométrique, structure locale.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/2/10}{
+  parent = {PSI/6/1/2},
+  numero = {6.1.2.10},
+  contenu = {
+    \cpgeitem{Effet Doppler.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre une détection synchrone pour mesurer une vitesse par décalage Doppler.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/6/1/3}{
+  parent = {PSI/6/1},
+  numero = {6.1.3},
+  niveau = {3},
+  titre = {Bilan de Poynting de l'énergie électromagnétique dans un milieu quelconque},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/6/1/3/1}{
+  parent = {PSI/6/1/3},
+  numero = {6.1.3.1},
+  contenu = {
+    \cpgeitem{Densité volumique d’énergie électromagnétique et vecteur de Poynting.}
+    \cpgeitem{Équation locale de Poynting.}},
+  capacites = {
+    \cpgeitem{Identifier les différents termes de l’équation locale de Poynting.}
+    \cpgeitem{Exprimer la puissance rayonnée à travers une surface à l’aide du vecteur de Poynting.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/6/1/4}{
+  parent = {PSI/6/1},
+  numero = {6.1.4},
+  niveau = {3},
+  titre = {Ondes électromagnétiques dans le vide},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/6/1/4/1}{
+  parent = {PSI/6/1/4},
+  numero = {6.1.4.1},
+  contenu = {
+    \cpgeitem{Propagation des vecteurs champs électrique et magnétique dans une région sans charge ni courant.}},
+  capacites = {
+    \cpgeitem{Citer les domaines du spectre des ondes électromagnétiques et leur associer des applications.}
+    \cpgeitem{Établir les équations de propagation.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/4/2}{
+  parent = {PSI/6/1/4},
+  numero = {6.1.4.2},
+  contenu = {
+    \cpgeitem{Structure d’une onde plane progressive harmonique.}},
+  capacites = {
+    \cpgeitem{Utiliser la notation complexe.}
+    \cpgeitem{Établir la relation entre le vecteur champ électrique, le vecteur champ magnétique et le vecteur d’onde.}
+    \cpgeitem{Associer la direction du vecteur de Poynting et la direction de propagation de l’onde.}
+    \cpgeitem{Associer le flux du vecteur de Poynting à un flux de photons en utilisant la relation d’Einstein-Planck.}
+    \cpgeitem{Citer quelques ordres de grandeur de flux énergétiques surfaciques moyens (laser hélium-néon, flux solaire).}
+    \cpgeitem{Utiliser le principe de superposition d’ondes planes progressives harmoniques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/1/4/3}{
+  parent = {PSI/6/1/4},
+  numero = {6.1.4.3},
+  contenu = {
+    \cpgeitem{Polarisation rectiligne.}},
+  capacites = {
+    \cpgeitem{Identifier l'expression d'une onde électromagnétique plane progressive polarisée rectilignement.}},
+  experimentales = {
+    \cpgeitem{Utiliser des polariseurs et étudier quantitativement la loi de Malus.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/6/2}{
+  parent = {PSI/6},
+  numero = {6.2},
+  niveau = {2},
+  titre = {Phénomènes de propagation linéaires : absorption et dispersion},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est consacrée aux phénomènes de propagation régis par des équations aux dérivées partielles linéaires à coefficients constants. L’étude est menée sur des ondes harmoniques unidimensionnelles lorsque l’équation de propagation est linéaire mais n’est pas une équation de d’Alembert. On évoque ensuite la théorie de Fourier pour justifier qu’une onde quelconque limitée dans le temps est la superposition d’ondes harmoniques : on définit ainsi la notion de paquet d’onde. Pour finir, on applique les notions nouvellement introduites sur la dispersion à la propagation des ondes dans les milieux conducteurs et les plasmas. L’étude de la propagation des ondes dans un plasma dilué est exclusivement limitée aux ondes transverses électriques ; le professeur est invité à signaler, sans soucis d’exhaustivité, quelques limites du modèle.}},
+}
+
+\cpgerubrique{PSI/6/2/1}{
+  parent = {PSI/6/2},
+  numero = {6.2.1},
+  niveau = {3},
+  titre = {Relation de dispersion},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/6/2/1/1}{
+  parent = {PSI/6/2/1},
+  numero = {6.2.1.1},
+  contenu = {
+    \cpgeitem{Propagation unidimensionnelle d’une onde harmonique dans un milieu linéaire.}},
+  capacites = {
+    \cpgeitem{Identifier le caractère linéaire d'une équation aux dérivées partielles.}
+    \cpgeitem{Établir la relation de dispersion.}
+    \cpgeitem{Relier, pour un signal proportionnel à $\exp[\cpgejj({\omega} t - \underline{k} x)]$, la partie réelle de $\underline{k}$ à la vitesse de phase et la partie imaginaire de $\underline{k}$ à une dépendance spatiale de l’amplitude.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/6/2/2}{
+  parent = {PSI/6/2},
+  numero = {6.2.2},
+  niveau = {3},
+  titre = {Paquet d’ondes},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/6/2/2/1}{
+  parent = {PSI/6/2/2},
+  numero = {6.2.2.1},
+  contenu = {
+    \cpgeitem{Superposition de deux ondes de fréquences proches dans un milieu non absorbant et dispersif.}},
+  capacites = {
+    \cpgeitem{Déterminer la vitesse de groupe.}
+    \cpgeitem{Associer la vitesse de groupe à la propagation de l’enveloppe du paquet d’ondes.}},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{à l’aide d’un langage de programmation, simuler la propagation d’un paquet d’ondes dans un milieu dispersif et visualiser le phénomène d’étalement.}},
+}
+
+\cpgeligne{PSI/6/2/2/2}{
+  parent = {PSI/6/2/2},
+  numero = {6.2.2.2},
+  contenu = {
+    \cpgeitem{Domaine spectral d’un paquet d’onde de durée finie.}},
+  capacites = {
+    \cpgeitem{Énoncer et exploiter la relation entre les ordres de grandeur de la durée temporelle d’un paquet d’onde et la largeur fréquentielle de son spectre.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/6/2/3}{
+  parent = {PSI/6/2},
+  numero = {6.2.3},
+  niveau = {3},
+  titre = {Ondes électromagnétiques planes dans des milieux conducteurs},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/6/2/3/1}{
+  parent = {PSI/6/2/3},
+  numero = {6.2.3.1},
+  contenu = {
+    \cpgeitem{Conducteur ohmique de conductivité réelle : effet de peau.}},
+  capacites = {
+    \cpgeitem{Identifier une analogie formelle avec les phénomènes de diffusion.}
+    \cpgeitem{Établir l’expression de l’épaisseur de peau.}
+    \cpgeitem{Citer l’ordre de grandeur de l’épaisseur de peau du cuivre à 50~Hz.}
+    \cpgeitem{Associer l’atténuation de l’onde à une dissipation d’énergie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/2/3/2}{
+  parent = {PSI/6/2/3},
+  numero = {6.2.3.2},
+  contenu = {
+    \cpgeitem{Modèle du conducteur parfait en présence d’un champ électromagnétique variable.}},
+  capacites = {
+    \cpgeitem{Justifier que les champs électrique et magnétique sont nuls dans le conducteur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/2/3/3}{
+  parent = {PSI/6/2/3},
+  numero = {6.2.3.3},
+  contenu = {
+    \cpgeitem{Onde plane transverse électrique harmonique dans un plasma dilué.}},
+  capacites = {
+    \cpgeitem{Exprimer la conductivité complexe du milieu et établir la relation de dispersion.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/2/3/4}{
+  parent = {PSI/6/2/3},
+  numero = {6.2.3.4},
+  contenu = {
+    \cpgeitem{Conductivité complexe du milieu.}
+    \cpgeitem{Fréquence de coupure.}
+    \cpgeitem{Vitesse de phase, vitesse de groupe.}},
+  capacites = {
+    \cpgeitem{Relier la fréquence de coupure aux caractéristiques du plasma et citer son ordre de grandeur dans le cas de l’ionosphère.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/2/3/5}{
+  parent = {PSI/6/2/3},
+  numero = {6.2.3.5},
+  contenu = {
+    \cpgeitem{Ondes évanescentes.}},
+  capacites = {
+    \cpgeitem{Associer le caractère imaginaire pur de la conductivité complexe à l’absence de puissance moyenne échangée entre le champ et les porteurs.}
+    \cpgeitem{Distinguer qualitativement les ondes évanescentes et les ondes progressives du point de vue du transport de l’énergie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/6/3}{
+  parent = {PSI/6},
+  numero = {6.3},
+  niveau = {2},
+  titre = {Interfaces entre deux milieux},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie est consacrée à la réflexion et à la transmission d’ondes à une interface plane sous incidence normale en acoustique et en électromagnétisme. Les relations de passage pour le champ électromagnétique sont affirmées, leurs démonstrations ne relèvent pas du programme. La détermination de l’intensité d’un courant à partir du vecteur densité de courant surfacique n’est pas un objectif de formation.}},
+}
+
+\cpgerubrique{PSI/6/3/1}{
+  parent = {PSI/6/3},
+  numero = {6.3.1},
+  niveau = {3},
+  titre = {Cas des ondes sonores},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/6/3/1/1}{
+  parent = {PSI/6/3/1},
+  numero = {6.3.1.1},
+  contenu = {
+    \cpgeitem{Réflexion, transmission d’une onde sonore sur une interface plane entre deux fluides : coefficients de réflexion et de transmission en amplitude des vitesses, des surpressions et des puissances sonores.}},
+  capacites = {
+    \cpgeitem{Expliciter des conditions aux limites à une interface.}
+    \cpgeitem{Établir les expressions des coefficients de transmission et de réflexion en amplitude de surpression, en amplitude de vitesse ou en puissance dans le cas d’une onde plane progressive sous incidence normale.}
+    \cpgeitem{Relier l’adaptation des impédances au transfert maximal de puissance.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/6/3/2}{
+  parent = {PSI/6/3},
+  numero = {6.3.2},
+  niveau = {3},
+  titre = {Cas des ondes électromagnétiques},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/6/3/2/1}{
+  parent = {PSI/6/3/2},
+  numero = {6.3.2.1},
+  contenu = {
+    \cpgeitem{Relations de passage du champ électromagnétique en présence d’une distribution surfacique de charge ou de courant.}},
+  capacites = {
+    \cpgeitem{Interpréter le vecteur densité de courant surfacique comme un modèle pour décrire un déplacement de charges à travers un domaine d’épaisseur faible devant l’échelle de description.}
+    \cpgeitem{Utiliser les relations de passage fournies.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/3/2/2}{
+  parent = {PSI/6/3/2},
+  numero = {6.3.2.2},
+  contenu = {
+    \cpgeitem{Réflexion d’une onde électromagnétique polarisée rectilignement sur un conducteur parfait, en incidence normale.}},
+  capacites = {
+    \cpgeitem{Exploiter la continuité de la composante tangentielle du champ électrique pour justifier l’existence d’une onde réfléchie et calculer celle-ci.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/6/3/2/3}{
+  parent = {PSI/6/3/2},
+  numero = {6.3.2.3},
+  contenu = {
+    \cpgeitem{Pression de radiation.}},
+  capacites = {
+    \cpgeitem{Établir l’expression du champ électromagnétique de l’onde réfléchie et du vecteur densité de courant surfacique.}
+    \cpgeitem{Calculer le coefficient de réflexion en puissance.}
+    \cpgeitem{Déterminer la pression de radiation à l’aide de l’expression fournie de la force de Laplace.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/7}{
+  parent = {PSI},
+  numero = {7},
+  niveau = {1},
+  titre = {Transformations chimiques de la matière : aspects thermodynamiques et cinétiques},
+  chapeau = {
+    \cpgeitem{Les transformations de la matière ont été abordées au premier semestre de la classe de PCSI ; le critère d’évolution spontanée d’un système chimique en transformation y a été présenté et utilisé sans être démontré. Ce critère a été remobilisé au second semestre lors de l’étude des transformations chimiques en solution aqueuse. Le but de cette partie est double : aborder les transferts thermiques et établir, puis exploiter le critère d’évolution spontanée d’un système engagé dans une transformation physico-chimique , ce qui nécessite l’introduction de la fonction enthalpie libre et du potentiel chimique.}},
+}
+
+\cpgerubrique{PSI/7/1}{
+  parent = {PSI/7},
+  numero = {7.1},
+  niveau = {2},
+  titre = {Premier principe de la thermodynamique appliqué aux transformations physico-chimiques},
+  chapeau = {
+    \cpgeitem{Dans la partie \cpgecettepartie, l’étude des transferts thermiques, abordée en première année dans le cadre du cours de physique relatif aux transformations physiques du corps pur, est ici généralisée aux transformations physico-chimiques. Les enthalpies standard de réaction sont considérées comme indépendantes de la température.}
+    \cpgeitem{Les notions et contenus sont illustrés à travers des applications liées à la vie quotidienne (contenu calorique des aliments, pouvoirs calorifiques des carburants, etc.), à la recherche (apports des techniques calorimétriques modernes, etc.) ou au domaine industriel. Un prolongement est proposé dans le cadre de l’étude thermique au sein des réacteurs continus dans la partie portant sur les procédés industriels continus.}},
+}
+
+\cpgeligne{PSI/7/1/1}{
+  parent = {PSI/7/1},
+  numero = {7.1.1},
+  contenu = {
+    \cpgeitem{État standard. Enthalpie standard de réaction.}
+    \cpgeitem{Loi de Hess.}},
+  capacites = {
+    \cpgeitem{Déterminer l'enthalpie standard de réaction à l'aide de tables de données thermodynamiques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/1/2}{
+  parent = {PSI/7/1},
+  numero = {7.1.2},
+  contenu = {
+    \cpgeitem{Enthalpie standard de formation, état standard de référence d'un élément.}},
+  capacites = {
+    \cpgeitem{Associer le signe de l’enthalpie standard de réaction au caractère endothermique ou exothermique de la réaction.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/1/3}{
+  parent = {PSI/7/1},
+  numero = {7.1.3},
+  contenu = {
+    \cpgeitem{Effets thermiques en réacteur monobare : \begin{itemize} \item transfert thermique associé à la transformation chimique en réacteur monobare, isotherme ; \item variation de température en réacteur monobare, adiabatique. \end{itemize}}},
+  capacites = {
+    \cpgeitem{Prévoir, à partir de données thermodynamiques, le sens et estimer la valeur du transfert thermique entre un système, siège d’une transformation physico-chimique et le milieu extérieur.}
+    \cpgeitem{Évaluer la température atteinte par un système siège d’une transformation chimique supposée monobare et réalisée dans un réacteur adiabatique.}},
+  experimentales = {
+    \cpgeitem{Mettre en œuvre une transformation physico-chimique en réacteur adiabatique monobare pour déterminer une enthalpie standard de réaction.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/7/2}{
+  parent = {PSI/7},
+  numero = {7.2},
+  niveau = {2},
+  titre = {Deuxième principe de la thermodynamique appliqué aux transformations physico-chimiques},
+  chapeau = {
+    \cpgeitem{Dans la partie \cpgecettepartie, on adopte pour les potentiels chimiques une expression générale : $\mu_i = \mu_{i,\text{réf}} + RT\ln(a_i)$ qui fait référence aux activités $a_i$ introduites en première année. L'établissement de cette expression est hors programme. L’influence de la pression sur le potentiel chimique d’un constituant en phase condensée pure n’est pas abordée. On se limite aux cas d'une espèce chimique pure, d'une espèce en solution aqueuse très diluée et d'une espèce en mélange de gaz parfaits avec référence à l'état standard. Pour le calcul des grandeurs standard de réaction, les enthalpies et entropies standard de réaction sont supposées indépendantes de la température. Les grandeurs standard de réaction permettent la détermination de la valeur de la constante thermodynamique d’équilibre $K^\circ$ d’une réaction, valeur qui était simplement donnée en première année. C’est ainsi l’occasion de revenir sur la détermination de la composition du système physico-chimique en fin d’évolution.}
+    \cpgeitem{La notion d’affinité chimique n’est pas utilisée, le sens d’évolution spontanée d’un système hors d’équilibre, à température et pression fixées, est déterminé par le signe de l’enthalpie libre de réaction $\Delta_r G$. Enfin, l’étude de l’influence de la modification d’un paramètre (pression, température ou composition) sur un système chimique permet d’aborder la problématique de l’optimisation des conditions opératoires d’un procédé chimique. Les illustrations et applications sont choisies dans le domaine industriel, dans la vie courante et au niveau du laboratoire.}},
+}
+
+\cpgeligne{PSI/7/2/1}{
+  parent = {PSI/7/2},
+  numero = {7.2.1},
+  contenu = {
+    \cpgeitem{Enthalpie libre.}},
+  capacites = {
+    \cpgeitem{Justifier que l’enthalpie libre est le potentiel thermodynamique adapté à l’étude des transformations isothermes, isobares et spontanées.}
+    \cpgeitem{Exprimer l’entropie créée en fonction de la variation d’enthalpie libre.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/2}{
+  parent = {PSI/7/2},
+  numero = {7.2.2},
+  contenu = {
+    \cpgeitem{Identités thermodynamiques.}},
+  capacites = {
+    \cpgeitem{Citer les expressions des différentielles de $U$, $H$, $G$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/3}{
+  parent = {PSI/7/2},
+  numero = {7.2.3},
+  contenu = {
+    \cpgeitem{Potentiel chimique.}},
+  capacites = {
+    \cpgeitem{Distinguer les caractères intensif ou extensif des variables utilisées.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/4}{
+  parent = {PSI/7/2},
+  numero = {7.2.4},
+  contenu = {
+    \cpgeitem{Potentiel chimique du corps pur.}},
+  capacites = {
+    \cpgeitem{Identifier le potentiel chimique d’un corps pur à son enthalpie libre molaire.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/5}{
+  parent = {PSI/7/2},
+  numero = {7.2.5},
+  contenu = {
+    \cpgeitem{Conditions d’équilibre d’un corps pur sous plusieurs phases.}},
+  capacites = {
+    \cpgeitem{Établir l’égalité des potentiels chimiques pour un corps pur en équilibre sous plusieurs phases. En déduire l’existence d’une courbe d’équilibre sur un diagramme $(P,T)$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/6}{
+  parent = {PSI/7/2},
+  numero = {7.2.6},
+  contenu = {
+    \cpgeitem{Paramètres intensifs.}},
+  capacites = {
+    \cpgeitem{Identifier un jeu de paramètres intensifs indépendants permettant la description d’un système physico-chimique en équilibre.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/7}{
+  parent = {PSI/7/2},
+  numero = {7.2.7},
+  contenu = {
+    \cpgeitem{Évolution d’un système sous plusieurs phases.}},
+  capacites = {
+    \cpgeitem{Utiliser le potentiel chimique pour prévoir l’évolution d’un système contenant une espèce chimique dans plusieurs phases.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/8}{
+  parent = {PSI/7/2},
+  numero = {7.2.8},
+  contenu = {
+    \cpgeitem{Potentiel chimique d’une espèce chimique dans un mélange ; enthalpie libre d’un système chimique. Activité.}},
+  capacites = {
+    \cpgeitem{Donner l’expression (admise) du potentiel chimique d’un constituant en fonction de son activité.}
+    \cpgeitem{Exprimer l’enthalpie libre d’un système chimique en fonction des potentiels chimiques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/9}{
+  parent = {PSI/7/2},
+  numero = {7.2.9},
+  contenu = {
+    \cpgeitem{Enthalpie de réaction, entropie de réaction, enthalpie libre de réaction et grandeurs standard associées.}
+    \cpgeitem{Relation entre enthalpie libre de réaction et quotient de réaction ; équilibre physico-chimique ; évolution d’un système chimique.}},
+  capacites = {
+    \cpgeitem{Justifier qualitativement ou prévoir le signe de l’entropie standard de réaction.}
+    \cpgeitem{Relier création d’entropie et enthalpie libre de réaction lors d’une transformation d’un système physico-chimique à pression et température fixées.}
+    \cpgeitem{Prévoir le sens d’évolution à pression et température fixées d’un système physico-chimique dans un état donné à l’aide de l’enthalpie libre de réaction.}
+    \cpgeitem{Déterminer les grandeurs standard de réaction à partir des tables de données thermodynamiques et de la loi de Hess.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/10}{
+  parent = {PSI/7/2},
+  numero = {7.2.10},
+  contenu = {
+    \cpgeitem{Constante thermodynamique d’équilibre ; relation de Van ’t Hoff.}},
+  capacites = {
+    \cpgeitem{Citer et exploiter la relation de Van ’t Hoff.}
+    \cpgeitem{Déterminer la valeur de la constante thermodynamique d’équilibre à une température quelconque.}},
+  experimentales = {
+    \cpgeitem{Déterminer l’évolution de la valeur d'une constante thermodynamique d'équilibre en fonction de la température.}},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/11}{
+  parent = {PSI/7/2},
+  numero = {7.2.11},
+  contenu = {
+    \cpgeitem{État final d’un système : équilibre chimique ou transformation totale.}},
+  capacites = {
+    \cpgeitem{Déterminer la composition chimique d’un système dans l’état final, en distinguant les cas d’équilibre chimique et de transformation totale, pour une transformation modélisée par une réaction chimique unique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/2/12}{
+  parent = {PSI/7/2},
+  numero = {7.2.12},
+  contenu = {
+    \cpgeitem{Optimisation thermodynamique d’un procédé chimique : \begin{itemize} \item par modification de la valeur de $K^\circ$ ; \item par modification de la valeur du quotient réactionnel. \end{itemize}}},
+  capacites = {
+    \cpgeitem{Identifier les paramètres d’influence et leur contrôle pour optimiser une synthèse ou minimiser la formation d’un produit secondaire indésirable.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/7/3}{
+  parent = {PSI/7},
+  numero = {7.3},
+  niveau = {2},
+  titre = {Procédés industriels continus : aspects cinétiques et thermodynamiques},
+  chapeau = {
+    \cpgeitem{Les transformations chimiques de la matière réalisées au laboratoire mettent en jeu de faibles quantités de matière et sont conduites en réacteur fermé. À l’échelle industrielle, les transformations mettent en jeu des quantités de matière beaucoup plus élevées et sont souvent conduites en réacteur ouvert pour assurer un fonctionnement continu. L’objectif de cette partie \cpgecettepartie est une initiation aux bilans de matière et d’énergie effectués sur des réacteurs ouverts continus. L’étude des opérations unitaires s’inscrit dans le prolongement des connaissances acquises en physique, notamment en mécanique des fluides, et en chimie, en particulier en cinétique en réacteur fermé et en thermodynamique, domaines qui sont à la base du génie des procédés et de la technologie chimique. Sensibiliser les étudiants aux enjeux spécifiques du secteur industriel est un élément constitutif de leur formation. Des procédés chimiques innovants s’imposent pour développer des techniques et des appareils adaptés permettant d’obtenir des rendements supérieurs à ceux des procédés conventionnels, tout en limitant leurs impacts environnementaux, en mettant au point des procédés plus sûrs, moins consommateurs d’énergie, de matières premières et de solvants et également moins polluants.}},
+}
+
+\cpgeligne{PSI/7/3/1}{
+  parent = {PSI/7/3},
+  numero = {7.3.1},
+  contenu = {
+    \cpgeitem{\cpgenotion{D’un protocole de laboratoire à un procédé industriel.}}
+    \cpgeitem{Opérations unitaires d’un procédé.}},
+  capacites = {
+    \cpgeitem{Exploiter un schéma de procédé légendé pour identifier les différentes opérations unitaires.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/3/2}{
+  parent = {PSI/7/3},
+  numero = {7.3.2},
+  contenu = {
+    \cpgeitem{Procédés discontinus ou continus.}},
+  capacites = {
+    \cpgeitem{Identifier un procédé discontinu ou continu.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/3/3}{
+  parent = {PSI/7/3},
+  numero = {7.3.3},
+  contenu = {
+    \cpgeitem{Procédés continus en régime stationnaire : débit de matière en masse et en quantité de matière, bilan de matière.}},
+  capacites = {
+    \cpgeitem{Effectuer un bilan de matière sur une espère chimique à partir de données sur les compositions et les débits entrants et sortants.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/3/4}{
+  parent = {PSI/7/3},
+  numero = {7.3.4},
+  contenu = {
+    \cpgeitem{\cpgenotion{Cinétique de transformations en réacteur ouvert.}}
+    \cpgeitem{Modèle du réacteur parfaitement agité continu en régime stationnaire dans le cas d’un écoulement de débits volumiques égaux à l’entrée et à la sortie.}},
+  capacites = {
+    \cpgeitem{Effectuer un bilan de quantité de matière sur une espèce chimique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/3/5}{
+  parent = {PSI/7/3},
+  numero = {7.3.5},
+  contenu = {
+    \cpgeitem{Taux de conversion d’un réactif.}
+    \cpgeitem{Temps de passage.}},
+  capacites = {
+    \cpgeitem{Relier le taux de conversion du réactif au temps de passage pour une transformation de loi de vitesse de réaction donnée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/3/6}{
+  parent = {PSI/7/3},
+  numero = {7.3.6},
+  contenu = {
+    \cpgeitem{Modèle du réacteur chimique en écoulement piston isotherme en régime stationnaire dans le cas de débits volumiques égaux à l’entrée et à la sortie du réacteur ; dimensionnement d’un réacteur en écoulement piston.}},
+  capacites = {
+    \cpgeitem{Établir un bilan de quantité de matière sur une espèce chimique.}
+    \cpgeitem{Relier le taux de conversion en sortie d’un réacteur en écoulement piston et le temps de passage pour une transformation modélisée par une loi de vitesse donnée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/7/3/7}{
+  parent = {PSI/7/3},
+  numero = {7.3.7},
+  contenu = {
+    \cpgeitem{\cpgenotion{Étude thermique d’un réacteur ouvert.}}
+    \cpgeitem{Bilan énergétique sur un réacteur parfaitement agité continu en régime stationnaire dans le cas de débits volumiques égaux à l’entrée et à la sortie.}},
+  capacites = {
+    \cpgeitem{Effectuer un bilan énergétique sur un réacteur ouvert afin d’établir une relation entre les températures d’entrée et de sortie, le taux de conversion et le flux thermique éventuellement échangé.}},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{à l’aide d’un langage de programmation, déterminer le(s) point(s) de fonctionnement (température et taux de conversion) d’un réacteur ouvert siège d’une transformation modélisée par une réaction isotherme unique et en discuter la stabilité.}},
+}
+
+\cpgerubrique{PSI/8}{
+  parent = {PSI},
+  numero = {8},
+  niveau = {1},
+  titre = {Aspects thermodynamiques et cinétiques de l’électrochimie},
+  chapeau = {
+    \cpgeitem{Les aspects thermodynamiques et cinétiques des réactions d’oxydo-réduction sont appliqués notamment à la corrosion d’une part et aux dispositifs électrochimiques que sont les piles et les accumulateurs d’autre part. L’illustration des notions gagne à s’appuyer sur des applications concrètes comme par exemple la mise en œuvre de capteurs électrochimiques dans l’analyse de l’eau, de l’air ou d’effluents. L’approche de l’électrochimie proposée ici privilégie les raisonnements qualitatifs et les aspects expérimentaux, plutôt que les développements théoriques et formels.}},
+}
+
+\cpgerubrique{PSI/8/1}{
+  parent = {PSI/8},
+  numero = {8.1},
+  niveau = {2},
+  titre = {Étude thermodynamique des réactions d’oxydo-réduction},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie se fonde sur les acquis de première année relatifs à l’étude des réactions d’oxydo-réduction et des piles, ainsi que sur la partie de thermodynamique chimique de seconde année pour relier les grandeurs thermodynamiques aux potentiels.}},
+}
+
+\cpgeligne{PSI/8/1/1}{
+  parent = {PSI/8/1},
+  numero = {8.1.1},
+  contenu = {
+    \cpgeitem{Relation entre enthalpie libre de réaction et potentiels des couples mis en jeu dans une réaction d’oxydo-réduction.}},
+  capacites = {
+    \cpgeitem{Citer et exploiter la relation entre l’enthalpie libre de réaction et les potentiels des couples mis en jeu dans une réaction d’oxydo-réduction.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/8/1/2}{
+  parent = {PSI/8/1},
+  numero = {8.1.2},
+  contenu = {
+    \cpgeitem{Relation entre enthalpie libre standard de réaction et potentiels standard des couples impliqués.}},
+  capacites = {
+    \cpgeitem{Déterminer l’enthalpie libre standard d’une réaction d’oxydo-réduction à partir des potentiels standard des couples.}
+    \cpgeitem{Déterminer la valeur du potentiel standard d’un couple d’oxydo-réduction à partir de données thermodynamiques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/8/2}{
+  parent = {PSI/8},
+  numero = {8.2},
+  niveau = {2},
+  titre = {Étude cinétique des réactions d’oxydo-réduction : courbe courant-potentiel},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie se fonde sur les acquis de cinétique chimique de première année et les prolongent par le tracé et l’exploitation de courbes courant-potentiel. Les courbes courant-potentiel, dont le tracé est proposé en capacité expérimentale, sont un outil essentiel dans la compréhension et la modélisation des systèmes électrochimiques. L’écart entre le potentiel d’une électrode et son potentiel d’équilibre est appelé surpotentiel plutôt que surtension pour des raisons pédagogiques, en cohérence avec le vocabulaire anglo-saxon correspondant.}},
+}
+
+\cpgeligne{PSI/8/2/1}{
+  parent = {PSI/8/2},
+  numero = {8.2.1},
+  contenu = {
+    \cpgeitem{Courbes courant-potentiel sur une électrode en régime stationnaire : \begin{itemize} \item surpotentiel ; \item systèmes rapides et systèmes lents ; \item nature de l’électrode ; \item courant de diffusion limite ; \item vagues successives ; \item domaine d’inertie électrochimique du solvant. \end{itemize}}},
+  capacites = {
+    \cpgeitem{Décrire le montage à trois électrodes permettant de tracer des courbes courant-potentiel.}
+    \cpgeitem{Relier vitesse de réaction électrochimique et intensité du courant.}
+    \cpgeitem{Identifier le caractère lent ou rapide d’un système à partir des courbes courant-potentiel.}
+    \cpgeitem{Identifier les espèces électroactives pouvant donner lieu à une limitation en courant par diffusion.}
+    \cpgeitem{Identifier des paliers de diffusion limite sur des relevés expérimentaux.}
+    \cpgeitem{Relier, à l’aide de la loi de Fick, l'intensité du courant de diffusion limite à la concentration du réactif et à la surface immergée de l'électrode.}
+    \cpgeitem{Tracer l’allure de courbes courant-potentiel de branches d’oxydation ou de réduction à partir de données fournies, de potentiels standard, concentrations et surpotentiels.}},
+  experimentales = {
+    \cpgeitem{Tracer et exploiter des courbes courant-potentiel.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/8/3}{
+  parent = {PSI/8},
+  numero = {8.3},
+  niveau = {2},
+  titre = {Stockage et conversion d’énergie dans des dispositifs électrochimiques},
+  chapeau = {
+    \cpgeitem{La partie \cpgecettepartie s’appuie sur les courbes courant-potentiel pour étudier le fonctionnement des piles et leur recharge, ainsi que les électrolyseurs. Ces courbes permettent en effet de déterminer différentes caractéristiques : réactions aux électrodes, tension à vide, tension à imposer pour une recharge, etc.}},
+}
+
+\cpgeligne{PSI/8/3/1}{
+  parent = {PSI/8/3},
+  numero = {8.3.1},
+  contenu = {
+    \cpgeitem{\cpgenotion{Conversion d’énergie chimique en énergie électrique : fonctionnement des piles.}}
+    \cpgeitem{Transformations spontanées et réaction modélisant le fonctionnement d’une pile électrochimique.}},
+  capacites = {
+    \cpgeitem{Établir l’inégalité reliant la variation d’enthalpie libre et le travail électrique.}
+    \cpgeitem{Relier la tension à vide d’une pile et l’enthalpie libre de la réaction modélisant son fonctionnement.}
+    \cpgeitem{Déterminer la capacité électrique d’une pile.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/8/3/2}{
+  parent = {PSI/8/3},
+  numero = {8.3.2},
+  contenu = {
+    \cpgeitem{Courbes courant-potentiel et fonctionnement d’une pile électrochimique.}},
+  capacites = {
+    \cpgeitem{Exploiter les courbes courant-potentiel pour rendre compte du fonctionnement d’une pile électrochimique et tracer sa caractéristique.}
+    \cpgeitem{Citer les paramètres influençant la résistance interne d’une pile électrochimique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/8/3/3}{
+  parent = {PSI/8/3},
+  numero = {8.3.3},
+  contenu = {
+    \cpgeitem{\cpgenotion{Conversion d’énergie électrique en énergie chimique.}}
+    \cpgeitem{Transformations forcées lors d’une électrolyse et de la recharge d’un accumulateur.}},
+  capacites = {
+    \cpgeitem{Exploiter les courbes courant-potentiel pour rendre compte du fonctionnement d’un électrolyseur et prévoir la valeur de la tension minimale à imposer.}
+    \cpgeitem{Exploiter les courbes courant-potentiel pour justifier les contraintes (purification de la solution électrolytique, choix des électrodes) dans la recharge d’un accumulateur.}
+    \cpgeitem{Déterminer la masse de produit formé pour une durée et des conditions données d’électrolyse.}
+    \cpgeitem{Déterminer un rendement faradique à partir d’informations fournies concernant le dispositif étudié.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/8/3/4}{
+  parent = {PSI/8/3},
+  numero = {8.3.4},
+  contenu = {
+    \cpgeitem{Stockage et conversion d’énergie chimique.}},
+  capacites = {},
+  experimentales = {
+    \cpgeitem{Étudier le fonctionnement d’une pile ou d’un électrolyseur pour effectuer des bilans de matière et des bilans électriques.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/8/4}{
+  parent = {PSI/8},
+  numero = {8.4},
+  niveau = {2},
+  titre = {Corrosion humide ou électrochimique},
+  chapeau = {
+    \cpgeitem{La lutte contre la corrosion est un enjeu économique actuel et la compréhension des phénomènes de corrosion et des facteurs influençant cette corrosion est essentielle pour effectuer des choix de méthodes de protection. La partie \cpgecettepartie exploite les courbes courant-potentiel pour interpréter les phénomènes de corrosion, de protection et de passivation. On se limite à la corrosion uniforme et à la corrosion galvanique de deux métaux en contact. Les tracés de diagrammes de Tafel ou d’Evans sont hors-programme.}},
+}
+
+\cpgeligne{PSI/8/4/1}{
+  parent = {PSI/8/4},
+  numero = {8.4.1},
+  contenu = {
+    \cpgeitem{Corrosion uniforme en milieu acide ou en milieu neutre oxygéné : potentiel de corrosion, courant de corrosion.}
+    \cpgeitem{Corrosion d’un système de deux métaux en contact.}},
+  capacites = {
+    \cpgeitem{Positionner un potentiel de corrosion sur un tracé de courbes courant-potentiel.}
+    \cpgeitem{Interpréter le phénomène de corrosion uniforme d’un métal ou de deux métaux en contact en utilisant des courbes courant-potentiel ou d’autres données expérimentales, thermodynamiques et cinétiques.}
+    \cpgeitem{Déterminer une vitesse de corrosion.}
+    \cpgeitem{Citer des facteurs favorisant la corrosion.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/8/4/2}{
+  parent = {PSI/8/4},
+  numero = {8.4.2},
+  contenu = {
+    \cpgeitem{Protection contre la corrosion : \begin{itemize} \item revêtement ; \item anode sacrificielle ; \item protection électrochimique par courant imposé. \end{itemize}}},
+  capacites = {
+    \cpgeitem{Exploiter des tracés de courbes courant-potentiel pour expliquer qualitativement : \begin{itemize} \item la qualité de la protection par un revêtement métallique ; \item le fonctionnement d’une anode sacrificielle. \end{itemize}}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/8/4/3}{
+  parent = {PSI/8/4},
+  numero = {8.4.3},
+  contenu = {
+    \cpgeitem{Passivation.}},
+  capacites = {
+    \cpgeitem{Interpréter le phénomène de passivation sur une courbe courant-potentiel.}},
+  experimentales = {
+    \cpgeitem{Mettre en évidence le phénomène de corrosion et les facteurs l’influençant.}},
+  numeriques = {},
+}
+
+\cpgerubrique{PSIA/A1}{
+  parent = {PSI},
+  numero = {A1},
+  niveau = {1},
+  titre = {Matériel},
+  chapeau = {
+    \cpgeitem{Cette liste complète celle donnée en annexe 1 du programme de physique de PCSI. À elles deux, ces listes regroupent le matériel que les étudiants doivent savoir utiliser avec l’aide d’une notice simplifiée. Une utilisation de matériel hors de ces listes lors d’épreuves d’évaluation n’est pas exclue, mais elle doit obligatoirement s’accompagner d’une aide.}},
+}
+
+\cpgeligne{PSIA/A1/1}{
+  parent = {PSIA/A1},
+  numero = {A1.1},
+  contenu = {
+    \cpgeitem{Domaine conversion de puissance}},
+  capacites = {
+    \cpgeitem{Wattmètre numérique.}
+    \cpgeitem{Transformateur à noyau ferromagnétique.}
+    \cpgeitem{Machine à courant continu.}
+    \cpgeitem{Alimentation stabilisée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSIA/A1/2}{
+  parent = {PSIA/A1},
+  numero = {A1.2},
+  contenu = {
+    \cpgeitem{Domaine électrique}},
+  capacites = {
+    \cpgeitem{Oscilloscope numérique avec analyseur de spectre.}
+    \cpgeitem{Microcontrôleur.}
+    \cpgeitem{CAN et CNA.}
+    \cpgeitem{ALI.}
+    \cpgeitem{Multiplieur analogique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSIA/A1/3}{
+  parent = {PSIA/A1},
+  numero = {A1.3},
+  contenu = {
+    \cpgeitem{Domaine ondes}},
+  capacites = {
+    \cpgeitem{Câble coaxial, bouchons adaptés.}
+    \cpgeitem{Émetteurs et récepteurs à ultrasons.}
+    \cpgeitem{Haut-parleur, microphone.}
+    \cpgeitem{Polariseurs.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSIA/A1/4}{
+  parent = {PSIA/A1},
+  numero = {A1.4},
+  contenu = {
+    \cpgeitem{Domaine chimie}},
+  capacites = {
+    \cpgeitem{Verrerie classique de chimie analytique : burettes, pipettes jaugées et graduées, fioles jaugées, erlenmeyers, béchers, etc.}
+    \cpgeitem{Spectrophotomètre UV-visible.}
+    \cpgeitem{pH-mètre et électrodes de mesure.}
+    \cpgeitem{Voltmètre et électrodes.}
+    \cpgeitem{Conductimètre et cellule de mesure.}
+    \cpgeitem{Thermomètre.}
+    \cpgeitem{Balance de précision.}
+    \cpgeitem{Électrodes de référence.}
+    \cpgeitem{Électrolyseur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSIA/A2}{
+  parent = {PSI},
+  numero = {A2},
+  niveau = {1},
+  titre = {Outils mathématiques},
+  chapeau = {
+    \cpgeitem{Les outils mathématiques dont la maîtrise est nécessaire à la mise en œuvre du programme de physique de la classe de PSI sont d’une part ceux qui figurent dans l’annexe 2 du programme de PCSI et d’autre part ceux qui figurent dans la liste ci-dessous.}
+    \cpgeitem{Le thème « analyse vectorielle » prolonge l’étude de l’outil « gradient » abordée en PCSI en introduisant de nouveaux opérateurs : seules leurs expressions en coordonnées cartésiennes sont exigibles. Toutes les autres formules utiles (expressions en coordonnées cylindriques ou sphériques, actions sur des produits, combinaisons d’opérateurs, etc.) doivent être fournies.}
+    \cpgeitem{Le thème « analyse de Fourier » prolonge l’étude de l’outil « séries de Fourier » abordée en PCSI en admettant la décomposition d’une fonction non périodique du temps en une somme continue de fonctions sinusoïdales ; la transformée de Fourier n’est pas au programme. On insiste sur la relation liant en ordre de grandeur la largeur spectrale $\Delta$f et la durée caractéristique $\Delta$t d’un signal non périodique.}
+    \cpgeitem{Dans le thème « équations aux dérivées partielles », aucune méthode générale d’étude n’est exigible : on se limite à chercher des solutions d’une forme donnée par substitution, menant ainsi soit à des équations différentielles classiques, soit à une relation de dispersion.}},
+}
+
+\cpgerubrique{PSIA/A2/1}{
+  parent = {PSIA/A2},
+  numero = {A2.1},
+  niveau = {2},
+  titre = {Analyse vectorielle},
+  chapeau = {},
+}
+
+\cpgeligne{PSIA/A2/1/1}{
+  parent = {PSIA/A2/1},
+  numero = {A2.1.1},
+  contenu = {
+    \cpgeitem{Gradient.}},
+  capacites = {
+    \cpgeitem{Relier le gradient à la différentielle d’un champ scalaire à $t$ fixé.}
+    \cpgeitem{Exprimer les composantes du gradient en coordonnées cartésiennes.}
+    \cpgeitem{Utiliser le fait que le gradient d’une fonction $f$ est perpendiculaire aux surfaces iso-$f$ et orienté dans le sens des valeurs de $f$ croissantes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSIA/A2/1/2}{
+  parent = {PSIA/A2/1},
+  numero = {A2.1.2},
+  contenu = {
+    \cpgeitem{Divergence.}},
+  capacites = {
+    \cpgeitem{Citer et utiliser le théorème d’Ostrogradski.}
+    \cpgeitem{Exprimer la divergence en coordonnées cartésiennes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSIA/A2/1/3}{
+  parent = {PSIA/A2/1},
+  numero = {A2.1.3},
+  contenu = {
+    \cpgeitem{Rotationnel.}},
+  capacites = {
+    \cpgeitem{Citer et utiliser le théorème de Stokes.}
+    \cpgeitem{Exprimer le rotationnel en coordonnées cartésiennes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSIA/A2/1/4}{
+  parent = {PSIA/A2/1},
+  numero = {A2.1.4},
+  contenu = {
+    \cpgeitem{Laplacien d’un champ scalaire.}},
+  capacites = {
+    \cpgeitem{Définir le laplacien à l’aide de la divergence et du gradient.}
+    \cpgeitem{Exprimer le laplacien en coordonnées cartésiennes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSIA/A2/1/5}{
+  parent = {PSIA/A2/1},
+  numero = {A2.1.5},
+  contenu = {
+    \cpgeitem{Laplacien d’un champ de vecteurs.}},
+  capacites = {
+    \cpgeitem{Exprimer le laplacien d’un champ de vecteurs en coordonnées cartésiennes.}
+    \cpgeitem{Utiliser la formule d’analyse vectorielle : $\cpgerot(\cpgerot \cpgevec{A}) = \cpgegrad(\cpgediv \cpgevec{A}) - \cpgevec{{\Delta}} \cpgevec{A}$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSIA/A2/1/6}{
+  parent = {PSIA/A2/1},
+  numero = {A2.1.6},
+  contenu = {
+    \cpgeitem{Champs proportionnels à $\exp(\cpgeii {\omega} t - \cpgeii \cpgevec{k} \cdot \cpgevec{r})$ ou $\exp(\cpgeii \cpgevec{k} \cdot \cpgevec{r} - \cpgeii {\omega} t)$.}},
+  capacites = {
+    \cpgeitem{Exprimer l’action des opérateurs d’analyse vectorielle sur un tel champ à l’aide du vecteur $\cpgeii \cpgevec{k}$.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSIA/A2/2}{
+  parent = {PSIA/A2},
+  numero = {A2.2},
+  niveau = {2},
+  titre = {Analyse de Fourier},
+  chapeau = {},
+}
+
+\cpgeligne{PSIA/A2/2/1}{
+  parent = {PSIA/A2/2},
+  numero = {A2.2.1},
+  contenu = {
+    \cpgeitem{Synthèse spectrale d’une fonction périodique.}},
+  capacites = {
+    \cpgeitem{Utiliser un développement en série de Fourier fourni.}
+    \cpgeitem{Utiliser un raisonnement par superposition.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSIA/A2/2/2}{
+  parent = {PSIA/A2/2},
+  numero = {A2.2.2},
+  contenu = {
+    \cpgeitem{Synthèse spectrale d’une fonction non périodique.}},
+  capacites = {
+    \cpgeitem{Utiliser un raisonnement par superposition.}
+    \cpgeitem{Citer et utiliser la relation liant en ordre de grandeur la largeur spectrale ${\Delta}f$ et la durée caractéristique ${\Delta}t$ d’un signal non périodique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSIA/A2/3}{
+  parent = {PSIA/A2},
+  numero = {A2.3},
+  niveau = {2},
+  titre = {Équations aux dérivées partielles},
+  chapeau = {},
+}
+
+\cpgeligne{PSIA/A2/3/1}{
+  parent = {PSIA/A2/3},
+  numero = {A2.3.1},
+  contenu = {
+    \cpgeitem{Exemples d’équations aux dérivées partielles : équation de Laplace, équation de diffusion, équation de d’Alembert.}},
+  capacites = {
+    \cpgeitem{Identifier une équation aux dérivées partielles connue.}
+    \cpgeitem{Transposer une solution familière dans un domaine de la physique à un autre domaine.}
+    \cpgeitem{Obtenir des solutions de forme donnée par substitution.}
+    \cpgeitem{Utiliser des conditions initiales et des conditions aux limites.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSIA/A2/4}{
+  parent = {PSIA/A2},
+  numero = {A2.4},
+  niveau = {2},
+  titre = {Calcul différentiel},
+  chapeau = {},
+}
+
+\cpgeligne{PSIA/A2/4/1}{
+  parent = {PSIA/A2/4},
+  numero = {A2.4.1},
+  contenu = {
+    \cpgeitem{Différentielle d’une fonction de plusieurs variables. Dérivée partielle. Théorème de Schwarz.}},
+  capacites = {
+    \cpgeitem{Connaître l’expression de la différentielle en fonction des dérivées partielles.}
+    \cpgeitem{Identifier la valeur d’une dérivée partielle, l’expression de la différentielle étant donnée.}
+    \cpgeitem{Utiliser le théorème de Schwarz (admis).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSIA/A3}{
+  parent = {PSI},
+  numero = {A3},
+  niveau = {1},
+  titre = {Outils numériques},
+  chapeau = {
+    \cpgeitem{La prise en compte de capacités de codage en langage Python dans la formation des étudiants inclut l’utilisation de fonctions extraites de diverses bibliothèques. Elle vise à une meilleure appréhension des principes mis en œuvre par les différents logiciels de traitement des données dont l’utilisation est par ailleurs toujours recommandée. Elle a aussi pour objectif de mobiliser ces capacités dans un contexte concret, celui de la physique. Cette formation par le codage permet également de développer des capacités utiles à la physique comme le raisonnement, la logique ou la décomposition d’un problème complexe en étapes plus simples.}
+    \cpgeitem{Le tableau ci-dessous complète les outils numériques identifiés dans le programme de première année de la classe de PCSI.}},
+}
+
+\cpgeligne{PSIA/A3/1}{
+  parent = {PSIA/A3},
+  numero = {A3.1},
+  contenu = {
+    \cpgeitem{Transformée de Fourier discrète.}},
+  capacites = {},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{Calculer la transformée de Fourier discrète d’un signal à valeurs réelles en utilisant la fonction rfft de la bibliothèque numpy.fft (sa spécification étant donnée).}},
+}
+
+\cpgeligne{PSIA/A3/2}{
+  parent = {PSIA/A3},
+  numero = {A3.2},
+  contenu = {
+    \cpgeitem{Équation de diffusion à une dimension.}},
+  capacites = {},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{Mettre en œuvre une méthode des différences finies explicite pour résoudre l’équation de diffusion à une dimension en régime variable.}},
+}
+
+\cpgerubrique{PSI/E}{
+  parent = {PSI},
+  numero = {E},
+  niveau = {1},
+  titre = {Formation expérimentale},
+  chapeau = {
+    \cpgeitem{Cette partie est spécifiquement dédiée à la mise en œuvre de la formation expérimentale des étudiants lors des séances de travaux pratiques. Dans un premier temps, elle précise les connaissances et savoir-faire qui doivent être acquis dans le domaine de la mesure et de l’évaluation des incertitudes. Elle présente ensuite de façon détaillée l’ensemble des capacités expérimentales qui doivent être acquises en autonomie par les étudiants à l’issue de leur seconde année de CPGE. Enfin, elle aborde la question de la prévention du risque au laboratoire de physique-chimie. Une liste de matériel, que les étudiants doivent savoir utiliser avec l’aide d’une notice succincte, figure dans l’annexe 1 du présent programme.}},
+}
+
+\cpgerubrique{PSI/E/1}{
+  parent = {PSI/E},
+  numero = {E.1},
+  niveau = {2},
+  titre = {Mesures et incertitudes},
+  chapeau = {
+    \cpgeitem{Les notions et capacités identifiées ci-dessous couvrent les deux années de formation en classe préparatoire aux grandes écoles ; leur pleine maîtrise est donc un objectif de fin de seconde année. L’accent est mis sur la variabilité de la mesure d’une grandeur physique et sa caractérisation à l’aide de l’incertitude-type. La comparaison entre deux valeurs mesurées d’une même grandeur physique est conduite au moyen de l’écart normalisé, l’objectif principal étant de développer l’esprit critique des étudiants en s’appuyant sur un critère quantitatif. Le même esprit prévaut dans l’analyse des résultats d’une régression linéaire qui ne saurait s’appuyer sur l’exploitation non raisonnée du coefficient de corrélation (R$^{2}$). Le recours à la simulation vise à illustrer, sur la base de mesures expérimentales, différents effets de la variabilité de la mesure d’une grandeur physique dans les cas des incertitudes-types composées et de la régression linéaire.}},
+}
+
+\cpgeligne{PSI/E/1/1}{
+  parent = {PSI/E/1},
+  numero = {E.1.1},
+  contenu = {
+    \cpgeitem{Variabilité de la mesure d’une grandeur physique.}
+    \cpgeitem{Incertitude.}
+    \cpgeitem{Incertitude-type.}},
+  capacites = {
+    \cpgeitem{Identifier les incertitudes liées, par exemple, à l’opérateur, à l’environnement, aux instruments ou à la méthode de mesure.}
+    \cpgeitem{Procéder à l’évaluation d’une incertitude-type par une approche statistique (évaluation de type A).}
+    \cpgeitem{Procéder à l’évaluation d’une incertitude-type par une autre approche que statistique (évaluation de type B).}
+    \cpgeitem{Associer un intervalle de confiance à l’écart-type dans l’hypothèse d’une distribution suivant la loi normale.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/1/2}{
+  parent = {PSI/E/1},
+  numero = {E.1.2},
+  contenu = {
+    \cpgeitem{Incertitudes-types composées.}},
+  capacites = {
+    \cpgeitem{Évaluer l’incertitude-type d’une grandeur s’exprimant en fonction d’autres grandeurs, dont les incertitudes-types sont connues, à l’aide d’une somme, d’une différence, d’un produit ou d’un quotient.}
+    \cpgeitem{Comparer entre elles les différentes contributions lors de l’évaluation d’une incertitude-type composée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/1/3}{
+  parent = {PSI/E/1},
+  numero = {E.1.3},
+  contenu = {
+    \cpgeitem{Écriture du résultat d’une mesure.}},
+  capacites = {
+    \cpgeitem{Écrire, avec un nombre adapté de chiffres significatifs, le résultat d’une mesure.}},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{simuler, à l’aide d’un langage de programmation ou d’un tableur, un processus aléatoire permettant de caractériser la variabilité de la valeur d’une grandeur composée.}},
+}
+
+\cpgeligne{PSI/E/1/4}{
+  parent = {PSI/E/1},
+  numero = {E.1.4},
+  contenu = {
+    \cpgeitem{Comparaison de deux valeurs ; écart normalisé.}},
+  capacites = {
+    \cpgeitem{Comparer deux valeurs dont les incertitudes-types sont connues à l’aide de leur écart normalisé.}
+    \cpgeitem{Analyser les causes d’une éventuelle incompatibilité entre le résultat d’une mesure et le résultat attendu par une modélisation.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/1/5}{
+  parent = {PSI/E/1},
+  numero = {E.1.5},
+  contenu = {
+    \cpgeitem{Régression linéaire.}},
+  capacites = {
+    \cpgeitem{Utiliser un logiciel de régression linéaire afin d’obtenir les valeurs des paramètres du modèle.}
+    \cpgeitem{Analyser les résultats obtenus à l’aide d’une procédure de validation : analyse graphique intégrant les barres d’incertitude ou analyse des écarts normalisés.}},
+  experimentales = {},
+  numeriques = {
+    \cpgeitem{simuler, à l’aide d’un langage de programmation ou d’un tableur, un processus aléatoire de variation des valeurs expérimentales de l’une des grandeurs – simulation Monte-Carlo – pour évaluer l’incertitude sur les paramètres du modèle.}},
+}
+
+\cpgerubrique{PSI/E/2}{
+  parent = {PSI/E},
+  numero = {E.2},
+  niveau = {2},
+  titre = {Mesures et capacités expérimentales},
+  chapeau = {
+    \cpgeitem{Cette partie présente l’ensemble des capacités expérimentales nouvelles que les étudiants doivent acquérir au cours de l’année de PSI durant les séances de travaux pratiques. Elle vient prolonger la partie correspondante du programme de PCSI dont les capacités doivent être complètement acquises à l’issue des deux années de préparation, et restent donc au programme de seconde année de PSI.}
+    \cpgeitem{Les capacités rassemblées ici ne constituent en aucun cas une liste de travaux pratiques qui s’articuleraient autour d’une découverte du matériel, mais doivent au contraire faire l’objet d’un apprentissage progressif contextualisé où chaque élément apparaît naturellement à l’occasion d’un problème concret. À ce titre, elle vient compléter la liste des thèmes d’étude – en gras dans la colonne « capacités exigibles » de la partie « Contenus thématiques » – à partir desquels la problématique d’une séance peut être définie.}
+    \cpgeitem{Les activités expérimentales sur le thème de la chimie sont aussi l’occasion de consolider les savoir-faire de la classe de PCSI en particulier dans le domaine des solutions aqueuses.}},
+}
+
+\cpgeligne{PSI/E/2/1}{
+  parent = {PSI/E/2},
+  numero = {E.2.1},
+  contenu = {
+    \cpgeitem{\textbf{1. Mesures de temps et de fréquences}}
+    \cpgeitem{Détection synchrone.}},
+  capacites = {
+    \cpgeitem{Mesurer une fréquence par une détection synchrone à l’aide d’un multiplieur et d’un filtre passe-bas adapté à la mesure.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/2}{
+  parent = {PSI/E/2},
+  numero = {E.2.2},
+  contenu = {
+    \cpgeitem{Analyse spectrale.}},
+  capacites = {
+    \cpgeitem{Mettre en évidence le phénomène de repliement du spectre provoqué par l’échantillonnage avec un oscilloscope numérique ou une carte d’acquisition.}
+    \cpgeitem{Choisir les paramètres d’une acquisition numérique destinée à une analyse spectrale afin de respecter la condition de Nyquist-Shannon, tout en optimisant la résolution spectrale.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/3}{
+  parent = {PSI/E/2},
+  numero = {E.2.3},
+  contenu = {
+    \cpgeitem{\textbf{2. Électricité et électronique}}
+    \cpgeitem{Filtrage analogique d’un signal périodique.}},
+  capacites = {
+    \cpgeitem{Mettre en évidence l’action d’un filtre linéaire sur un signal périodique dans les domaines fréquentiel et temporel.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/4}{
+  parent = {PSI/E/2},
+  numero = {E.2.4},
+  contenu = {
+    \cpgeitem{Montages utilisant un amplificateur linéaire intégré (ALI).}},
+  capacites = {
+    \cpgeitem{Identifier les limitations suivantes : saturation en tension, saturation en courant, vitesse de balayage, bande passante.}
+    \cpgeitem{Mettre en œuvre divers montages utilisant un ALI.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/5}{
+  parent = {PSI/E/2},
+  numero = {E.2.5},
+  contenu = {
+    \cpgeitem{Modulation et démodulation.}},
+  capacites = {
+    \cpgeitem{Élaborer un signal modulé en amplitude à l’aide d’un circuit multiplieur.}
+    \cpgeitem{Réaliser une démodulation synchrone.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/6}{
+  parent = {PSI/E/2},
+  numero = {E.2.6},
+  contenu = {
+    \cpgeitem{Électronique numérique.}},
+  capacites = {
+    \cpgeitem{Utiliser un convertisseur analogique-numérique et un convertisseur numérique-analogique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/7}{
+  parent = {PSI/E/2},
+  numero = {E.2.7},
+  contenu = {
+    \cpgeitem{\textbf{3. Conversion de puissance}}
+    \cpgeitem{Puissance électrique.}},
+  capacites = {
+    \cpgeitem{Mesurer une puissance moyenne à l’aide d’un wattmètre numérique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/8}{
+  parent = {PSI/E/2},
+  numero = {E.2.8},
+  contenu = {
+    \cpgeitem{Conversion électromagnétique statique de puissance.}},
+  capacites = {
+    \cpgeitem{Mettre en œuvre un transformateur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/9}{
+  parent = {PSI/E/2},
+  numero = {E.2.9},
+  contenu = {
+    \cpgeitem{Conversion électromécanique de puissance.}},
+  capacites = {
+    \cpgeitem{Mettre en œuvre une machine à courant continu.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/10}{
+  parent = {PSI/E/2},
+  numero = {E.2.10},
+  contenu = {
+    \cpgeitem{Conversion électronique statique de puissance.}},
+  capacites = {
+    \cpgeitem{Mettre en œuvre un convertisseur électronique statique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/11}{
+  parent = {PSI/E/2},
+  numero = {E.2.11},
+  contenu = {
+    \cpgeitem{\textbf{4. Ondes}}
+    \cpgeitem{Mesure d’une célérité.}},
+  capacites = {
+    \cpgeitem{Mesurer la célérité d’une onde par diverses méthodes : étude d’ondes progressives en propagation libre, étude d’ondes stationnaires.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/12}{
+  parent = {PSI/E/2},
+  numero = {E.2.12},
+  contenu = {
+    \cpgeitem{Polarisation.}},
+  capacites = {
+    \cpgeitem{Mettre en œuvre un photorécepteur et plusieurs polariseurs.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/13}{
+  parent = {PSI/E/2},
+  numero = {E.2.13},
+  contenu = {
+    \cpgeitem{\textbf{5. Thermodynamique de la transformation chimique et électrochimie}}
+    \cpgeitem{Bilans d’énergie.}},
+  capacites = {
+    \cpgeitem{Mettre en œuvre une technique de calorimétrie.}
+    \cpgeitem{Déterminer la valeur en eau d’un calorimètre.}
+    \cpgeitem{Estimer les fuites thermiques lors d’expériences réalisées avec un calorimètre.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/14}{
+  parent = {PSI/E/2},
+  numero = {E.2.14},
+  contenu = {
+    \cpgeitem{Mesures de grandeurs électriques : conductance-conductivité, tension électrique, intensité du courant.}},
+  capacites = {
+    \cpgeitem{Mettre en œuvre des mesures électriques dans un environnement chimique et électrochimique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/2/15}{
+  parent = {PSI/E/2},
+  numero = {E.2.15},
+  contenu = {
+    \cpgeitem{Électrochimie.}},
+  capacites = {
+    \cpgeitem{Mettre en œuvre un dispositif à trois électrodes pour tracer des courbes courant-potentiel Mettre en œuvre des piles et des électrolyseurs.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/E/3}{
+  parent = {PSI/E},
+  numero = {E.3},
+  niveau = {2},
+  titre = {Prévention du risque au laboratoire de physique-chimie},
+  chapeau = {
+    \cpgeitem{Les étudiants doivent prendre conscience du risque lié à la manipulation et au rejet des produits chimiques. L’apprentissage et le respect des règles de sécurité chimique, électrique, optique et celles liées à la pression et à la température leur permettent de prévenir et de minimiser ce risque. Futurs ingénieurs, chercheurs, enseignants, ils doivent être sensibilisés au respect de la législation et à l’impact de leur activité sur l’environnement.}},
+}
+
+\cpgeligne{PSI/E/3/1}{
+  parent = {PSI/E/3},
+  numero = {E.3.1},
+  contenu = {
+    \cpgeitem{\textbf{1. Prévention des risques au laboratoire}}},
+  capacites = {
+    \cpgeitem{Adopter une attitude responsable et adaptée au travail en laboratoire.}
+    \cpgeitem{Développer une attitude autonome dans la prévention des risques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/3/2}{
+  parent = {PSI/E/3},
+  numero = {E.3.2},
+  contenu = {
+    \cpgeitem{\begin{itemize} \item Risque chimique \end{itemize}}
+    \cpgeitem{Règles de sécurité au laboratoire.}
+    \cpgeitem{Classes et catégories de danger.}
+    \cpgeitem{Pictogrammes de sécurité pour les produits chimiques.}
+    \cpgeitem{Mentions de danger (H) et conseils de prudence (P).}
+    \cpgeitem{Fiches de sécurité.}},
+  capacites = {
+    \cpgeitem{Relever les indications sur le risque associé au prélèvement, au mélange et au stockage des produits chimiques et adopter une attitude responsable lors de leurs utilisations.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/3/3}{
+  parent = {PSI/E/3},
+  numero = {E.3.3},
+  contenu = {
+    \cpgeitem{\begin{itemize} \item Risque électrique \end{itemize}}},
+  capacites = {
+    \cpgeitem{Adopter une attitude responsable lors de l’utilisation d’appareils électriques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/3/4}{
+  parent = {PSI/E/3},
+  numero = {E.3.4},
+  contenu = {
+    \cpgeitem{\begin{itemize} \item Risque optique \end{itemize}}},
+  capacites = {
+    \cpgeitem{Utiliser les sources laser et les diodes électroluminescentes de manière adaptée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/3/5}{
+  parent = {PSI/E/3},
+  numero = {E.3.5},
+  contenu = {
+    \cpgeitem{\begin{itemize} \item Risques liés à la pression et à la température \end{itemize}}},
+  capacites = {
+    \cpgeitem{Adopter une attitude responsable lors de manipulations de corps chauds ou de dispositifs engageant des hautes ou des basses pressions.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/E/3/6}{
+  parent = {PSI/E/3},
+  numero = {E.3.6},
+  contenu = {
+    \cpgeitem{\textbf{2. Prévention de l’impact environnemental}}
+    \cpgeitem{Traitement et rejet des espèces chimiques.}},
+  capacites = {
+    \cpgeitem{Adapter le mode d’élimination d’une espèce chimique ou d’un mélange en fonction des informations recueillies sur la toxicité ou les risques.}
+    \cpgeitem{Sélectionner, parmi plusieurs modes opératoires, celui qui minimise les impacts environnementaux.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/P}{
+  parent = {PSI},
+  numero = {P},
+  niveau = {1},
+  titre = {Préambule},
+  chapeau = {},
+}
+
+\cpgerubrique{PSI/P/1}{
+  parent = {PSI/P},
+  numero = {P.1},
+  niveau = {2},
+  titre = {Objectifs de formation},
+  chapeau = {
+    \cpgeitem{Le programme de physique-chimie de la classe de PSI est conçu comme un socle cohérent et ambitieux de connaissances et de capacités scientifiques s’appuyant sur celles déjà travaillées au lycée et en classe de PCSI. Concernant la chimie, le programme de référence est celui de la classe de PCSI du semestre 1 à l’exception de la partie 2.3. intitulée « Réactivité des espèces organiques et premières applications en synthèse » ; il est complété par celui de la classe de PCSI option PSI du semestre 2. Le programme vise à préparer les étudiants à un cursus d’ingénieur, de chercheur ou d’enseignant. Il s’agit de renforcer chez l’étudiant les compétences inhérentes à la pratique de la démarche scientifique : observer et s’approprier, analyser et modéliser, réaliser et valider, et enfin communiquer et valoriser ses résultats.}
+    \cpgeitem{L’acquisition de ce socle par les étudiants constitue un objectif prioritaire pour l’enseignant. Parce que la physique et la chimie sont avant tout des sciences expérimentales qui développent la curiosité, la créativité et l’analyse critique, l’expérience est au cœur de son enseignement, que ce soit en cours ou lors des séances de travaux pratiques. Les activités expérimentales habituent les étudiants à se confronter au réel, comme ces derniers auront à le faire dans l’exercice de leur métier.}
+    \cpgeitem{De même, l’introduction de capacités numériques dans le programme prend en compte la place nouvelle des sciences numériques dans la formation des scientifiques notamment dans le domaine de la simulation. Elles offrent aux étudiants la possibilité d’effectuer une modélisation avancée du monde réel, par exemple par la prise en compte d’effets non linéaires.}
+    \cpgeitem{La démarche de modélisation occupe également une place centrale dans le programme pour former les étudiants à établir, de manière autonome, un lien fait d’allers-retours entre le « monde » des objets, des expériences, des faits, et celui des modèles et des théories. L’enseignant doit rechercher un point d’équilibre entre des approches complémentaires : conceptuelle et expérimentale, abstraite et concrète, théorique et appliquée, inductive et déductive, qualitative et quantitative. La construction d’un modèle passe aussi par l’utilisation maîtrisée des mathématiques dont un des fondateurs de la physique expérimentale, Galilée, énonçait déjà qu’elles sont le langage dans lequel est écrit le monde.}
+    \cpgeitem{Enfin, l’autonomie et la prise d’initiative sont spécifiquement développées à travers la pratique d’activités du type « résolution de problèmes » qui visent à exercer les étudiants à mobiliser de façon complémentaire connaissances et capacités pour répondre à un questionnement ou atteindre un but sans qu’aucune démarche de résolution ne soit fournie.}},
+}
+
+\cpgerubrique{PSI/P/2}{
+  parent = {PSI/P},
+  numero = {P.2},
+  niveau = {2},
+  titre = {Organisation du programme},
+  chapeau = {
+    \cpgeitem{Le programme est organisé en deux parties.}
+    \cpgeitem{Dans la première partie, intitulée « Formation expérimentale », sont décrits les objectifs de formation sur le thème « Mesures et incertitudes » ainsi que les méthodes et les capacités expérimentales que les étudiants doivent maîtriser à la fin de l’année scolaire. Leur mise en œuvre doit notamment s’appuyer sur des problématiques concrètes identifiées en gras dans la colonne « capacités exigibles » de la seconde partie du programme intitulée « Contenus thématiques ». Elles doivent être programmées par l’enseignant de façon à assurer un apprentissage progressif de l’ensemble des capacités attendues.}
+    \cpgeitem{La seconde partie, intitulée « Contenus thématiques » est structurée autour de huit thèmes : « Électronique », « Phénomènes de transport », « Bilans macroscopiques », « Électromagnétisme », « Conversion de puissance », « Physique des ondes », « Transformations de la matière : aspects thermodynamiques et cinétiques » et « Aspects thermodynamiques et cinétiques de l’électrochimie ». La présentation en deux colonnes (« notions et contenus » et « capacités exigibles ») met en valeur les éléments clefs constituant le socle de connaissances et de capacités dont l’assimilation par tous les étudiants est requise. Certains items de cette seconde partie, identifiés en caractères gras dans la colonne capacités exigibles, se prêtent particulièrement à une approche expérimentale. Ils doivent être abordés en priorité lors de séances de travaux pratiques où l’autonomie et l’initiative individuelle de l’étudiant doivent être privilégiées. La présence de capacités numériques explicitées atteste par ailleurs de la volonté de renforcer ce volet de la formation des étudiants.}
+    \cpgeitem{Trois annexes sont consacrées d’une part au matériel nécessaire à la mise en œuvre des programmes, d’autre part aux outils mathématiques et aux outils numériques que les étudiants doivent savoir mobiliser de façon autonome dans le cadre des enseignements de physique-chimie à la fin de l’année de PSI.}
+    \cpgeitem{Ce programme précise les objectifs de formation à atteindre pour tous les étudiants. Il n’impose en aucun cas une progression ; celle-ci relève de la liberté pédagogique de l’enseignant.}},
+}
+
+\cpgerubrique{PSI/P/3}{
+  parent = {PSI/P},
+  numero = {P.3},
+  niveau = {2},
+  titre = {Les compétences travaillées dans le cadre de la démarche scientifique},
+  chapeau = {
+    \cpgeitem{L’ensemble des activités proposées en classe préparatoire aux grandes écoles – activités expérimentales, résolutions de problèmes, TIPE, etc. – permet de travailler les compétences de la démarche scientifique qui figurent dans le tableau ci-dessous. Des capacités associées sont explicitées afin de préciser les contours de chaque compétence, elles ne constituent donc pas une liste exhaustive et peuvent parfois relever de plusieurs domaines de compétences. L’ordre de présentation de ces compétences ne préjuge pas d’un ordre de mobilisation de ces dernières lors d’une activité.}
+    \cpgeitem{Les compétences doivent être acquises à l’issue de la formation en CPGE. Elles nécessitent d’être régulièrement mobilisées par les étudiants et sont évaluées en s’appuyant, par exemple, sur l’utilisation de grilles d’évaluation.}
+    \cpgeitem{Le niveau de maîtrise de ces compétences dépend de l’autonomie et de l’initiative requises dans les activités proposées aux étudiants sur les notions et capacités exigibles du programme.}
+    \cpgeitem{La mise en œuvre des programmes doit aussi être l’occasion d’aborder avec les étudiants des questions liées à l’histoire de l’évolution des idées, des modèles et des théories en physique-chimie, à des questions liées à la recherche scientifique actuelle et à des enjeux citoyens comme la responsabilité individuelle et collective, la sécurité pour soi et pour autrui, l’environnement et le développement durable ou encore le réchauffement climatique.}},
+}
+
+\cpgerubrique{PSI/P/3/APP}{
+  parent = {PSI/P/3},
+  numero = {APP},
+  niveau = {3},
+  titre = {S’approprier},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/P/3/APP/1}{
+  parent = {PSI/P/3/APP},
+  numero = {APP.1},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Rechercher, extraire et organiser l’information en lien avec la situation étudiée.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/APP/2}{
+  parent = {PSI/P/3/APP},
+  numero = {APP.2},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Identifier la complémentarité d’informations présentées sous des formes différentes (texte, graphe, tableau, etc.).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/APP/3}{
+  parent = {PSI/P/3/APP},
+  numero = {APP.3},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Énoncer ou dégager une problématique scientifique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/APP/4}{
+  parent = {PSI/P/3/APP},
+  numero = {APP.4},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Représenter la situation par un schéma modèle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/APP/5}{
+  parent = {PSI/P/3/APP},
+  numero = {APP.5},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Identifier les grandeurs pertinentes, leur attribuer un symbole.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/APP/6}{
+  parent = {PSI/P/3/APP},
+  numero = {APP.6},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Relier le problème à une situation modèle connue.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/APP/7}{
+  parent = {PSI/P/3/APP},
+  numero = {APP.7},
+  contenu = {
+    \cpgeitem{S’approprier}},
+  capacites = {
+    \cpgeitem{Acquérir de nouvelles connaissances en autonomie.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/P/3/ANA}{
+  parent = {PSI/P/3},
+  numero = {ANA},
+  niveau = {3},
+  titre = {Analyser /Raisonner},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/P/3/ANA/1}{
+  parent = {PSI/P/3/ANA},
+  numero = {ANA.1},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Formuler des hypothèses.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/ANA/2}{
+  parent = {PSI/P/3/ANA},
+  numero = {ANA.2},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Décomposer un problème en plusieurs problèmes plus simples.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/ANA/3}{
+  parent = {PSI/P/3/ANA},
+  numero = {ANA.3},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Proposer une stratégie pour répondre à une problématique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/ANA/4}{
+  parent = {PSI/P/3/ANA},
+  numero = {ANA.4},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Choisir, concevoir, justifier un protocole, un dispositif expérimental, un modèle ou des lois physiques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/ANA/5}{
+  parent = {PSI/P/3/ANA},
+  numero = {ANA.5},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Évaluer des ordres de grandeur.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/ANA/6}{
+  parent = {PSI/P/3/ANA},
+  numero = {ANA.6},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Identifier les idées essentielles d’un document et leurs articulations.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/ANA/7}{
+  parent = {PSI/P/3/ANA},
+  numero = {ANA.7},
+  contenu = {
+    \cpgeitem{Analyser /Raisonner}},
+  capacites = {
+    \cpgeitem{Relier qualitativement ou quantitativement différents éléments d’un ou de documents.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/P/3/REA}{
+  parent = {PSI/P/3},
+  numero = {REA},
+  niveau = {3},
+  titre = {Réaliser},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/P/3/REA/1}{
+  parent = {PSI/P/3/REA},
+  numero = {REA.1},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Mettre en œuvre les étapes d’une démarche, un protocole, un modèle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/REA/2}{
+  parent = {PSI/P/3/REA},
+  numero = {REA.2},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Extraire une information d’un texte, d’un graphe, d’un tableau, d’un schéma, d’une photo.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/REA/3}{
+  parent = {PSI/P/3/REA},
+  numero = {REA.3},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Schématiser un dispositif, une expérience, une méthode de mesure.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/REA/4}{
+  parent = {PSI/P/3/REA},
+  numero = {REA.4},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Utiliser le matériel et les produits de manière adaptée en respectant des règles de sécurité.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/REA/5}{
+  parent = {PSI/P/3/REA},
+  numero = {REA.5},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Effectuer des représentations graphiques à partir de données.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/REA/6}{
+  parent = {PSI/P/3/REA},
+  numero = {REA.6},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Mener des calculs analytiques ou à l’aide d’un langage de programmation, effectuer des applications numériques.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/REA/7}{
+  parent = {PSI/P/3/REA},
+  numero = {REA.7},
+  contenu = {
+    \cpgeitem{Réaliser}},
+  capacites = {
+    \cpgeitem{Conduire une analyse dimensionnelle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/P/3/VAL}{
+  parent = {PSI/P/3},
+  numero = {VAL},
+  niveau = {3},
+  titre = {Valider},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/P/3/VAL/1}{
+  parent = {PSI/P/3/VAL},
+  numero = {VAL.1},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Exploiter des observations, des mesures en estimant les incertitudes.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/VAL/2}{
+  parent = {PSI/P/3/VAL},
+  numero = {VAL.2},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Confronter les résultats d’un modèle à des résultats expérimentaux, à des données figurant dans un document, à ses connaissances.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/VAL/3}{
+  parent = {PSI/P/3/VAL},
+  numero = {VAL.3},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Confirmer ou infirmer une hypothèse, une information.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/VAL/4}{
+  parent = {PSI/P/3/VAL},
+  numero = {VAL.4},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Analyser les résultats de manière critique.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/VAL/5}{
+  parent = {PSI/P/3/VAL},
+  numero = {VAL.5},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Repérer les points faibles d’une argumentation (contradiction, partialité, incomplétude, etc.).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/VAL/6}{
+  parent = {PSI/P/3/VAL},
+  numero = {VAL.6},
+  contenu = {
+    \cpgeitem{Valider}},
+  capacites = {
+    \cpgeitem{Proposer des améliorations de la démarche ou du modèle.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/P/3/COM}{
+  parent = {PSI/P/3},
+  numero = {COM},
+  niveau = {3},
+  titre = {Communiquer},
+  chapeau = {},
+}
+
+\cpgeligne{PSI/P/3/COM/1}{
+  parent = {PSI/P/3/COM},
+  numero = {COM.1},
+  contenu = {
+    \cpgeitem{Communiquer}},
+  capacites = {
+    \cpgeitem{À l’écrit comme à l’oral : présenter les étapes de sa démarche de manière synthétique, organisée et cohérente. rédiger une synthèse, une analyse, une argumentation. utiliser un vocabulaire scientifique précis et choisir des modes de représentation adaptés (schémas, graphes, cartes mentales, etc.).}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgeligne{PSI/P/3/COM/2}{
+  parent = {PSI/P/3/COM},
+  numero = {COM.2},
+  contenu = {
+    \cpgeitem{Communiquer}},
+  capacites = {
+    \cpgeitem{Écouter, confronter son point de vue.}},
+  experimentales = {},
+  numeriques = {},
+}
+
+\cpgerubrique{PSI/P/4}{
+  parent = {PSI/P},
+  numero = {P.4},
+  niveau = {2},
+  titre = {Repères pour l’enseignement},
+  chapeau = {
+    \cpgeitem{Dans le cadre de la liberté pédagogique, l’enseignant organise son enseignement en respectant trois grands principes directeurs : \begin{itemize} \item privilégier la mise en activité des étudiants en évitant tout dogmatisme : l’acquisition des connaissances, des capacités et des compétences est d’autant plus efficace que les étudiants sont acteurs de leur formation. Les supports pédagogiques utilisés doivent notamment favoriser la réflexion, le raisonnement, la participation et l’autonomie des étudiants. L’investigation expérimentale et la résolution de problèmes facilitent cette mise en activité ; \item recourir à la mise en contexte des contenus scientifiques : le questionnement scientifique peut être introduit à partir de phénomènes naturels, de procédés industriels ou d’objets technologiques. Le recours à des approches documentaires est un moyen pertinent pour diversifier les supports d’accès à l’information scientifique et technologique et ainsi former l’étudiant à mieux en appréhender la complexité et à apprendre par lui-même. Lorsque le thème traité s’y prête, l’enseignant peut le mettre en perspective avec l’histoire des sciences et des techniques, avec des questions d’actualité ou des débats d’idées ; \item contribuer à la nécessaire mise en cohérence des enseignements scientifiques ; la progression en physique-chimie doit être articulée avec celles mises en œuvre dans les autres disciplines scientifiques : mathématiques, informatique, sciences industrielles de l’ingénieur. \end{itemize}}
+    \cpgeitem{Concernant l’évaluation, qui vise à mesurer le degré de maîtrise du socle ainsi défini et le niveau d’autonomie et d’initiative des étudiants, l’enseignant veille soigneusement à identifier les compétences et les capacités mobilisées dans les activités proposées afin d’en élargir le plus possible le spectre.}
+    \cpgeitem{Enfin, le professeur veille aussi à développer chez les étudiants des compétences transversales et préprofessionnelles relatives aux capacités suivantes : \begin{itemize} \item identifier les différents champs professionnels et les parcours pour y accéder ; \item valoriser ses compétences scientifiques et techniques en lien avec son projet de poursuite d'études ou professionnel. \end{itemize}}},
+}
+

@@ -1,0 +1,640 @@
+% !TEX program = lualatex
+% programmes-cpge.tex — documentation du paquet programmes-cpge
+% Se compile sous LuaLaTeX comme sous pdfLaTeX, avec --shell-escape pour l'index
+% (ou en lançant makeindex à la main).
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[french]{babel}
+\usepackage[margin=2.4cm,marginparwidth=2cm]{geometry}
+\usepackage{microtype}
+\usepackage{imakeidx}
+\makeindex[columns=2,title=Index des commandes]
+\usepackage{tabularx,multicol,xcolor,amssymb}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{programmes-cpge}
+
+% Les exemples sont en UTF-8 : listingsutf8 les recode en Latin-1 sous pdfLaTeX ;
+% LuaLaTeX lit l'UTF-8 sans aide.
+\ifPDFTeX
+  \tcbuselibrary{documentation,listingsutf8}
+  \newcommand\encodagelistings{inputencoding=utf8/latin1,}
+\else
+  \tcbuselibrary{documentation,listings}
+  \newcommand\encodagelistings{}
+\fi
+\tcbset{
+  doclang/.cd,
+  color=couleur, colors=Couleurs, counter=compteur, counters=Compteurs,
+  environment content=contenu de l'environnement, environment=environnement,
+  environments=Environnements, commands=Commandes, path=chemin, paths=Chemins,
+  index=Index, key=clé, keys=Clés, length=longueur, lengths=Longueurs,
+  new=Nouveau, pageshort={p.}, updated=Mis à jour, value=valeur, values=Valeurs,
+}
+% Les options des exemples, communes aux deux moteurs ; l'encodage s'y ajoute.
+\newcommand\optionsexemples{%
+    style=tcbdocumentation, basicstyle=\ttfamily\small,
+    extendedchars=true,
+    moretexcs={cpgechamp,cpgetitre,cpgenumero,cpgeintitule,cpgegenre,cpgeparent,
+      cpgefiliereDe,cpgeancetre,cpgenombre,cpgenombreenfants,cpgenombrelignes,cpgesiexiste,cpgesivide,
+      cpgesiligne,cpgeafficher,cpgechapeau,cpgecapacites,cpgecite,cpgecettepartie,
+      cpgepourchaque,cpgepourchaqueligne,cpgerangees,cpgetableau,cpgeboite,cpgecharger,
+      cpgefiliere,cpgerubrique,cpgeligne,cpgeitem,cpgenotion,cpgevec,cpgegrad,cpgerot,
+      cpgediv,cpgedd,cpgeii,cpgejj,cpgeRe,cpgerenvoi,cpgeformatcitation,
+      cpgeformatexperimentale,cpgeformatnumerique,cpgeformattitretableau,
+      cpgeformatnumeroligne,cpgeformattitreboite,tcbset},}
+\edef\x{\noexpand\tcbset{documentation listing options={%
+  \unexpanded\expandafter{\optionsexemples},\encodagelistings}}}
+\x
+\tcbset{
+  documentation minted options={},
+  color command=red!60!black, color key=blue!60!black, color value=teal!70!black,%
+}
+
+\newcommand\pkg[1]{\textsf{#1}}
+\newcommand\cle[1]{\texttt{#1}}
+\newcommand\champ[1]{\texttt{#1}}
+
+\title{\pkg{programmes-cpge}\\[0.4em]
+  \large Les programmes officiels de physique-chimie des CPGE,\\
+  à citer, parcourir et composer en \LaTeX}
+\author{Antonin Marchand}
+\date{Version 0.1 — 17 octobre 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Le paquet \pkg{programmes-cpge} met à disposition, sous forme de données \LaTeX,
+le texte des programmes officiels de physique-chimie de cinq classes
+préparatoires scientifiques — MPSI, PCSI, MP, PC et PSI — ligne par ligne : les
+notions et contenus, les capacités exigibles, les capacités expérimentales et
+numériques, les chapeaux de chaque partie. Chaque élément porte une clé stable
+(\cle{MP/4/1/1} est la première ligne de l'électrostatique de MP). Le paquet
+fournit de quoi lire un champ, parcourir une partie, et composer des tableaux
+et des boîtes prêts à l'emploi, ou des mises en page sur mesure. Il fonctionne
+sous pdf\LaTeX{} comme sous Lua\LaTeX.
+\end{abstract}
+
+\tableofcontents
+
+% =========================================================================
+\section{Ce que contient le paquet}
+
+Chaque filière est un fichier de données, \texttt{programmes-cpge-<filière>.tex},
+que le paquet lit au chargement.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}llXlr@{}}
+  \toprule
+  Clé & Discipline & Voie & Texte & Lignes \\
+  \midrule
+  \cle{MPSI} & \cpgechamp{MPSI}{discipline} & \cpgechamp{MPSI}{voie} & \cpgechamp{MPSI}{annee} & \cpgenombrelignes{MPSI} \\
+  \cle{PCSI} & \cpgechamp{PCSI}{discipline} & \cpgechamp{PCSI}{voie} & \cpgechamp{PCSI}{annee} & \cpgenombrelignes{PCSI} \\
+  \cle{MP}   & \cpgechamp{MP}{discipline}   & \cpgechamp{MP}{voie}   & \cpgechamp{MP}{annee}   & \cpgenombrelignes{MP} \\
+  \cle{PC}   & \cpgechamp{PC}{discipline}   & \cpgechamp{PC}{voie}   & \cpgechamp{PC}{annee}   & \cpgenombrelignes{PC} \\
+  \cle{PSI}  & \cpgechamp{PSI}{discipline}  & \cpgechamp{PSI}{voie}  & \cpgechamp{PSI}{annee}  & \cpgenombrelignes{PSI} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+La PCSI est la première année de la PC comme de la PSI. Pour la PCSI et la PC,
+seul le programme de physique est fourni : leur programme de chimie est un texte
+à part. L'année est celle du texte officiel, et non celle de sa mise en
+application.
+
+Chaque programme comprend, comme le texte du ministère, un préambule
+(\cle{P}), une formation expérimentale (\cle{E}), les contenus thématiques
+(\cle{1}, \cle{2}…) et trois annexes : matériel (\cle{A1}), outils mathématiques
+(\cle{A2}) et outils numériques (\cle{A3}).
+
+% =========================================================================
+\section{Charger le paquet}
+
+\begin{docCommand}{usepackage}{\oarg{filières}\marg{programmes-cpge}}
+  Charge les filières nommées, séparées par des virgules ; sans option, les
+  cinq. L'option \cle{toutes} les charge explicitement.
+\end{docCommand}
+
+\begin{dispListing}
+\usepackage[MP,PSI]{programmes-cpge}   % deux filières seulement
+\usepackage{programmes-cpge}           % les cinq
+\end{dispListing}
+
+\begin{docCommand}{cpgecharger}{\marg{filières}}
+  Charge des filières supplémentaires, n'importe où. Une filière déjà chargée ne
+  l'est pas deux fois.
+\end{docCommand}
+
+Le paquet charge \pkg{amsmath}, \pkg{amssymb} (sauf si \pkg{unicode-math} est
+déjà chargé), \pkg{array}, \pkg{booktabs}, \pkg{longtable} et \pkg{tcolorbox}.
+Un préambule complet, pour chacun des deux moteurs :
+
+\begin{dispListing}
+% pdfLaTeX
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage{programmes-cpge}
+
+% LuaLaTeX
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage[french]{babel}
+\usepackage{programmes-cpge}
+\end{dispListing}
+
+% =========================================================================
+\section{Les clés}
+
+Une clé est un chemin : la filière, puis les numéros du texte officiel, un cran
+par niveau.
+
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+  \toprule
+  Clé & Ce qu'elle désigne \\
+  \midrule
+  \cle{MP} & le programme de MP \\
+  \cle{MP/4} & le thème 4 : \cpgetitre{MP/4} \\
+  \cle{MP/4/1} & la partie 4.1 : \cpgetitre{MP/4/1} \\
+  \cle{MP/4/1/1} & la première ligne de cette partie \\
+  \cle{MPSI/1/7/2} & une sous-partie : \cpgetitre{MPSI/1/7/2} \\
+  \cle{MP/E/1} & la formation expérimentale : \cpgetitre{MP/E/1} \\
+  \cle{MP/P/3/APP} & une compétence du préambule : \cpgetitre{MP/P/3/APP} \\
+  \cle{MPA/A2/1} & une annexe : \cpgetitre{MPA/A2/1} \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+Les annexes ont leur racine propre, \cle{MPA}, \cle{PCA}…, parce que le texte
+officiel les numérote à part : \cle{MPA/A2/1/1} ne se confond pas avec
+\cle{MP/2/1/1}. Elles restent des enfants de la filière quand on la parcourt.
+
+Une clé désigne l'un de trois \emph{genres} d'éléments, chacun avec ses
+\emph{champs} :
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+  \toprule
+  Genre & Champs \\
+  \midrule
+  \cle{filiere} & \champ{discipline}, \champ{classe}, \champ{voie}, \champ{annee} \\
+  \cle{rubrique} & \champ{parent}, \champ{numero}, \champ{niveau} (1 pour un thème,
+    2 pour une partie, 3 pour une sous-partie), \champ{titre}, \champ{chapeau} \\
+  \cle{ligne} & \champ{parent}, \champ{numero}, \champ{contenu}, \champ{capacites},
+    \champ{experimentales}, \champ{numeriques} \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+Tous portent aussi \champ{cle}, \champ{genre} et \champ{filiere}. Les champs
+\champ{chapeau}, \champ{contenu} et les trois familles de capacités sont des
+\emph{listes d'items} : un item par paragraphe du texte officiel, une capacité
+exigible par item.
+
+% =========================================================================
+\section{Lire}
+
+Les commandes de lecture sont \emph{développables} : on peut s'en servir dans un
+titre de section, dans un \cs{edef}, dans un test.
+
+\begin{docCommand}{cpgechamp}{\marg{clé}\marg{champ}}
+  Le champ, tel quel. Une liste d'items se compose en paragraphes.
+\end{docCommand}
+
+\begin{docCommand}{cpgetitre}{\marg{clé}}\end{docCommand}
+\begin{docCommand}{cpgenumero}{\marg{clé}}\end{docCommand}
+\begin{docCommand}{cpgeintitule}{\marg{clé}}
+  Le titre, le numéro, ou les deux à la suite.
+\end{docCommand}
+
+\begin{docCommand}{cpgegenre}{\marg{clé}}\end{docCommand}
+\begin{docCommand}{cpgeparent}{\marg{clé}}\end{docCommand}
+\begin{docCommand}{cpgefiliereDe}{\marg{clé}}
+  Le genre (\cle{filiere}, \cle{rubrique} ou \cle{ligne}), la clé du parent, et
+  la filière.
+\end{docCommand}
+
+\begin{docCommand}{cpgeancetre}{\marg{clé}\marg{niveau}}
+  La clé de l'ancêtre au niveau voulu : le thème d'une ligne au niveau 1, sa
+  partie au niveau 2. Rien si la clé n'a pas d'ancêtre à ce niveau.
+\end{docCommand}
+
+\begin{docCommand}{cpgenombre}{\marg{clé}\marg{champ}}\end{docCommand}
+\begin{docCommand}{cpgenombreenfants}{\marg{clé}}
+  Le nombre d'items d'un champ, et le nombre d'enfants d'un élément.
+\end{docCommand}
+\begin{docCommand}{cpgenombrelignes}{\marg{clés}}
+  Le nombre de lignes sous les clés données, à toute profondeur. Elle compte en
+  parcourant : elle n'est pas développable.
+\end{docCommand}
+
+\begin{dispExample}
+\cpgeintitule{PC/5/2}, dans le thème
+« \cpgetitre{\cpgeancetre{PC/5/2/1/4}{1}} » ;
+la ligne \cpgenumero{PC/5/2/1/4} porte
+\cpgenombre{PC/5/2/1/4}{capacites} capacités ;
+le programme de PSI date de \cpgechamp{PSI}{annee}.
+\end{dispExample}
+
+\begin{docCommand}{cpgesiexiste}{\marg{clé}\marg{vrai}\marg{faux}}\end{docCommand}
+\begin{docCommand}{cpgesivide}{\marg{clé}\marg{champ}\marg{vrai}\marg{faux}}\end{docCommand}
+\begin{docCommand}{cpgesiligne}{\marg{clé}\marg{vrai}\marg{faux}}
+  Les tests : la clé existe-t-elle, le champ est-il vide, la clé est-elle une
+  ligne.
+\end{docCommand}
+
+\begin{dispExample}
+\cpgesiexiste{MP/9/9}{existe}{n'existe pas} ;
+la ligne MP/2/2/1 \cpgesivide{MP/2/2/1}{capacites}%
+  {n'a que des capacités expérimentales}{a des capacités exigibles}.
+\end{dispExample}
+
+% =========================================================================
+\section{Composer un champ}
+
+\begin{docCommand}{cpgeafficher}{\oarg{options}\marg{clé}\marg{champ}}
+  Compose un champ selon une forme :
+  \begin{docKey}{forme}{=\textcolor{blue!60!black}{\texttt{paragraphes}}\,|\,\texttt{liste}\,|\,\texttt{enumeration}\,|\,\texttt{ligne}}{par défaut \texttt{paragraphes}}
+    Un item par paragraphe, en liste à puces, en liste numérotée, ou à la suite.
+  \end{docKey}
+  \begin{docKey}{separateur}{=\meta{texte}}{par défaut une espace}
+    Ce qui sépare deux items de la forme \texttt{ligne}.
+  \end{docKey}
+  \begin{docKey}{format}{=\meta{commande}}{par défaut aucune}
+    Une commande à un argument appliquée à chaque item.
+  \end{docKey}
+\end{docCommand}
+
+\begin{dispExample}
+\cpgeafficher[forme=liste]{MP/4/1/4}{capacites}
+\cpgeafficher[forme=ligne, separateur={ ; },
+  format=\emph]{MP/4/1/4}{contenu}
+\end{dispExample}
+
+\begin{docCommand}{cpgechapeau}{\oarg{options}\marg{clé}}
+  Le chapeau d'une rubrique. Il cite souvent sa partie : \cs{cpgecettepartie}
+  y désigne alors la rubrique composée.
+\end{docCommand}
+
+\begin{dispExample}
+\cpgechapeau{PSI/4/6}
+\end{dispExample}
+
+\begin{docCommand}{cpgecapacites}{\oarg{options}\marg{clé}}
+  Les capacités d'une ligne, les trois familles à la suite : exigibles,
+  expérimentales (en gras, comme dans le texte officiel), numériques (précédées
+  de « Capacité numérique : »).
+  \begin{docKey}{forme}{=\texttt{paragraphes}\,|\,\texttt{liste}}{par défaut \texttt{paragraphes}}\end{docKey}
+  \begin{docKey}{exigibles}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}\end{docKey}
+  \begin{docKey}{experimentales}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}\end{docKey}
+  \begin{docKey}{numeriques}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}
+    Les familles à composer.
+  \end{docKey}
+\end{docCommand}
+
+\begin{dispExample}
+\cpgecapacites[forme=liste]{MPSI/1/5/3}
+\end{dispExample}
+
+\begin{docCommand}{cpgecite}{\marg{clé}}\end{docCommand}
+\begin{docCommand}{cpgecettepartie}{}
+  Le numéro et le titre d'une rubrique, mis en forme par
+  \cs{cpgeformatcitation}. \cs{cpgecettepartie} cite la rubrique en cours de
+  composition, et vaut « cette partie » hors de tout contexte.
+\end{docCommand}
+
+\begin{dispExample}
+Voir la partie \cpgecite{PCSI/1/5}.
+\end{dispExample}
+
+% =========================================================================
+\section{Parcourir}
+
+\begin{docCommand}{cpgepourchaque}{\marg{clé}\marg{code}}
+  Exécute le code pour chaque enfant de la clé, dans l'ordre du texte ;
+  \texttt{\#1} y vaut la clé de l'enfant.
+\end{docCommand}
+
+\begin{docCommand}{cpgepourchaqueligne}{\marg{clés}\marg{code}}
+  Exécute le code pour chaque \emph{ligne} sous les clés données, à toute
+  profondeur ; une clé de ligne se désigne elle-même. Les clés se séparent par
+  des virgules.
+\end{docCommand}
+
+\begin{dispExample}
+\cpgepourchaque{PC}{\cpgeintitule{#1}\par}
+\end{dispExample}
+
+\begin{dispExample}
+Les lignes de \cpgecite{MP/4/4} :
+\cpgepourchaqueligne{MP/4/4}{\cpgenumero{#1}~}.
+\end{dispExample}
+
+\begin{docCommand}{cpgerangees}{\marg{clés}\marg{modèle}}
+  Les rangées d'un tableau fait main : le modèle, où \texttt{\#1} vaut la clé,
+  est répété pour chaque ligne sous les clés données. Les rangées sont
+  assemblées avant d'être rendues : les \texttt{\&} et \cs{\textbackslash} du
+  modèle entrent dans l'alignement comme s'ils étaient écrits à la main, dans
+  \texttt{tabular}, \texttt{tabularx} ou \texttt{longtable}.
+\end{docCommand}
+
+\begin{dispExample}
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+  \toprule
+  \cpgerangees{MP/4/3}{\cpgenumero{#1} &
+    \cpgeafficher[forme=ligne]{#1}{contenu} \\}
+  \bottomrule
+\end{tabularx}
+\end{dispExample}
+
+% =========================================================================
+\section{Mises en page prêtes à l'emploi}
+
+\subsection{Le tableau du texte officiel}
+
+\begin{docCommand}{cpgetableau}{\oarg{options}\marg{clés}}
+  Le tableau à deux colonnes du texte officiel, « Notions et contenus » et
+  « Capacités exigibles », pour les clés données : une ligne, une partie, un
+  thème, plusieurs à la fois. Une rubrique y porte son titre sur toute la
+  largeur. C'est un \texttt{longtable} : il se coupe d'une page à l'autre et
+  répète son en-tête.
+  \begin{docKey}{largeur}{=\meta{nombre}}{par défaut \texttt{0.38}}
+    La part de la largeur de ligne donnée à la première colonne.
+  \end{docKey}
+  \begin{docKey}{entete}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}\end{docKey}
+  \begin{docKey}{titres}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}
+    Les titres des rubriques traversées.
+  \end{docKey}
+  \begin{docKey}{numeros}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{false}}
+    La clé de chaque ligne, en petit, au-dessus de son contenu.
+  \end{docKey}
+  \begin{docKey}{exigibles}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}\end{docKey}
+  \begin{docKey}{experimentales}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}\end{docKey}
+  \begin{docKey}{numeriques}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}\end{docKey}
+  \begin{docKey}{long}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}
+    Un \texttt{tabular} au lieu d'un \texttt{longtable} : nécessaire dans une
+    boîte, dans deux colonnes, partout où \texttt{longtable} ne va pas.
+  \end{docKey}
+  \begin{docKey}{titre contenus}{=\meta{texte}}{par défaut \texttt{Notions et contenus}}\end{docKey}
+  \begin{docKey}{titre capacites}{=\meta{texte}}{par défaut \texttt{Capacités exigibles}}\end{docKey}
+\end{docCommand}
+
+Une partie entière, comme elle paraît dans le texte officiel :
+
+\begin{dispListing}
+\cpgetableau{MP/2/1}
+\end{dispListing}
+
+\cpgetableau{MP/2/1}
+
+Deux lignes choisies, sans titre, avec leur clé :
+
+\begin{dispExample}
+\cpgetableau[long=false, titres=false, numeros, largeur=0.33]
+  {PSI/4/6/1, PSI/4/6/5}
+\end{dispExample}
+
+\subsection{La boîte}
+
+\begin{docCommand}{cpgeboite}{\oarg{options}\marg{clé}}
+  Une ligne en boîte : son contenu au-dessus, ses capacités en liste
+  au-dessous. Une rubrique en boîte : son chapeau, et ses lignes si on le
+  demande.
+  \begin{docKey}{lignes}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{false}}\end{docKey}
+  \begin{docKey}{chapeau}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}\end{docKey}
+  \begin{docKey}{titre}{=\meta{texte}}{par défaut le numéro et le titre}\end{docKey}
+  \begin{docKey}{tcolorbox}{=\meta{options}}{par défaut aucune}
+    Des options \pkg{tcolorbox} pour cette boîte.
+  \end{docKey}
+  \begin{docKey}{exigibles}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}\end{docKey}
+  \begin{docKey}{experimentales}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}\end{docKey}
+  \begin{docKey}{numeriques}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}
+    Les familles de capacités à composer, comme pour \cs{cpgecapacites}.
+  \end{docKey}
+\end{docCommand}
+
+\begin{dispExample}
+\cpgeboite{MP/4/1/4}
+\end{dispExample}
+
+\begin{dispExample}
+\cpgeboite[lignes, tcolorbox={colframe=teal!60!black,
+  colbacktitle=teal!10}]{PC/1/3}
+\end{dispExample}
+
+Toutes les boîtes suivent le style \pkg{tcolorbox} \texttt{cpge boite}, qu'on
+retouche une fois pour le document :
+
+\begin{dispListing}
+\tcbset{cpge boite/.append style={colframe=blue!50!black,
+  colbacktitle=blue!8, fonttitle=\sffamily\bfseries}}
+\end{dispListing}
+
+% =========================================================================
+\section{Galerie : des mises en page sur mesure}
+
+Les commandes de lecture et de parcours suffisent à toutes les mises en page.
+Voici quelques recettes, à recopier et à adapter.
+
+\subsection{Une fiche d'auto-évaluation}
+
+Chaque capacité d'une partie précédée d'une case, par l'option \texttt{format},
+dans une boîte \pkg{tcolorbox} ordinaire :
+
+\begin{dispExample}
+\newcommand\caseacocher[1]{$\square$~#1}
+\begin{tcolorbox}[title={Je sais faire -- \cpgeintitule{MP/4/4}}]
+  \cpgepourchaqueligne{MP/4/4}{%
+    \cpgeafficher[forme=liste, format=\caseacocher]{#1}{capacites}}
+\end{tcolorbox}
+\end{dispExample}
+
+\subsection{Un tableau de progression}
+
+Une colonne pour la date à laquelle chaque ligne a été traitée, à remplir à la
+main :
+
+\begin{dispExample}
+\begin{tabularx}{\linewidth}{@{}lXp{2cm}@{}}
+  \toprule
+  Ligne & Notions et contenus & Traitée le \\
+  \midrule
+  \cpgerangees{PCSI/1/5}{\cpgenumero{#1} &
+    \cpgeafficher[forme=ligne]{#1}{contenu} & \\ \midrule}
+\end{tabularx}
+\end{dispExample}
+
+\subsection{Les capacités expérimentales d'un thème}
+
+Un filtre : seules les lignes qui portent une capacité expérimentale, et
+seulement celle-ci.
+
+\begin{dispExample}
+\cpgepourchaqueligne{PSI/1/4}{%
+  \cpgesivide{#1}{experimentales}{}{%
+    \cpgeboite[exigibles=false, numeriques=false,
+      tcolorbox={colback=orange!4, colframe=orange!60!black}]{#1}}}
+\end{dispExample}
+
+\subsection{Le sommaire d'un programme}
+
+\begin{dispExample}
+\begin{multicols}{2}\small
+\cpgepourchaque{MP}{%
+  \textbf{\cpgeintitule{#1}}\par
+  \cpgepourchaque{#1}{%
+    \cpgesiligne{##1}{}{\quad\cpgeintitule{##1}\par}}}
+\end{multicols}
+\end{dispExample}
+
+Dans un code imbriqué, la clé de l'enfant s'écrit \texttt{\#\#1}, comme dans
+toute définition imbriquée. Le test \cs{cpgesiligne} écarte les lignes posées
+directement sous un thème, comme celles du matériel.
+
+\subsection{Trois colonnes, une par famille de capacités}
+
+\begin{dispExample}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright}X>{\raggedright}X
+    >{\raggedright\arraybackslash}X@{}}
+  \toprule
+  Contenus & Exigibles & Expérimentales \\
+  \midrule
+  \cpgerangees{MP/2/2}{%
+    \cpgeafficher{#1}{contenu} & \cpgeafficher{#1}{capacites} &
+    \cpgeafficher{#1}{experimentales} \\ \midrule}
+\end{tabularx}
+\end{dispExample}
+
+% =========================================================================
+\section{Les macros des données}
+
+Le texte des programmes emploie quelques macros, que le paquet définit et que
+l'on peut redéfinir par \cs{renewcommand} pour les accorder au reste d'un
+document.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}lXl@{}}
+  \toprule
+  Macro & Rôle & Défaut \\
+  \midrule
+  \cs{cpgenotion}\marg{titre} & titre de notion, en tête d'un contenu & \cs{textbf} \\
+  \cs{cpgecettepartie}, \cs{cpgecite} & citation d'une partie & voir plus haut \\
+  \cs{cpgeformatcitation}\marg{n}\marg{t} & sa mise en forme & \textbf{n}~«~t~» \\
+  \cs{cpgerenvoi}\marg{clé} & renvoi d'une capacité expérimentale à sa ligne & rien \\
+  \cs{cpgevec}\marg{x} & vecteur & \cs{overrightarrow} \\
+  \cs{cpgegrad}, \cs{cpgerot}, \cs{cpgediv} & opérateurs & $\cpgegrad$, $\cpgerot$, $\cpgediv$ \\
+  \cs{cpgedd} & le d droit d'une différentielle & $\cpgedd x$ \\
+  \cs{cpgeii}, \cs{cpgejj} & unités imaginaires & $\cpgeii$, $\cpgejj$ \\
+  \cs{cpgeRe} & partie réelle & $\cpgeRe$ \\
+  \bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{sloppypar}
+Les mises en forme des mises en page prêtes à l'emploi se redéfinissent de
+même : \cs{cpgeformatexperimentale}, \cs{cpgeformatnumerique},
+\cs{cpgeformattitretableau}, \cs{cpgeformatnumeroligne},
+\cs{cpgeformattitreboite}.
+\end{sloppypar}
+
+\begin{dispListing}
+\usepackage{esvect}
+\renewcommand\cpgevec{\vv}
+\renewcommand\cpgenotion[1]{\textsc{#1}}
+\renewcommand\cpgeformatnumerique[1]{\textsf{Python :} #1}
+\end{dispListing}
+
+% =========================================================================
+\section{Ajouter ou corriger un programme}
+
+Les fichiers \texttt{programmes-cpge-<filière>.tex} sont la source : c'est là
+qu'on corrige une coquille, et c'est sur leur modèle qu'on ajoute une filière.
+Le nom du fichier est en minuscules ; l'option du paquet est la clé de la
+filière, en majuscules.
+
+\begin{docCommand}{cpgefiliere}{\marg{clé}\marg{champs}}\end{docCommand}
+\begin{docCommand}{cpgerubrique}{\marg{clé}\marg{champs}}\end{docCommand}
+\begin{docCommand}{cpgeligne}{\marg{clé}\marg{champs}}
+  Les trois déclarations d'un fichier de données. Les champs s'écrivent
+  \texttt{nom = \{valeur\}}, séparés par des virgules ; un parent se déclare
+  avant ses enfants, qui se rangent dans l'ordre du fichier.
+\end{docCommand}
+
+\begin{docCommand}{cpgeitem}{\marg{texte}}
+  Un item d'un champ liste.
+\end{docCommand}
+
+\begin{dispListing}
+\cpgefiliere{TSI}{
+  discipline = {Physique-chimie}, classe = {TSI},
+  voie = {Technologie et sciences industrielles}, annee = {2021},
+}
+\cpgerubrique{TSI/1}{
+  parent = {TSI}, numero = {1}, niveau = {1}, titre = {Électronique},
+  chapeau = {\cpgeitem{Premier paragraphe.}\cpgeitem{Second paragraphe.}},
+}
+\cpgeligne{TSI/1/1}{
+  parent = {TSI/1}, numero = {1.1},
+  contenu = {\cpgeitem{Signaux périodiques.}},
+  capacites = {\cpgeitem{Définir la valeur moyenne d'un signal.}},
+  experimentales = {}, numeriques = {},
+}
+\end{dispListing}
+
+% =========================================================================
+\section{pdf\LaTeX{} et Lua\LaTeX}
+
+Le paquet est écrit en expl3 et ne dépend d'aucun moteur. Deux précautions :
+\begin{itemize}
+  \item sous pdf\LaTeX, les données sont en UTF-8 et emploient les guillemets
+    français et l'apostrophe typographique : \verb|\usepackage[T1]{fontenc}|
+    est nécessaire ;
+  \item sous Lua\LaTeX, on ne charge pas \pkg{fontenc}, mais \pkg{fontspec}.
+    Avec \pkg{unicode-math}, \pkg{amssymb} n'est pas chargé, ses symboles étant
+    déjà définis.
+\end{itemize}
+Cette documentation se compile sous les deux moteurs.
+
+% =========================================================================
+\section{Les textes et leur licence}
+
+Les textes des programmes sont ceux publiés par le ministère de l'Enseignement
+supérieur et de la Recherche (\url{https://www.enseignementsup-recherche.gouv.fr}),
+annexes des arrêtés de 2020 (première année) et de 2021 (seconde année). Ils
+ont été relevés dans les documents officiels, et les formules mises en \LaTeX.
+Une erreur de transcription se signale à l'auteur.
+
+Ces textes sont des informations publiques. Les programmes de physique-chimie
+ne portent aucune licence particulière --- contrairement à ceux de
+mathématiques et d'informatique, publiés sous licence Creative Commons ---, si
+bien que s'applique le régime par défaut : leur réutilisation est libre
+(code des relations entre le public et l'administration, art.~L.~321-1), à
+condition de ne pas les altérer, de ne pas en dénaturer le sens, et d'en citer
+la source et la date (art.~L.~322-1). C'est ce que fait ce paquet : le texte est
+transcrit tel quel, seule sa mise en forme est celle de \LaTeX, et chaque
+filière porte l'année de son texte (\cs{cpgechamp}\marg{filière}\marg{annee}).
+
+Le code du paquet est distribué sous la licence LPPL, version 1.3c ou
+ultérieure.
+
+% =========================================================================
+\section{Historique}
+
+\begin{description}
+  \item[0.1 (2026-10-17)] Première version : MPSI, PCSI, MP, PC (physique) et
+    PSI.
+\end{description}
+
+\printindex
+\end{document}

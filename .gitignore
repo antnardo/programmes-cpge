@@ -1,0 +1,11 @@
+# Produits de compilation : la construction se fait hors du dossier (construire.sh)
+*.aux
+*.log
+*.toc
+*.out
+*.idx
+*.ind
+*.ilg
+*.tcbtemp
+*.synctex.gz
+.DS_Store
