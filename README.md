@@ -15,6 +15,25 @@ parcourir et composer en LaTeX.
 Chaque élément porte une clé stable : `MP/4/1/1` est la première ligne de
 l'électrostatique de MP. Le paquet fonctionne sous pdfLaTeX comme sous LuaLaTeX.
 
+## In English
+
+This package provides, as LaTeX data, the official physics and chemistry
+syllabi of the French *classes préparatoires aux grandes écoles* (CPGE): MPSI,
+PCSI, MP, PC and PSI (for PCSI and PC, the physics part only). Each item —
+topic, section, syllabus line with its content and its required, experimental
+and numerical skills — has a stable key such as `MP/4/1/1`. The package offers
+expandable accessors, iterators, ready-made layouts (the official two-column
+table, tcolorbox boxes) and the tools to build custom tables and boxes. It
+works with pdfLaTeX and LuaLaTeX. The documentation is in French.
+
+License: the code is under the LaTeX Project Public License 1.3c or later. The
+data files `programmes-cpge-*.tex` contain official texts published by the
+French Ministry of Higher Education; as public sector information without a
+specific licence, they may be freely reused under French law, provided they
+are not altered and their source and date are cited.
+
+Bugs and suggestions: <https://github.com/antnardo/programmes-cpge/issues>.
+
 ## Contenu
 
 | Fichier | Rôle |
