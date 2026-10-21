@@ -309,10 +309,12 @@ la ligne MP/2/2/1 \cpgesivide{MP/2/2/1}{capacites}%
 \begin{docCommand}{cpgecite}{\marg{clé}}\end{docCommand}
 \begin{docCommand}{cpgecettepartie}{}
   Le numéro et le titre d'une rubrique, mis en forme par
-  \cs{cpgeformatcitation}. \cs{cpgecettepartie} cite la rubrique en cours de
+  \cs{cpgeformatcitation}. La seconde cite la rubrique en cours de
   composition, et vaut « cette partie » hors de tout contexte. Comme toute
-  commande sans argument, elle mange l'espace qui la suit : on écrit
-  \verb+\cpgecettepartie{} constitue+.
+  commande sans argument, elle mange l'espace qui la suit ; on écrit donc :
+\begin{verbatim}
+\cpgecettepartie{} constitue
+\end{verbatim}
 \end{docCommand}
 
 \begin{dispExample}
@@ -454,10 +456,12 @@ retouche une fois pour le document :
   Les titres sont ceux de la classe, en version étoilée : le texte officiel
   porte sa propre numérotation, que les titres reprennent. Ils entrent dans la
   table des matières par \cs{addcontentsline}.
-  \begin{docKey}{niveau}{=\texttt{part}\,|\,\texttt{chapter}\,|\,\texttt{section}\,|\,\texttt{subsection}\,|\,\texttt{subsubsection}\,|\,\texttt{paragraph}}{par défaut \texttt{section}}
-    Le titre des rubriques du plus haut niveau ; les suivantes descendent d'un
-    cran à chaque rang, jusqu'à \cs{subparagraph}. \texttt{chapter} suppose une
-    classe qui le définit.
+  \begin{docKey}{niveau}{=\meta{titre}}{par défaut \texttt{section}}
+    Le titre des rubriques du plus haut niveau : \texttt{part},
+    \texttt{chapter}, \texttt{section}, \texttt{subsection},
+    \texttt{subsubsection} ou \texttt{paragraph}. Les suivantes descendent
+    d'un cran à chaque rang, jusqu'à \cs{subparagraph}. \texttt{chapter}
+    suppose une classe qui le définit.
   \end{docKey}
   \begin{docKey}{sommaire}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}
     Les titres dans la table des matières.
@@ -679,9 +683,8 @@ filière porte l'année de son texte (\cs{cpgechamp}\marg{filière}\marg{annee})
 \subsection*{Les programmes composés}
 
 Le dossier \texttt{doc} contient aussi un programme par filière, composé en
-entier par le paquet : \texttt{programme-mpsi.pdf}, \texttt{programme-pcsi.pdf},
-\texttt{programme-mp.pdf}, \texttt{programme-pc.pdf} et
-\texttt{programme-psi.pdf}. Chaque ligne y porte sa clé. Ils se lisent à côté
+entier par le paquet : \texttt{programme-}\meta{filière}\texttt{.pdf}, pour
+\texttt{mpsi}, \texttt{pcsi}, \texttt{mp}, \texttt{pc} et \texttt{psi}. Chaque ligne y porte sa clé. Ils se lisent à côté
 du texte publié par le ministère : c'est la preuve de la concordance, et le
 moyen le plus simple de trouver la clé d'une ligne. Leur source,
 \texttt{programme.tex}, appelle \cs{cpgeprogramme}\texttt{[numeros]} et lit la
