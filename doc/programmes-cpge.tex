@@ -493,13 +493,18 @@ seulement celle-ci.
 \cpgepourchaque{MP}{%
   \textbf{\cpgeintitule{#1}}\par
   \cpgepourchaque{#1}{%
-    \cpgesiligne{##1}{}{\quad\cpgeintitule{##1}\par}}}
+    \cpgesiligne{##1}%
+      {\quad\textit{\cpgenumero{##1}
+        \cpgeafficher[forme=ligne]{##1}{contenu}}\par}%
+      {\quad\cpgeintitule{##1}\par}}}
 \end{multicols}
 \end{dispExample}
 
 Dans un code imbriqué, la clé de l'enfant s'écrit \texttt{\#\#1}, comme dans
-toute définition imbriquée. Le test \cs{cpgesiligne} écarte les lignes posées
-directement sous un thème, comme celles du matériel.
+toute définition imbriquée. Une rubrique a pour enfants des sous-rubriques
+ou des lignes : les annexes du matériel (A1) et des outils numériques (A3)
+n'ont que des lignes, sans titre. Le test \cs{cpgesiligne} les distingue, et
+l'exemple compose une ligne par son numéro et son contenu, en italique.
 
 \subsection{Trois colonnes, une par famille de capacités}
 
