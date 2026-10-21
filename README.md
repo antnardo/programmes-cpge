@@ -24,7 +24,9 @@ topic, section, syllabus line with its content and its required, experimental
 and numerical skills — has a stable key such as `MP/4/1/1`. The package offers
 expandable accessors, iterators, ready-made layouts (the official two-column
 table, tcolorbox boxes) and the tools to build custom tables and boxes. It
-works with pdfLaTeX and LuaLaTeX. The documentation is in French.
+works with pdfLaTeX and LuaLaTeX. The documentation is in French; the `doc`
+folder also holds each syllabus typeset in full by the package, with its keys,
+to be checked against the official text.
 
 License: the code is under the LaTeX Project Public License 1.3c or later. The
 data files `programmes-cpge-*.tex` contain official texts published by the
@@ -41,7 +43,9 @@ Bugs and suggestions: <https://github.com/antnardo/programmes-cpge/issues>.
 | `programmes-cpge.sty` | le paquet |
 | `programmes-cpge-mpsi.tex`, `-pcsi`, `-mp`, `-pc`, `-psi` | les textes, un fichier par filière : ils font foi |
 | `doc/programmes-cpge.tex`, `doc/programmes-cpge.pdf` | la documentation, en français |
-| `construire.sh` | compile la documentation sous les deux moteurs et prépare l'archive, dans `../programmes-cpge-construction/` |
+| `doc/programme-<filière>.pdf`, `doc/programme.tex` | chaque programme composé en entier, avec ses clés : la preuve de la concordance avec le texte officiel |
+| `tests/` | les essais que lance `construire.sh` : chaque commande et ses options, et les cinq programmes sous les deux moteurs |
+| `construire.sh` | lance les essais, compile la documentation sous les deux moteurs, compose les programmes et prépare l'archive, dans `../programmes-cpge-construction/` |
 
 ## Installation
 

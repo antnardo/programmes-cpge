@@ -1,0 +1,83 @@
+% !TEX program = lualatex
+% Compose un programme entier, tel que le paquet le transcrit : titres, chapeaux,
+% et chaque ligne avec ses capacités. Il sert de preuve de concordance : on le
+% lit à côté du texte publié par le ministère.
+% La filière se lit dans le nom du job : lualatex -jobname=programme-mp programme.tex
+\documentclass[a4paper,11pt]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[french]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\setcounter{secnumdepth}{-10}
+\setcounter{tocdepth}{2}
+
+\ExplSyntaxOn
+\str_set:Ne \l_tmpa_str { \c_sys_jobname_str }
+\str_remove_once:Nn \l_tmpa_str { programme- }
+\str_const:Ne \c_programme_filiere_str { \str_uppercase:f { \l_tmpa_str } }
+\ExplSyntaxOff
+\usepackage{programmes-cpge}
+
+\ExplSyntaxOn
+% Une rubrique : son titre au niveau de son rang, son chapeau, puis ses enfants.
+% Les lignes qui se suivent forment un seul tableau.
+\clist_new:N \l_programme_lignes_clist
+\cs_new_protected:Npn \programme_vider:
+  {
+    \clist_if_empty:NF \l_programme_lignes_clist
+      {
+        \use:e
+          {
+            \exp_not:N \cpgetableau [ titres = false , numeros ]
+              { \exp_not:V \l_programme_lignes_clist }
+          }
+        \clist_clear:N \l_programme_lignes_clist
+      }
+  }
+\cs_new_protected:Npn \programme_rubrique:n #1
+  {
+    \int_case:nn { \cpgechamp {#1} { niveau } }
+      {
+        { 1 } { \section { \cpgeintitule {#1} } }
+        { 2 } { \subsection { \cpgeintitule {#1} } }
+        { 3 } { \subsubsection { \cpgeintitule {#1} } }
+      }
+    \cpgesivide {#1} { chapeau } { } { \cpgechapeau {#1} \par }
+    \group_begin:
+      \clist_clear:N \l_programme_lignes_clist
+      \cpgepourchaque {#1}
+        {
+          \cpgesiligne {##1}
+            { \clist_put_right:Nn \l_programme_lignes_clist {##1} }
+            { \programme_vider: \programme_rubrique:n {##1} }
+        }
+      \programme_vider:
+    \group_end:
+  }
+\NewDocumentCommand \programme { }
+  {
+    \cpgepourchaque { \c_programme_filiere_str }
+      { \programme_rubrique:n {##1} }
+  }
+\NewExpandableDocumentCommand \filiere { } { \c_programme_filiere_str }
+\ExplSyntaxOff
+
+\begin{document}
+\begin{center}
+  {\LARGE \cpgechamp{\filiere}{discipline} — classe de \cpgechamp{\filiere}{classe}\par}
+  \medskip
+  {\large Voie \cpgechamp{\filiere}{voie} — texte officiel de \cpgechamp{\filiere}{annee}\par}
+\end{center}
+
+\noindent Ce document compose le programme tel que le paquet \textsf{programmes-cpge} le transcrit, dans l'ordre du texte officiel, pour qu'on puisse le lire à côté du texte publié par le ministère de l'Enseignement supérieur et de la Recherche. Chaque ligne porte en petit sa clé, celle qu'on donne aux commandes du paquet. La mise en forme est celle du paquet ; le texte est celui de l'officiel, aux écarts près que la documentation du paquet énumère (section « Les textes et leur licence »).
+
+\tableofcontents
+\clearpage
+\programme
+\end{document}

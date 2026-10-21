@@ -66,7 +66,7 @@
   \large Les programmes officiels de physique-chimie des CPGE,\\
   à citer, parcourir et composer en \LaTeX}
 \author{Antonin Marchand}
-\date{Version 0.1 — 17 octobre 2026}
+\date{Version 0.2 — 21 octobre 2026}
 
 \begin{document}
 \maketitle
@@ -310,7 +310,9 @@ la ligne MP/2/2/1 \cpgesivide{MP/2/2/1}{capacites}%
 \begin{docCommand}{cpgecettepartie}{}
   Le numéro et le titre d'une rubrique, mis en forme par
   \cs{cpgeformatcitation}. \cs{cpgecettepartie} cite la rubrique en cours de
-  composition, et vaut « cette partie » hors de tout contexte.
+  composition, et vaut « cette partie » hors de tout contexte. Comme toute
+  commande sans argument, elle mange l'espace qui la suit : on écrit
+  \verb+\cpgecettepartie{} constitue+.
 \end{docCommand}
 
 \begin{dispExample}
@@ -630,6 +632,19 @@ la source et la date (art.~L.~322-1). C'est ce que fait ce paquet : le texte est
 transcrit tel quel, seule sa mise en forme est celle de \LaTeX, et chaque
 filière porte l'année de son texte (\cs{cpgechamp}\marg{filière}\marg{annee}).
 
+\subsection*{Les programmes composés}
+
+Le dossier \texttt{doc} contient aussi un programme par filière, composé en
+entier par le paquet : \texttt{programme-mpsi.pdf}, \texttt{programme-pcsi.pdf},
+\texttt{programme-mp.pdf}, \texttt{programme-pc.pdf} et
+\texttt{programme-psi.pdf}. Chaque ligne y porte sa clé. Ils se lisent à côté
+du texte publié par le ministère : c'est la preuve de la concordance, et le
+moyen le plus simple de trouver la clé d'une ligne. Leur source,
+\texttt{programme.tex}, lit la filière dans le nom du job :
+\begin{verbatim}
+lualatex -jobname=programme-mp programme.tex
+\end{verbatim}
+
 \subsection*{Écarts au texte officiel}
 
 Le texte est transcrit tel que le ministère l'a publié, coquilles comprises,
@@ -655,6 +670,23 @@ ultérieure.
 \section{Historique}
 
 \begin{description}
+  \item[0.2 (2026-10-21)] Corrections.
+    \begin{itemize}
+      \item Le programme de MPSI compile de nouveau sous pdfLaTeX (une
+        apostrophe dans une formule).
+      \item La clé d'un élément se lit par \cs{cpgechamp}\marg{clé}\marg{cle},
+        et l'option \texttt{numeros} de \cs{cpgetableau} l'affiche.
+      \item L'espace après \cs{cpgecettepartie} n'est plus mangé dans les
+        chapeaux.
+      \item Les rubriques sont dans l'ordre du texte officiel, et le texte lui
+        est conforme mot à mot, aux écarts près de la section « Les textes et
+        leur licence ». Dans « Communiquer », en MP et MPSI, les clés
+        \texttt{COM/3} et \texttt{COM/4} disparaissent : la capacité et sa
+        sous-liste sont une seule ligne, comme dans l'officiel, et l'ancienne
+        \texttt{COM/4} devient \texttt{COM/2}.
+      \item Tirets et points de suspension en Unicode, au même rendu.
+      \item Un programme composé par filière, dans \texttt{doc}.
+    \end{itemize}
   \item[0.1 (2026-10-17)] Première version : MPSI, PCSI, MP, PC (physique) et
     PSI.
 \end{description}

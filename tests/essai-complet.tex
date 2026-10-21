@@ -1,0 +1,20 @@
+% Compose les cinq programmes en entier : chaque texte, chaque formule passe par
+% le moteur. construire.sh le compile sous pdfLaTeX et sous LuaLaTeX, et refuse
+% d'aller plus loin s'il y a une erreur ou un caractère manquant.
+\documentclass{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[french]{babel}
+\usepackage{programmes-cpge}
+\begin{document}
+\cpgetableau{MPSI}
+\cpgetableau{PCSI}
+\cpgetableau{MP}
+\cpgetableau{PC}
+\cpgetableau{PSI}
+\end{document}

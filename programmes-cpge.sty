@@ -16,7 +16,7 @@
 %% ceux publiés par le ministère de l'Enseignement supérieur ; voir la
 %% documentation, section « Les textes et leur licence ».
 \NeedsTeXFormat{LaTeX2e}[2022-06-01]
-\ProvidesExplPackage{programmes-cpge}{2026-10-17}{0.1}
+\ProvidesExplPackage{programmes-cpge}{2026-10-21}{0.2}
   {Programmes officiels de physique-chimie des CPGE}
 
 \RequirePackage{amsmath}
@@ -85,6 +85,7 @@
   {
     \__cpge_creer:nn {#1} { filiere }
     \prop_gset_from_keyval:cn { g__cpge_ #1 _prop } {#2}
+    \prop_gput:cnn { g__cpge_ #1 _prop } { cle } {#1}
     \prop_gput:cnn { g__cpge_ #1 _prop } { genre } { filiere }
     \prop_gput:cnn { g__cpge_ #1 _prop } { filiere } {#1}
     \seq_if_in:NnF \g_cpge_filieres_seq {#1}
@@ -98,6 +99,7 @@
   {
     \__cpge_creer:nn {#1} {#2}
     \prop_gset_from_keyval:cn { g__cpge_ #1 _prop } {#3}
+    \prop_gput:cnn { g__cpge_ #1 _prop } { cle } {#1}
     \prop_gput:cnn { g__cpge_ #1 _prop } { genre } {#2}
     \prop_gput:cnV { g__cpge_ #1 _prop } { filiere } \l__cpge_filiere_tl
     \tl_set:Ne \l__cpge_tmp_tl { \prop_item:cn { g__cpge_ #1 _prop } { parent } }

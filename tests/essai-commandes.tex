@@ -1,0 +1,153 @@
+% Vérifie chaque commande publique du paquet, avec ses options.
+% Les lecteurs développables sont confrontés à la valeur attendue ; les commandes
+% qui composent sont composées dans une boîte, qui ne doit pas être vide.
+% Toute différence arrête la compilation sur une erreur qui la nomme.
+% construire.sh le compile sous pdfLaTeX et sous LuaLaTeX.
+\documentclass{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[french]{babel}
+\usepackage{tabularx}
+\usepackage[MP,PC]{programmes-cpge}
+
+\ExplSyntaxOn
+\int_new:N \g_essai_verifs_int
+\cs_new_protected:Npn \essai_echec:nnn #1#2#3
+  { \msg_error:nneee { essai } { echec } {#1} {#2} {#3} }
+\msg_new:nnn { essai } { echec }
+  { Test~«#1»~:~obtenu~«#2»,~attendu~«#3». }
+% \egal{nom}{expression développable}{valeur attendue}
+\NewDocumentCommand \egal { m m m }
+  {
+    \int_gincr:N \g_essai_verifs_int
+    \tl_set:Ne \l_tmpa_tl {#2}
+    \tl_set:Ne \l_tmpb_tl {#3}
+    \tl_if_eq:NNF \l_tmpa_tl \l_tmpb_tl
+      { \essai_echec:nnn {#1} { \tl_to_str:N \l_tmpa_tl } { \tl_to_str:N \l_tmpb_tl } }
+  }
+% \compose{nom}{code} : le code compose quelque chose, sans erreur
+\box_new:N \l_essai_box
+\NewDocumentCommand \compose { m +m }
+  {
+    \int_gincr:N \g_essai_verifs_int
+    \vbox_set:Nn \l_essai_box { \hsize = \textwidth #2 }
+    \dim_compare:nNnT { \box_ht:N \l_essai_box + \box_dp:N \l_essai_box } = { 0pt }
+      { \essai_echec:nnn {#1} { rien~de~composé } { une~boîte~non~vide } }
+  }
+% compteurs pour les parcours
+\int_new:N \g_essai_n_int
+\NewDocumentCommand \compter { } { \int_gincr:N \g_essai_n_int }
+\NewDocumentCommand \raz { } { \int_gzero:N \g_essai_n_int }
+\NewExpandableDocumentCommand \compte { } { \int_use:N \g_essai_n_int }
+% nombre de lignes, sans composer
+\NewExpandableDocumentCommand \nblignes { m } { \cpge_lignes:Nn \l_tmpa_seq {#1} }
+\NewDocumentCommand \egalnblignes { m m }
+  {
+    \cpge_lignes:Nn \l_tmpa_seq {#1}
+    \egal { nombre~de~lignes~de~#1 } { \seq_count:N \l_tmpa_seq } {#2}
+  }
+\NewDocumentCommand \bilan { }
+  { \typeout { essai-commandes~:~\int_use:N \g_essai_verifs_int \space vérifications~passées } }
+\ExplSyntaxOff
+
+\begin{document}
+
+% --- Chargement : options et \cpgecharger -------------------------------------
+\egal{MP chargé}{\cpgesiexiste{MP}{oui}{non}}{oui}
+\egal{PSI pas encore chargé}{\cpgesiexiste{PSI}{oui}{non}}{non}
+\cpgecharger{PSI, MPSI, PCSI}
+\cpgecharger{PSI}% une filière déjà chargée ne l'est pas deux fois
+\egal{PSI chargé}{\cpgesiexiste{PSI}{oui}{non}}{oui}
+\egal{PCSI chargé}{\cpgesiexiste{PCSI}{oui}{non}}{oui}
+
+% --- Lecteurs développables -------------------------------------------------------
+\egal{champ}{\cpgechamp{PSI}{voie}}{Physique et sciences de l’ingénieur}
+\egal{annee}{\cpgechamp{MP}{annee}}{2021}
+\egal{annee MPSI}{\cpgechamp{MPSI}{annee}}{2020}
+\egal{titre}{\cpgetitre{MP/4/1}}{Électrostatique}
+\egal{numero}{\cpgenumero{MP/4/1/1}}{4.1.1}
+\egal{intitule}{\cpgeintitule{PC/5/2}}{\cpgenumero{PC/5/2} \cpgetitre{PC/5/2}}
+\egal{cle ligne}{\cpgechamp{MP/4/1/1}{cle}}{MP/4/1/1}
+\egal{cle rubrique}{\cpgechamp{MP/4/1}{cle}}{MP/4/1}
+\egal{cle filiere}{\cpgechamp{PSI}{cle}}{PSI}
+\egal{genre filiere}{\cpgegenre{MP}}{filiere}
+\egal{genre rubrique}{\cpgegenre{MP/4}}{rubrique}
+\egal{genre ligne}{\cpgegenre{MP/4/1/1}}{ligne}
+\egal{parent}{\cpgeparent{MP/4/1/1}}{MP/4/1}
+\egal{parent annexe}{\cpgeparent{MPA/A2}}{MP}
+\egal{filiere de}{\cpgefiliereDe{MPA/A2/1}}{MP}
+\egal{ancetre 1}{\cpgeancetre{MP/4/1/1}{1}}{MP/4}
+\egal{ancetre 2}{\cpgeancetre{MP/4/1/1}{2}}{MP/4/1}
+\egal{ancetre absent}{\cpgeancetre{MP/4}{2}}{}
+\egal{nombre}{\cpgenombre{MP/4/1/1}{capacites}}{2}
+\egal{nombre vide}{\cpgenombre{MP/4/1/1}{experimentales}}{0}
+\egal{enfants}{\cpgenombreenfants{MP}}{14}
+\egal{enfants partie}{\cpgenombreenfants{MP/4/1}}{13}
+\egal{dans un titre}{\cpgetitre{\cpgeancetre{PC/5/2/1}{1}}}{\cpgetitre{PC/5}}
+
+% --- Tests -------------------------------------------------------------------------
+\egal{existe}{\cpgesiexiste{MP/4/1/1}{oui}{non}}{oui}
+\egal{existe pas}{\cpgesiexiste{MP/9/9}{oui}{non}}{non}
+\egal{vide}{\cpgesivide{MP/4/1/1}{experimentales}{vide}{plein}}{vide}
+\egal{pas vide}{\cpgesivide{MP/4/1/1}{capacites}{vide}{plein}}{plein}
+\egal{ligne}{\cpgesiligne{MP/4/1/1}{l}{r}}{l}
+\egal{pas ligne}{\cpgesiligne{MP/4/1}{l}{r}}{r}
+
+% --- Parcours ----------------------------------------------------------------------
+\raz\cpgepourchaque{MP}{\compter}
+\egal{pourchaque = enfants}{\compte}{\cpgenombreenfants{MP}}
+\raz\cpgepourchaqueligne{MP/4}{\compter}
+\egal{pourchaqueligne MP/4}{\compte}{39}
+\raz\cpgepourchaqueligne{MP/4/1/1, MP/4/1/2}{\compter}
+\egal{pourchaqueligne liste}{\compte}{2}
+\raz\cpgepourchaque{MP/4/1}{\cpgesiligne{#1}{\compter}{}}
+\egal{pourchaque imbrique}{\compte}{13}
+\egalnblignes{MPSI}{255}
+\egalnblignes{PCSI}{251}
+\egalnblignes{MP}{176}
+\egalnblignes{PC}{198}
+\egalnblignes{PSI}{274}
+\compose{nombrelignes}{\cpgenombrelignes{MP}}
+\compose{rangees}{\begin{tabular}{ll}\cpgerangees{MP/4/1}{\cpgenumero{#1} & x\\}\end{tabular}}
+\compose{rangees tabularx}{\begin{tabularx}{\linewidth}{lX}\cpgerangees{MP/4/3}{\cpgenumero{#1} & \cpgeafficher[forme=ligne]{#1}{contenu}\\}\end{tabularx}}
+
+% --- Composer un champ ------------------------------------------------------------
+\compose{champ}{\cpgechamp{MP/4/1/1}{capacites}}
+\compose{afficher}{\cpgeafficher{MP/4/1/4}{capacites}}
+\compose{afficher paragraphes}{\cpgeafficher[forme=paragraphes]{MP/4/1/4}{capacites}}
+\compose{afficher liste}{\cpgeafficher[forme=liste]{MP/4/1/4}{capacites}}
+\compose{afficher enumeration}{\cpgeafficher[forme=enumeration]{MP/4/1/4}{capacites}}
+\compose{afficher ligne}{\cpgeafficher[forme=ligne, separateur={ ; }]{MP/4/1/4}{contenu}}
+\compose{afficher format}{\cpgeafficher[forme=liste, format=\emph]{MP/4/1/4}{capacites}}
+\compose{chapeau}{\cpgechapeau{PSI/4/6}}
+\compose{chapeau liste}{\cpgechapeau[forme=liste]{PSI/4/6}}
+\compose{capacites}{\cpgecapacites{MPSI/1/5/3}}
+\compose{capacites liste}{\cpgecapacites[forme=liste]{MPSI/1/5/3}}
+\compose{capacites filtrees}{\cpgecapacites[exigibles=false, numeriques=false]{MP/2/2/1}}
+\compose{cite}{\cpgecite{PCSI/1/5}}
+\compose{cettepartie}{\cpgecettepartie}
+
+% --- Mises en page prêtes à l'emploi -------------------------------------------------
+\cpgetableau{MP/2/1}
+\cpgetableau[largeur=0.3, entete=false, titres=false, numeros]{MP/2/1}
+\cpgetableau[experimentales=false, numeriques=false, exigibles=true]{MP/2/2}
+\cpgetableau[titre contenus={Contenus}, titre capacites={Capacités}]{PSI/4/6/1, PSI/4/6/5}
+\compose{tableau court}{\cpgetableau[long=false, titres=false]{PSI/4/6/1}}
+\compose{boite ligne}{\cpgeboite{MP/4/1/4}}
+\compose{boite rubrique}{\cpgeboite[lignes]{PC/1/3}}
+\compose{boite options}{\cpgeboite[chapeau=false, titre={Essai}, tcolorbox={colframe=red}]{PC/1/3}}
+\compose{boite filtree}{\cpgeboite[exigibles=false, numeriques=false, experimentales=true]{PSI/1/4/1}}
+
+% --- Macros des données, redéfinissables -------------------------------------------
+\renewcommand\cpgenotion[1]{\textsc{#1}}
+\renewcommand\cpgevec[1]{\mathbf{#1}}
+\renewcommand\cpgeformatcitation[2]{#1~(#2)}
+\compose{macros redefinies}{\cpgeafficher{MP/4/1/1}{contenu} \cpgecite{MP/4/1} $\cpgevec{E}\cpgegrad\cpgerot\cpgediv\cpgedd x\cpgeii\cpgejj\cpgeRe$}
+
+\bilan
+\end{document}
