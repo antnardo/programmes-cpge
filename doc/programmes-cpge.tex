@@ -630,6 +630,24 @@ la source et la date (art.~L.~322-1). C'est ce que fait ce paquet : le texte est
 transcrit tel quel, seule sa mise en forme est celle de \LaTeX, et chaque
 filière porte l'année de son texte (\cs{cpgechamp}\marg{filière}\marg{annee}).
 
+\subsection*{Écarts au texte officiel}
+
+Le texte est transcrit tel que le ministère l'a publié, coquilles comprises,
+sauf deux coquilles évidentes du programme de MPSI, corrigées parce qu'elles ne
+changent rien au sens. Chacune est signalée par un commentaire dans le fichier
+de données.
+\begin{itemize}
+  \item Annexe 3 (outils numériques), chapeau : le texte officiel écrit « la
+    formation des étudiants inclue » ; le paquet écrit « inclut ».
+  \item Formation expérimentale, prévention du risque au laboratoire : le texte
+    officiel numérote « 1. Prévention des risques au laboratoire », puis « 4.
+    Prévention de l'impact environnemental » ; le paquet numérote la seconde
+    « 2. », comme les programmes des autres filières.
+\end{itemize}
+La mise en forme, elle, est celle de \LaTeX{} : les formules sont composées,
+« densité*vitesse » s'écrit $\text{densité}\times\text{vitesse}$, et une liste
+du texte officiel reste une liste.
+
 Le code du paquet est distribué sous la licence LPPL, version 1.3c ou
 ultérieure.
 
