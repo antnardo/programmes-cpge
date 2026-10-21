@@ -590,6 +590,115 @@
 \NewDocumentCommand \cpgeboite { O{} m } { \cpge_boite:nn {#1} {#2} }
 
 % ------------------------------------------------------------------------
+% Un programme entier : chaque rubrique en titre, son chapeau, puis ses lignes,
+% celles qui se suivent formant un seul tableau
+
+\clist_const:Nn \c__cpge_titres_clist
+  { part , chapter , section , subsection , subsubsection , paragraph , subparagraph }
+\int_new:N \l__cpge_niveau_int
+\tl_new:N \l__cpge_opt_tableau_tl
+\clist_new:N \l__cpge_programme_clist
+\cs_new_protected:Npn \__cpge_vers_tableau:n #1
+  { \tl_put_right:Nn \l__cpge_opt_tableau_tl { #1 , } }
+\keys_define:nn { programmes-cpge / programme }
+  {
+    niveau .choices:nn =
+      { part , chapter , section , subsection , subsubsection , paragraph }
+      { \int_set_eq:NN \l__cpge_niveau_int \l_keys_choice_int } ,
+    niveau .initial:n = section ,
+    sommaire .bool_set:N = \l__cpge_sommaire_bool ,
+    sommaire .initial:n = true ,
+    chapeaux .bool_set:N = \l__cpge_chapeaux_bool ,
+    chapeaux .initial:n = true ,
+    largeur .code:n = \__cpge_vers_tableau:n { largeur = {#1} } ,
+    entete .code:n = \__cpge_vers_tableau:n { entete = #1 } ,
+    entete .default:n = true ,
+    numeros .code:n = \__cpge_vers_tableau:n { numeros = #1 } ,
+    numeros .default:n = true ,
+    exigibles .code:n = \__cpge_vers_tableau:n { exigibles = #1 } ,
+    exigibles .default:n = true ,
+    experimentales .code:n = \__cpge_vers_tableau:n { experimentales = #1 } ,
+    experimentales .default:n = true ,
+    numeriques .code:n = \__cpge_vers_tableau:n { numeriques = #1 } ,
+    numeriques .default:n = true ,
+    long .code:n = \__cpge_vers_tableau:n { long = #1 } ,
+    long .default:n = true ,
+    titre~contenus .code:n = \__cpge_vers_tableau:n { titre~contenus = {#1} } ,
+    titre~capacites .code:n = \__cpge_vers_tableau:n { titre~capacites = {#1} } ,
+    unknown .code:n =
+      { \msg_error:nnVn { programmes-cpge } { option-inconnue } \l_keys_key_str { cpgeprogramme } } ,
+  }
+
+\cs_generate_variant:Nn \cpge_tableau:nn { VV , Vn }
+% #1 : la profondeur de la rubrique sous la clé donnée (1 pour elle-même)
+\cs_new_protected:Npn \__cpge_programme_titre:nn #1#2
+  {
+    \tl_set:Ne \l__cpge_tmp_tl
+      {
+        \clist_item:Nn \c__cpge_titres_clist
+          { \int_min:nn { \l__cpge_niveau_int + #1 - 1 } { 7 } }
+      }
+    \use:c { \l__cpge_tmp_tl } * { \cpgeintitule {#2} }
+    \bool_if:NT \l__cpge_sommaire_bool
+      {
+        \use:e
+          {
+            \exp_not:N \addcontentsline { toc } { \l__cpge_tmp_tl }
+              { \exp_not:n { \cpgeintitule {#2} } }
+          }
+      }
+  }
+\cs_new_protected:Npn \__cpge_programme_vider:
+  {
+    \clist_if_empty:NF \l__cpge_programme_clist
+      {
+        \cpge_tableau:VV \l__cpge_opt_tableau_tl \l__cpge_programme_clist
+        \clist_clear:N \l__cpge_programme_clist
+      }
+  }
+\cs_new_protected:Npn \__cpge_programme_enfants:nn #1#2
+  {
+    \group_begin:
+      \clist_clear:N \l__cpge_programme_clist
+      \seq_map_inline:cn { g__cpge_ #2 _enfants_seq }
+        {
+          \str_if_eq:eeTF { \cpge_champ:nn {##1} { genre } } { ligne }
+            { \clist_put_right:Nn \l__cpge_programme_clist {##1} }
+            {
+              \__cpge_programme_vider:
+              \__cpge_programme_rubrique:nn {#1} {##1}
+            }
+        }
+      \__cpge_programme_vider:
+    \group_end:
+  }
+\cs_new_protected:Npn \__cpge_programme_rubrique:nn #1#2
+  {
+    \__cpge_programme_titre:nn {#1} {#2}
+    \bool_if:NT \l__cpge_chapeaux_bool
+      { \cpge_afficher:nnn { } {#2} { chapeau } \par }
+    \__cpge_programme_enfants:nn { #1 + 1 } {#2}
+  }
+\cs_new_protected:Npn \cpge_programme:nn #1#2
+  {
+    \group_begin:
+      \tl_set:Nn \l__cpge_opt_tableau_tl { titres = false , }
+      \keys_set:nn { programmes-cpge / programme } {#1}
+      \cpge_si_existe:nTF {#2}
+        {
+          \str_case_e:nnF { \cpge_champ:nn {#2} { genre } }
+            {
+              { filiere } { \__cpge_programme_enfants:nn { 1 } {#2} }
+              { ligne } { \cpge_tableau:Vn \l__cpge_opt_tableau_tl {#2} }
+            }
+            { \__cpge_programme_rubrique:nn { 1 } {#2} }
+        }
+        { \msg_error:nnn { programmes-cpge } { cle-inconnue } {#2} }
+    \group_end:
+  }
+\NewDocumentCommand \cpgeprogramme { O{} m } { \cpge_programme:nn {#1} {#2} }
+
+% ------------------------------------------------------------------------
 % Options du paquet : les filières à charger
 
 \clist_new:N \g__cpge_options_clist

@@ -45,7 +45,7 @@
     moretexcs={cpgechamp,cpgetitre,cpgenumero,cpgeintitule,cpgegenre,cpgeparent,
       cpgefiliereDe,cpgeancetre,cpgenombre,cpgenombreenfants,cpgenombrelignes,cpgesiexiste,cpgesivide,
       cpgesiligne,cpgeafficher,cpgechapeau,cpgecapacites,cpgecite,cpgecettepartie,
-      cpgepourchaque,cpgepourchaqueligne,cpgerangees,cpgetableau,cpgeboite,cpgecharger,
+      cpgepourchaque,cpgepourchaqueligne,cpgerangees,cpgetableau,cpgeboite,cpgeprogramme,cpgecharger,
       cpgefiliere,cpgerubrique,cpgeligne,cpgeitem,cpgenotion,cpgevec,cpgegrad,cpgerot,
       cpgediv,cpgedd,cpgeii,cpgejj,cpgeRe,cpgerenvoi,cpgeformatcitation,
       cpgeformatexperimentale,cpgeformatnumerique,cpgeformattitretableau,
@@ -442,6 +442,50 @@ retouche une fois pour le document :
   colbacktitle=blue!8, fonttitle=\sffamily\bfseries}}
 \end{dispListing}
 
+\subsection{Le programme entier}
+
+\begin{docCommand}{cpgeprogramme}{\oarg{options}\marg{clé}}
+  Un programme entier, ou l'une de ses rubriques, comme dans le texte
+  officiel : chaque rubrique devient un titre, suivi de son chapeau, et les
+  lignes qui se suivent forment un seul tableau à deux colonnes. Pour une
+  filière, ce sont ses rubriques qui portent les titres du plus haut niveau ;
+  pour une rubrique, c'est elle ; une ligne donne le seul tableau.
+
+  Les titres sont ceux de la classe, en version étoilée : le texte officiel
+  porte sa propre numérotation, que les titres reprennent. Ils entrent dans la
+  table des matières par \cs{addcontentsline}.
+  \begin{docKey}{niveau}{=\texttt{part}\,|\,\texttt{chapter}\,|\,\texttt{section}\,|\,\texttt{subsection}\,|\,\texttt{subsubsection}\,|\,\texttt{paragraph}}{par défaut \texttt{section}}
+    Le titre des rubriques du plus haut niveau ; les suivantes descendent d'un
+    cran à chaque rang, jusqu'à \cs{subparagraph}. \texttt{chapter} suppose une
+    classe qui le définit.
+  \end{docKey}
+  \begin{docKey}{sommaire}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}
+    Les titres dans la table des matières.
+  \end{docKey}
+  \begin{docKey}{chapeaux}{=\texttt{true}\,|\,\texttt{false}}{par défaut \texttt{true}}\end{docKey}
+  Les options \texttt{largeur}, \texttt{entete}, \texttt{numeros},
+  \texttt{exigibles}, \texttt{experimentales}, \texttt{numeriques},
+  \texttt{long}, \texttt{titre contenus} et \texttt{titre capacites} passent aux tableaux,
+  comme pour \cs{cpgetableau}.
+\end{docCommand}
+
+Un programme entier, chaque ligne avec sa clé, dans un \texttt{book} :
+
+\begin{dispListing}
+\tableofcontents
+\cpgeprogramme[niveau=chapter, numeros]{MP}
+\end{dispListing}
+
+Une rubrique, à un niveau de titre qui ne prend pas toute la page :
+
+\begin{dispExample}
+\cpgeprogramme[niveau=paragraph, sommaire=false,
+  long=false]{MP/1/2}
+\end{dispExample}
+
+Les programmes composés que contient le dossier \texttt{doc} (voir
+« Les programmes composés ») sont faits ainsi.
+
 % =========================================================================
 \section{Galerie : des mises en page sur mesure}
 
@@ -640,7 +684,8 @@ entier par le paquet : \texttt{programme-mpsi.pdf}, \texttt{programme-pcsi.pdf},
 \texttt{programme-psi.pdf}. Chaque ligne y porte sa clé. Ils se lisent à côté
 du texte publié par le ministère : c'est la preuve de la concordance, et le
 moyen le plus simple de trouver la clé d'une ligne. Leur source,
-\texttt{programme.tex}, lit la filière dans le nom du job :
+\texttt{programme.tex}, appelle \cs{cpgeprogramme}\texttt{[numeros]} et lit la
+filière dans le nom du job :
 \begin{verbatim}
 lualatex -jobname=programme-mp programme.tex
 \end{verbatim}
@@ -670,7 +715,7 @@ ultérieure.
 \section{Historique}
 
 \begin{description}
-  \item[0.2 (2026-10-21)] Corrections.
+  \item[0.2 (2026-10-21)] Une commande nouvelle, des corrections.
     \begin{itemize}
       \item Le programme de MPSI compile de nouveau sous pdfLaTeX (une
         apostrophe dans une formule).
@@ -685,6 +730,8 @@ ultérieure.
         sous-liste sont une seule ligne, comme dans l'officiel, et l'ancienne
         \texttt{COM/4} devient \texttt{COM/2}.
       \item Tirets et points de suspension en Unicode, au même rendu.
+      \item \cs{cpgeprogramme} compose un programme entier, ou l'une de ses
+        rubriques.
       \item Un programme composé par filière, dans \texttt{doc}.
     \end{itemize}
   \item[0.1 (2026-10-17)] Première version : MPSI, PCSI, MP, PC (physique) et
