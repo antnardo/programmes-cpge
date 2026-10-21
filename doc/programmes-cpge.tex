@@ -11,7 +11,7 @@
 \else
   \usepackage{fontspec}
 \fi
-\usepackage[french]{babel}
+\usepackage[english,french]{babel}
 \usepackage[margin=2.4cm,marginparwidth=2cm]{geometry}
 \usepackage{microtype}
 \usepackage{imakeidx}
@@ -82,6 +82,20 @@ fournit de quoi lire un champ, parcourir une partie, et composer des tableaux
 et des boîtes prêts à l'emploi, ou des mises en page sur mesure. Il fonctionne
 sous pdf\LaTeX{} comme sous Lua\LaTeX.
 \end{abstract}
+
+\begin{otherlanguage}{english}
+\begin{abstract}
+The \pkg{programmes-cpge} package provides, as \LaTeX{} data, the official
+physics and chemistry syllabi of five French \emph{classes préparatoires aux
+grandes écoles} — MPSI, PCSI, MP, PC and PSI (physics only for PCSI and PC) —
+line by line: contents, required skills, experimental and numerical skills,
+and the introduction of each part. Every item has a stable key
+(\cle{MP/4/1/1}). The package offers accessors, iterators, ready-made layouts
+(the official two-column table, boxes, a whole syllabus) and the tools for
+custom ones. It works with pdf\LaTeX{} and Lua\LaTeX. This documentation is
+in French; the \texttt{doc} folder also holds each syllabus typeset in full.
+\end{abstract}
+\end{otherlanguage}
 
 \tableofcontents
 
