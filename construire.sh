@@ -62,7 +62,7 @@ for filiere in mpsi pcsi mp pc psi; do
 done
 echo "✓ programmes composés : doc/programme-{mpsi,pcsi,mp,pc,psi}.pdf"
 mkdir -p "$construction/ctan/programmes-cpge/doc"
-cp README.md programmes-cpge.sty programmes-cpge-*.tex "$construction/ctan/programmes-cpge/"
+cp README.md LICENSE programmes-cpge.sty programmes-cpge-*.tex "$construction/ctan/programmes-cpge/"
 cp doc/programmes-cpge.tex doc/programmes-cpge.pdf doc/programme.tex doc/programme-*.pdf \
   "$construction/ctan/programmes-cpge/doc/"
 (cd "$construction/ctan" && rm -f programmes-cpge.zip && zip -qr programmes-cpge.zip programmes-cpge)
